@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.hide{
+    transition: .4s;
+    display: none;
+}
+
+.bidForm {
+    animation: slideDown 1s ease-in-out forwards;
+    background-color: rgba(255, 215, 0, 1);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    z-index: 0;
+    border-radius: 0 0 10px 10px;
+    transition: height 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+
+.bidTitle{
+    color: white;
+}
+.cardActDel{
+    margin: 50px 0;
+    background-color:rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 70%;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    /* padding: 25px; */
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    animation:slide ease-in;
+}
+@keyframes slide{
+    0%{
+        margin-left: -200%;
+    }
+
+    100%{
+        margin-left: 0%;
+    }
+}
+.cardActDel .cardTile,.cardInfo{
+    padding: 15px 25px;
+    z-index: 2;
+}
+.cardActDel img{
+    border-radius: 10px;
+}
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.cardInfo div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bidBtn{
+    width: 32%;
+    height: 100%;
+    border: 2px solid transparent;
+    background-color: rgba(255, 215, 0, 1);
+    padding: 10px 0;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    transition: .2s;
+}
+.btnDet{
+    height: 100%;
+    width: 100%;
+}
+
+.bidBtn:hover{
+    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: inherit;
+	color: inherit;
+	border: inherit;
+	padding: inherit;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.rot{
+    transform: rotate(16deg) scale(1.1) skew(23deg) translate(-107px,133px);
+    -webkit-transform: rotate(16deg) scale(1.1) skew(23deg) translate(-107px,133px);
+    -moz-transform: rotate(16deg) scale(1.1) skew(23deg) translate(-107px,133px);
+}
+.bidForm form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+@media screen and (max-width: 870px) {
+    .cardInfo{
+        flex-direction: column;
+    }
+    .cardInfo div{
+        margin: 15px 0px;
+    }
+    .bidBtn{
+        width: 90%; 
+    }
+    .cardActDel{
+        width: 90%;
+    }
+    .bidForm form{
+        flex-direction: column;
+    }
+    #comment{
+        width: 55%;
+    }
+    #bid{
+        width: 55%;
+    }
+    #sendBid{
+        width: 57%;
+    }
+}
+
+@media screen and (min-width: 870px) {
+
+    #comment{
+        width: 35%;
+    }
+    #bid{
+        width: 35%;
+    }
+    #sendBid{
+        width: 37%;
+    }
+}
+#comment{
+    height: 100px;
+    resize: none;
+    border: none;
+}
+#bid{
+    height: 35px;
+    border: none;
+}
+#sendBid{
+    background-color: rgba(255, 215, 0, 1);
+    color: white;
+    border: 2px solid white;
+    transition: .2s;
+}
+
+#sendBid:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgba(255, 215, 0, 1);
+}
+#comment , #bid ,#sendBid{
+    
+    border-radius: 5px;
+    padding: 1%;
+    margin: 5px;
+}
+
