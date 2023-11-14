@@ -9,7 +9,8 @@
 <body>
     <center>
     <?php
-        require_once("..\Model\config.php"); 
+    function showActiveDeliveries(){ 
+        require_once("..\model\config.php"); 
         $countbox = 0;
         $countannim = 0.5;
         $bd = new config();
@@ -66,12 +67,12 @@
         </div>
         <div class="bidForm hide">
             <h3 class="bidTitle">bid form</h3>
-                <form action="addBid.php" method="POST">        
-                    <input type="number" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idDeliveries"]?>">
-                    <input type="number" name="montant" id="bid" placeholder="bid">
+                <form action="..\controller\addBid.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
+                    <input type="number" class="normal" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idDeliveries"]?>">
+                    <input type="text" class="normal" name="montant" id="bid" placeholder="bid">
                     <div id="dateHolder">
-                        <input type="date" name="dateDepart" id="dateDepart" placeholder="Date Depart">
-                        <input type="date" name="dateArrive" id="dateArrive" placeholder="Date Arrive">
+                        <input type="date" class="normal" name="dateDepart" id="dateDepart" placeholder="Date Depart">
+                        <input type="date" class="normal" name="dateArrive" id="dateArrive" placeholder="Date Arrive">
                     </div>
                     <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment"></textarea>
                     <input type="submit" value="BID" id="sendBid">
@@ -81,11 +82,12 @@
 
             <?php
         }
-
+    }
 
 
     ?>
     </center>
     <script src="..\activeDeliveries.js"></script>
+    <script src="..\bidFormControl.js"></script>
 </body>
 </html>

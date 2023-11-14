@@ -13,4 +13,14 @@ body{
 
 #tableOrders{
     width: 80%;
+    border: 1px solid black;
+}
+
+#tableOrders th{
+    background-color: rgb(173, 173, 173);
+    border:1px solid rgb(173, 173, 173) ;
+}
+#thLine{
+    background-color: black;
+    border:1px solid rgb(173, 173, 173) ;
 }

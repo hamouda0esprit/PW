@@ -15,7 +15,37 @@ body{
     transition: .4s;
     display: none;
 }
+.error{
+    border: 2px solid rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.4);
+    animation: errorBounce 0.2s ease-in;
+}
+.correct{
+    border: 2px solid rgb(8, 174, 8);
+    background-color: rgba(8, 174, 8, 0.4);
+}
 
+@keyframes errorBounce{
+    0%{
+        transform: translateX(-30px);
+    }
+    25%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    75%{
+        transform: translateX(30px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.normal{
+    border: 2px solid transparent;
+}
 .bidForm {
     animation: slideDown 1s ease-in-out forwards;
     background-color: rgba(255, 215, 0, 1);
@@ -133,7 +163,7 @@ button, input[type="submit"], input[type="reset"] {
     flex-direction: column;
     width: 100%;
 }
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 965px) {
     .cardInfo{
         flex-direction: column;
     }
@@ -159,11 +189,11 @@ button, input[type="submit"], input[type="reset"] {
         width: 55%;
     }
     #dateHolder{
-        width: 57%;
+        width: 55%;
     }
 }
 
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 965px) {
 
     #comment{
         width: 35%;
@@ -172,7 +202,7 @@ button, input[type="submit"], input[type="reset"] {
         width: 35%;
     }
     #dateHolder{
-        width: 37%;
+        width: 35%;
     }
     #sendBid{
         width: 35%;
@@ -185,7 +215,6 @@ button, input[type="submit"], input[type="reset"] {
 }
 #bid,#dateDepart,#dateArrive{
     height: 35px;
-    border: none;
 }
 #sendBid{
     background-color: rgba(255, 215, 0, 1);
@@ -207,7 +236,13 @@ button, input[type="submit"], input[type="reset"] {
 #idDeliveries{
     display: none;
 }
-
-#dateHolder input{
-    width: 45%;
+#dateHolder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+#dateHolder input{
+    width: 49%;
+    margin: 0;
+}
+

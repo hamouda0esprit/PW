@@ -9,8 +9,8 @@
 <body>
     <h2>Manage Orders</h2>
     <center>
-    <table border="1" id="tableOrders">
-        <tr>
+    <table id="tableOrders">
+        <tr id="thLine">
             <th>Task</th>
             <th>Delivery Date</th>
             <th>Status</th>
@@ -29,7 +29,16 @@
             </td>
             <td>test</td>
             <td>test</td>
-        </th>
+        </tr>
+        <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>
+                <input type="text" name="currentBid" id="currentBid">
+            </td>
+            <td>test</td>
+            <td>test</td>
+        </tr>
     </table>
     </center>
 </body>
