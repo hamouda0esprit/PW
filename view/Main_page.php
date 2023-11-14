@@ -3,6 +3,12 @@
 <head>
     <title>Deliverable Points Calculator</title>
     <style>
+        .button{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -22,7 +28,7 @@
             font-weight: bold;
         }
 
-        input[type="number"] {
+        input[type="text"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -38,7 +44,7 @@
             background-color: #007BFF;
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 20px 20px;
             cursor: pointer;
         }
 
@@ -56,7 +62,7 @@
 	?>
     <div class="container">
         <h1>Deliverable Points Calculator</h1>
-        <form id="calculator-form" action="../controller/controller.php" method = "POST">
+        <form id="calculator-form" action="../controller/controller.php" method = "POST" onsubmit = "return validateForm()">
             <label for="clientId">Select Client:</label>
             <select id="clientId" name="clientId" onchange="updateSelectedValue()">
                 <?php
@@ -96,16 +102,16 @@
             <p id="selectedUserName"></p>
             <br>
             <label for="pointsPerTask">Points per Task:</label>
-            <input type="number" id="point" name="point" min="0" value="1" required>
+            <input type="text" id="point" name="point" min="0" value="1" required>
             <br>
-            <button type="submit" id="calculateButton">Calculate Points</button>
+            <div class="button">
+            <button type="submit" id="calculateButton">Submit</button>
+            </div>
         </form>
         <div id="result"></div>
     </div>
 
-    <script>
-       
-
+    <script src ="verification.js">
     </script>
 </body>
 </html>
