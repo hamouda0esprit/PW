@@ -1,0 +1,86 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	background-color: white;
+}
+
+h1{
+	font-size:40px;
+	font-weight: 900;
+	margin-top: 25px;
+}
+
+select {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  padding: 15px;
+  width: inherit;
+  color: #333;
+  font-size: 20px;
+}
+
+.select-box {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  background: #ddd;
+  z-index: 1;
+}
+
+.select-box::after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    border-right: 3px solid #333;
+    border-bottom: 3px solid #333;
+    transform: translateY(-50%) rotate(45deg);
+    content: "";
+    z-index: -1;
+}
+
+input, textarea {
+	background-color:#ddd; 
+	border:0; 
+	outline:0;
+	padding: 1em;
+	border-radius:8px;
+	display: block;
+	width: 100%;
+	margin-top: 1em;
+	box-shadow:0 1px 1px rgba(0,0,0,.1);
+	resize: none;
+  }
+
+textarea:focus {
+	box-shadow:0 1px 2px rgba(150,0,0,.2);
+}
+
+
+.submit-container{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-submit {
+	width:40%;
+	color: black; 
+	background: #ddd;
+	cursor: pointer;
+}
+
+.input-submit:hover {
+	box-shadow:0 1px 1px 1px rgba(170,170,170,.6); 
+}
