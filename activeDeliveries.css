@@ -156,6 +156,9 @@ button, input[type="submit"], input[type="reset"] {
         width: 55%;
     }
     #sendBid{
+        width: 55%;
+    }
+    #dateHolder{
         width: 57%;
     }
 }
@@ -168,8 +171,11 @@ button, input[type="submit"], input[type="reset"] {
     #bid{
         width: 35%;
     }
-    #sendBid{
+    #dateHolder{
         width: 37%;
+    }
+    #sendBid{
+        width: 35%;
     }
 }
 #comment{
@@ -177,7 +183,7 @@ button, input[type="submit"], input[type="reset"] {
     resize: none;
     border: none;
 }
-#bid{
+#bid,#dateDepart,#dateArrive{
     height: 35px;
     border: none;
 }
@@ -192,10 +198,16 @@ button, input[type="submit"], input[type="reset"] {
     background-color: rgb(255, 255, 255);
     color: rgba(255, 215, 0, 1);
 }
-#comment , #bid ,#sendBid{
-    
+#comment , #bid ,#sendBid,#dateDepart,#dateArrive{
     border-radius: 5px;
     padding: 1%;
     margin: 5px;
 }
 
+#idDeliveries{
+    display: none;
+}
+
+#dateHolder input{
+    width: 45%;
+}

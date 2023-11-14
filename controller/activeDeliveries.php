@@ -16,7 +16,7 @@
         $pdo = $bd::getConnexion();
         try{
             $query = $pdo->prepare(
-                'SELECT u.nom, u.prenom, a.depart, a.arrive, a.size, a.poid, MIN(b.montant) AS montant_minimum FROM user u JOIN activedeliveries a ON u.ID = a.ID LEFT JOIN bids b ON a.idDeliveries = b.idDeliveries GROUP BY u.nom, u.prenom, a.depart, a.arrive, a.size, a.poid;'
+                'SELECT u.nom, u.prenom, a.depart, a.arrive, a.idDeliveries, a.size, a.poid, MIN(b.montant) AS montant_minimum FROM user u JOIN activedeliveries a ON u.ID = a.ID LEFT JOIN bids b ON a.idDeliveries = b.idDeliveries GROUP BY u.nom, u.prenom, a.depart, a.arrive, a.size, a.poid;'
             );
 
             $query->execute();
@@ -66,8 +66,13 @@
         </div>
         <div class="bidForm hide">
             <h3 class="bidTitle">bid form</h3>
-                <form action="" method="POST">        
-                    <input type="number" name="bid" id="bid" placeholder="bid">
+                <form action="addBid.php" method="POST">        
+                    <input type="number" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idDeliveries"]?>">
+                    <input type="number" name="montant" id="bid" placeholder="bid">
+                    <div id="dateHolder">
+                        <input type="date" name="dateDepart" id="dateDepart" placeholder="Date Depart">
+                        <input type="date" name="dateArrive" id="dateArrive" placeholder="Date Arrive">
+                    </div>
                     <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment"></textarea>
                     <input type="submit" value="BID" id="sendBid">
                 </form>

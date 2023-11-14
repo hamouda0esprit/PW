@@ -7,7 +7,7 @@ public static function getConnexion()
 if (!isset(self::$pdo)) {
 try {
 self::$pdo = new PDO(
-'mysql:host=localhost;dbname=test-PW',
+'mysql:host=localhost;dbname=PW',
 'root',
 '',
 [
