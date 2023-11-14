@@ -13,6 +13,8 @@
             'email' => $client->email,
             'password' => $client->password
         ]);
+        header("Location: ../view/index2.php");
+        sexit();
     }catch(PDOException $e){
         echo'Connection failure :'. $e->getMessage();
     }

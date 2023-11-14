@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .Container{
@@ -66,7 +67,7 @@ form .Field{
     padding: 5px;
 }
 .Field button{
-    background-color: #0093E9;
+    background-color: #0094e9b0;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     color: #FFF;
     transition: all 0.3s ease;

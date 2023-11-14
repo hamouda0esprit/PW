@@ -9,28 +9,29 @@
 
 </head>
 <body>
-    <form action="" onsubmit="return validateemail()">
+    
+    <form action="../model/Login.php" method="POST" onsubmit="return validateemail()">
     <section class="Container">
         <div class="Login">
             <div class="Content">
                 <header>Login</header>
                 <form action="#">
                     <div class="Field">
-                        <input id="email" type="text" placeholder="Email" class="input">
+                        <input id="email" type="text" placeholder="Email" class="input" name="email">
                     </div>
                     <div class="Field">
-                        <input type="password" placeholder="Password" class="password">
+                        <input type="password" placeholder="Password" class="password" name="password">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
                     
                     <div class="Link">
-                        <a href="#" class="forget-password">Forgot Password?</a>
+                        <a href="index3.php" class="forget-password">Forgot Password?</a>
                     </div>
                     <div class="Field">
                         <button type="submit">Login</button>
                     </div>
                     <div class="Link">
-                        <span>You dont have an account? <a href="index2.html" class="SignUpL">Sign Up</a></span>
+                        <span>You dont have an account? <a href="index2.php" class="SignUpL">Sign Up</a></span>
                     </div>
                 </form>
             </div>
@@ -44,7 +45,7 @@
 
             <div class="media">
                 <a href="#" class="GG">
-                    <img src="Assets/Google.png" alt="" class="google-img">
+                    <img src="../controller/Assets/Google.png" alt="" class="google-img">
                     <span>Login with Google</span>
                 </a>
             </div>

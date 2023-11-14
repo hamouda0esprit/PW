@@ -42,7 +42,7 @@
                         <button type="submit">Sign In</button>
                     </div>
                     <div class="Link">
-                        <span>You already have an account? <a href="Index.html" class="SignUpL">Log In</a></span>
+                        <span>You already have an account? <a href="Index.php" class="SignUpL">Log In</a></span>
                     </div>
                 </form>
             </div>
