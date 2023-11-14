@@ -12,7 +12,7 @@
     function showActiveDeliveries(){ 
         require_once("..\model\config.php"); 
         $countbox = 0;
-        $countannim = 0.5;
+        $countannim = 0.3;
         $bd = new config();
         $pdo = $bd::getConnexion();
         try{
@@ -28,7 +28,7 @@
         }
         foreach($result as $row){
             ?>
-    <div class="cardActDel" style="animation-duration:<?php echo $countannim;$countannim = $countannim +0.5;?>s;">
+    <div class="cardActDel" style="animation-duration:<?php echo $countannim;$countannim = $countannim +0.3;?>s;">
         <div class="cardTile">
             <p>Get an estimate for your delivery</p>
         </div>  

@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="../manageOrders.css">
 </head>
 <body>
-    <h2>Manage Orders</h2>
     <?php
     function showManageOrders(){
+        $index = 0;
     ?>
     <center>
     <table id="tableOrders">
@@ -18,7 +18,7 @@
             <th>Delivery Date</th>
             <th>Status</th>
             <th>Bid</th>
-            <th></th>
+            <th>Delete</th>
         </tr>
         <!-- <tr>
             <td>test</td>
@@ -52,9 +52,15 @@
         }
         foreach($result as $row){
 
-
         ?>
-        <tr>
+        <tr class="<?php
+         if($index%2 == 0){
+            echo "bwhite";
+         }else{
+            echo "bgrey";
+         }
+         $index++;
+        ?>">
             <td><?php echo "#" . $row["idBid"] ?></td>
             <td><?php echo $row["dateDepart"] . " - " . $row["dateArrive"] ?></td>
             <td>
@@ -63,14 +69,14 @@
             <td>
                 <form action="../controller/updateOrder.php" method="POST">
                     <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
-                    <input type="text" name="currentBid" id="currentBid" value="<?php echo $row["montant"]?>"> 
-                    <input type="submit" value="update">
+                    <input type="text" name="currentBid" id="currentBid" value="<?php echo $row["montant"]?>" class="inpt"> 
+                    <input type="submit" value="update" class="btn">
                 </form>
             </td>
             <td>
-                <form action="../controller/deleteOrder.php" method="POST">
+                <form action="../controller/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
                     <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
-                    <input type="submit" value="delete">
+                    <input type="submit" value="delete" class="btn">
                 </form>
             </td>
         </tr>
@@ -83,5 +89,13 @@
     <?php
     }   
     ?>
+    <script>
+        function confirmdelete() {
+            x = confirm("are you sure ?");
+            if(x == false){
+                return false
+            }
+        }
+    </script>
 </body>
 </html>
