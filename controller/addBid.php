@@ -21,7 +21,7 @@ try {
     ]);
 
     // Redirect to activeDeliveries.php
-    header(`Location: ..\view\showMO.php`);
+    header("Location: ../view/showMO.php");
     exit();
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();

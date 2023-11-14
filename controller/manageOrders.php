@@ -8,16 +8,19 @@
 </head>
 <body>
     <h2>Manage Orders</h2>
+    <?php
+    function showManageOrders(){
+    ?>
     <center>
     <table id="tableOrders">
         <tr id="thLine">
             <th>Task</th>
             <th>Delivery Date</th>
             <th>Status</th>
+            <th>Bid</th>
             <th></th>
-            <th></th>
-        </th>
-        <tr>
+        </tr>
+        <!-- <tr>
             <td>test</td>
             <td>test</td>
             <td>
@@ -29,17 +32,56 @@
             </td>
             <td>test</td>
             <td>test</td>
-        </tr>
+        </tr> -->
+        <?php
+        require_once("..\model\config.php"); 
+        $countbox = 0;
+        $countannim = 0.5;
+        $bd = new config();
+        $pdo = $bd::getConnexion();
+        try{
+            $query = $pdo->prepare(
+                'SELECT * FROM `bids` WHERE idLivreur = 1;'
+            );
+
+            $query->execute();
+            $result = $query->fetchAll();
+
+        }catch(PDOExcepion $e){
+            echo "connection failed :". $e->getMessage();
+        }
+        foreach($result as $row){
+
+
+        ?>
         <tr>
-            <td>test</td>
-            <td>test</td>
+            <td><?php echo "#" . $row["idBid"] ?></td>
+            <td><?php echo $row["dateDepart"] . " - " . $row["dateArrive"] ?></td>
             <td>
-                <input type="text" name="currentBid" id="currentBid">
+                
             </td>
-            <td>test</td>
-            <td>test</td>
+            <td>
+                <form action="../controller/updateOrder.php" method="POST">
+                    <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
+                    <input type="text" name="currentBid" id="currentBid" value="<?php echo $row["montant"]?>"> 
+                    <input type="submit" value="update">
+                </form>
+            </td>
+            <td>
+                <form action="../controller/deleteOrder.php" method="POST">
+                    <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
+                    <input type="submit" value="delete">
+                </form>
+            </td>
         </tr>
+        <?php
+    }   
+    ?>
     </table>
     </center>
+
+    <?php
+    }   
+    ?>
 </body>
 </html>
