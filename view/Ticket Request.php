@@ -13,7 +13,7 @@
 		$bd = new config();
         $pdo = $bd::getConnexion();
 	?>
-	<form action="../controller/AddRequest.php" method="POST" class="cf">
+	<form action="../model/AddRequest.php" method="POST" class="cf">
 		<!--select type-->
 		<h1>Type : </h1> <br>
 		<div class="select-box">
@@ -21,7 +21,7 @@
 				<option value="0" disabled hidden selected>Please choose a type</option>
 				<option value="Technical">Technical</option>
 				<option value="Payement">Payement</option>
-				<option value="Supprot">Supprot</option>
+				<option value="Support">Support</option>
 			</select>
 		</div>
 		
