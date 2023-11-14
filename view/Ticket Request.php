@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 	<link rel="stylesheet" href="../model/Style.css">
+	<script src="../model/Control.js"></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
 		$bd = new config();
         $pdo = $bd::getConnexion();
 	?>
-	<form action="../model/AddRequest.php" method="POST" class="cf">
+	<form action="../model/AddRequest.php" method="POST" class="cf" onsubmit="return validateForm()">
 		<!--select type-->
 		<h1>Type : </h1> <br>
 		<div class="select-box">
