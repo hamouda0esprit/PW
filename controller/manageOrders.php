@@ -62,9 +62,9 @@
          $index++;
         ?>">
             <td><?php echo "#" . $row["idBid"] ?></td>
-            <td><?php echo $row["dateDepart"] . " - " . $row["dateArrive"] ?></td>
+            <td><?php echo $row["dateDepart"] . " -> " . $row["dateArrive"] ?></td>
             <td>
-                
+                not assigned yet
             </td>
             <td>
                 <form action="../controller/updateOrder.php" method="POST">
