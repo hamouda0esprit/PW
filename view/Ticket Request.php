@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-	<link rel="stylesheet" href="../model/Style.css">
+	<meta charset="utf-8">
+	<title>Ticket Request</title>
+	<link rel="stylesheet" href="../model/Ticket Request.css">
 	<script src="../model/Control.js"></script>
 </head>
 
