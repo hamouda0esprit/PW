@@ -40,11 +40,69 @@
 
 .White_Line{
 	width:100%;
-	height: 2vw;
+	height: 1vw;
 	
 	background-color:white;
 }
 
 .second_container{
+	width: 100%;
+	height: 30vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background-color:rgba(250,250,250,1.00);
+	
+	.left{
+		width:40%;
+		height:100%;	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		.main_text{
+			height: 100%;
+			width: 80%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+
+			.title{
+				font-weight: 600;
+				font-size:1.4vw;
+			}
+
+			.first{
+				font-weight: 200;
+				margin-top:.8vw;
+			}
+
+			.second{
+				font-weight: 600;
+				font-size:.8vw;	
+				margin-top:1vw;
+			}
+
+			.fa-check{
+				color:rgb(29, 191, 114);
+				font-size:1vw;
+				margin-right:.6vw;
+			}
+		}
+	}
+	
+	.right{
+		width:60%;
+		height:100%;
+		
+		background-image: url("../Assets/index/2.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	
+	
 	
 }

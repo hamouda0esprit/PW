@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Index</title>
 	<link rel="stylesheet" href="../model/index.scss">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -17,7 +18,19 @@
 		<div class="White_Line"></div>
 		
 		<div class="second_container">
+			<div class="left">
+				<div class="main_text">
+					<h3 class="title">Everyday life made easier.</h3>
+					<p class="first">Whether your looking to deliver something or indeed or delivering something, we got your back !  </p>
+					<p class="second"><i class="fa-solid fa-check"></i>Choose your Transporter</p>
+					<p class="second"><i class="fa-solid fa-check"></i>Schedule when it works for you </p>
+					<p class="second"><i class="fa-solid fa-check"></i>Chat, pay, tip, and review all through one platform</p>
+				</div>
+			</div>
 			
+			<div class="right">
+			
+			</div>
 		</div>
 		
 		<div class="third_container">
