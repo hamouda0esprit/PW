@@ -1,17 +1,22 @@
 <?php
+require_once("..\model\config.php");
 
-require_once("..\Model\config.php");
+$bd = new config();
+$pdo = $bd::getConnexion();
 
+$sql = "DELETE FROM `colis` WHERE idcolis= :idcolis;";
 
-$sql = "DELETE FROM colis WHERE id_client=1";
-        $db = config::getConnexion();
-        $req = $db->prepare($sql);
-        
+$db = config::getConnexion();
+try {
+    $query = $db->prepare($sql);
+    $query->execute([
+        ':idcolis' => $_POST["delete_id"],
+    ]);
 
-        try {
-            $req->execute();
-        } catch (Exception $e) {
-            die('Error:' . $e->getMessage());
-        }
-
-        ?>
+    // Redirect to activeDeliveries.php
+    header("Location: ../view/mytask.php");
+    exit();
+} catch (Exception $e) {
+    echo 'Error: ' . $e->getMessage();
+}
+?>
