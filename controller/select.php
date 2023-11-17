@@ -34,8 +34,8 @@
         <td><?php echo  $row['arrivee']?></td>
         <td><?php echo  $row['budget']?></td>
         <td class="button-container">
-          <form><button class="modify-button" onclick="modifyDelivery(this)">Modify</button></form>
-          <form><button class="suppress-button" onclick="suppressDelivery(this)">Suppress</button></form>
+          <form action="..\controller\update_form.php" method="POST"><input type="text" id="update" name="update_id" value="<?php echo $row['idcolis']?>"/> <button class="modify-button" onclick="modifyDelivery(this)">Modify</button></form>
+          <form><input type="text" id="delete" name="delete_id" value="<?php echo $row['idcolis']?>"/><button class="suppress-button" onclick="suppressDelivery(this)">Suppress</button></form>
         </td>
       </tr>
       <?php 
