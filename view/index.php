@@ -41,6 +41,11 @@
 		</div>
 		
 		<div class="third_container">
+			<div class="top">
+				<h1 class="title">Featured Delivery Drivers</h1>
+			</div>
+			
+			<div class="bottom">
 			<?php
 				try{
 					$query = $pdo->prepare('SELECT `ID`, `nom`, `prenom`, `PositiveReview`, `CompletedTasks`, `Bio` FROM `user`');
@@ -51,31 +56,32 @@
 				catch(PDOExcepion $e){
 					echo "connection failed :". $e->getMessage();
 				}
-				foreach($result as $row){ $AvgPositiveReviews = number_format((float)(($row["PositiveReview"] / $row["CompletedTasks"]) * 100), 2, '.', '') . "%";
+				foreach($result as $row){ $AvgPositiveReviews = number_format((float)(($row["PositiveReview"] / $row["CompletedTasks"]) * 100), 2, '.', ''); if ($AvgPositiveReviews>=15){
 			?>
 			<!---->
 			
-			<div class="FDD-box">
-				<div class="top">
-					<div class="pdp">
-						<img src="../Assets/index/6.jpg" class="image">
+				<div class="FDD-box">
+					<div class="top">
+						<div class="pdp">
+							<img src="../Assets/index/6.jpg" class="image">
+						</div>
+
+						<div class="details">
+							<h3 class="name"><?php echo $row["prenom"] . " " . $row["nom"]?> </h3>
+							<p class="PReviews"><i class="fa-solid fa-star"></i><?php echo $AvgPositiveReviews . "%"?> positive reviews</p>
+							<p class="TasksC"><i class="fa-solid fa-circle-check"></i><?php echo $row["CompletedTasks"]?> completed tasks</p>
+						</div>
 					</div>
-					
-					<div class="details">
-						<h3 class="name"><?php echo $row["prenom"] . " " . $row["nom"]?> </h3>
-						<p class="PReviews"><i class="fa-solid fa-star"></i><?php echo $AvgPositiveReviews?> positive reviews</p>
-						<p class="TasksC"><i class="fa-solid fa-circle-check"></i><?php echo $row["CompletedTasks"]?> completed tasks</p>
+
+					<hr>
+
+					<div class="bottom">
+						<p class="bio"><?php echo $row["Bio"]?></p>
 					</div>
 				</div>
-				
-				<hr>
-				
-				<div class="bottom">
-					<p class="bio"><?php echo $row["Bio"]?></p>
-				</div>
-			</div>
 			
-			<?php } ?>
+			<?php }} ?>
+			</div>
 			
 		</div>
 		

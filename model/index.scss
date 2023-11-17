@@ -4,11 +4,14 @@
 	padding:0;
 	margin:0;
 	font-family: 'Poppins', sans-serif;
+	
+	box-sizing: border-box;
 }
 
 .Main_Container{
 	width:100%;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 }
 
@@ -115,92 +118,114 @@
 }
 
 .third_container{
-	width:100%;
+	width:60%;
 	height:30vw;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
+	align-items: flex-start;
+	flex-direction: column;
+	overflow-x: auto;
 	
 	background-color:white;
 	
-	.FDD-box{
-		width: 15vw;
-		height: 16vw;
-		margin:2vw;
-		box-shadow: 2px 4px 7px 3px rgba(0,0,0,.1);
+	.top{
+		width:100%;
+		height:10%;
+		display: flex;
+		justify-content: center;
 		
-		.top{
-			width:100%;
-			height:70%;
-			display: flex;
-			justify-content: center;
-			flex-direction: row;
-			
-			.details{
-				padding:1vw .5vw;
-				width:60%;
-				height:100%;
-				display: flex;
-				align-items: center;
-				flex-direction: column;
-				
-				.name{
-					font-size:.9vw;
-					font-weight: 600;
-					text-align: center;
-				}
-				
-				.PReviews{
-					margin-top: .6vw; 
-					.fa-star{
-						margin-right:.4vw;
-						color:#FFD700;
-					}
-				}
-				
-				.TasksC{
-					margin-top: .4vw;
-					.fa-circle-check{
-						margin-right:.4vw;
-						color:rgb(29, 191, 114);
-					}
-				}
-			}
-			
-			.pdp{
-				width:40%;
-				height:100%;
-				display: flex;
-				align-items: flex-start;
-				justify-content: center;
-				
-				
-				background-color:rgba(250,250,250,1.00);
-				
-				.image{
-					width:75%;
-					margin-top:.6vw;
-					
-					border-radius: 50%;
-				}
-			}
-			
+		.title{
+			position:absolute;
+			font-weight: 700;
+			font-size:2vw;
+			color:rgba(0, 43, 84, 1);
+			margin-top:3vw; 
 		}
-		.bottom{
-			width:100%;
-			height:30%;
-			display: flex;
-			justify-content: center;
-			
-			.bio{
-				max-width:80%;
-				margin-top:.5vw;
-				font-weight: 500;
-				font-size:.8vw;
+	}
+	
+	.bottom{
+		height:90%;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		
+		.FDD-box{
+			width: 15vw;
+			height: 16vw;
+			margin:2vw;
+			box-shadow: 2px 4px 7px 3px rgba(0,0,0,.1);
+
+			.top{
+				width:100%;
+				height:70%;
+				display: flex;
+				justify-content: center;
+				flex-direction: row;
+
+				.details{
+					padding:1vw .5vw;
+					width:60%;
+					height:100%;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+
+					.name{
+						font-size:.9vw;
+						font-weight: 600;
+						text-align: center;
+					}
+
+					.PReviews{
+						margin-top: .6vw; 
+						font-size:.8vw;
+						.fa-star{
+							margin-right:.4vw;
+							color:#FFD700;
+						}
+					}
+
+					.TasksC{
+						margin-top: .4vw;
+						font-size:.8vw;
+						.fa-circle-check{
+							margin-right:.4vw;
+							color:rgb(29, 191, 114);
+						}
+					}
+				}
+
+				.pdp{
+					width:40%;
+					height:100%;
+					display: flex;
+					align-items: flex-start;
+					justify-content: center;
+
+
+					background-color:rgba(250,250,250,1.00);
+
+					.image{
+						width:75%;
+						margin-top:.6vw;
+
+						border-radius: 50%;
+					}
+				}
+
 			}
-			background-color:rgba(250,250,250,1.00);
-		} 
+			.bottom{
+				width:100%;
+				height:30%;
+
+				.bio{
+					max-width:80%;
+					font-weight: 500;
+					font-size:.8vw;
+				}
+				background-color:rgba(250,250,250,1.00);
+			} 
+		}
 	}
 }
 
