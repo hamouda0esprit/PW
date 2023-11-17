@@ -8,6 +8,13 @@
 </head>
 
 <body>
+	<?php
+        require_once("..\model\config.php");
+	
+		$bd = new config();
+        $pdo = $bd::getConnexion();
+	?>
+	
 	<div class="Main_Container">
 		<div class="first_container">
 			<div class="box">
@@ -34,6 +41,37 @@
 		</div>
 		
 		<div class="third_container">
+			<?php
+				try{
+					$query = $pdo->prepare('SELECT `ID`, `nom`, `prenom`, `PositiveReview`, `CompletedTasks`, `Bio` FROM `user`');
+					$query->execute();
+					$result = $query->fetchAll();
+					
+				}
+				catch(PDOExcepion $e){
+					echo "connection failed :". $e->getMessage();
+				}
+				foreach($result as $row){ $AvgPositiveReviews = number_format((float)(($row["PositiveReview"] / $row["CompletedTasks"]) * 100), 2, '.', '') . "%";
+			?>
+			<!--<?php echo $AvgPositiveReviews?>-->
+			
+			<div class="FDD-box">
+				<div class="top">
+					<div class="pdp">
+					
+					</div>
+					
+					<div class="details">
+						<h3 class="name"><?php echo $row["prenom"] . " " . $row["nom"]?> </h3>
+					</div>
+				</div>
+				
+				<div class="bottom">
+					
+				</div>
+			</div>
+			
+			<?php } ?>
 			
 		</div>
 		
