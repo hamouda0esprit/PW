@@ -27,9 +27,14 @@
 					<div class="box">
 						<div class="content">
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Type</h3>
-							<select name="" id="" class="select">
-								<option value="0" disabled hidden selected>Please choose a type</option>
-							</select>
+							<div class="select-box">
+								<select name="" id="" class="select">
+									<option value="0" disabled hidden selected>Please choose a type</option>
+									<option value="Technical">Technical</option>
+									<option value="Payement">Payement</option>
+									<option value="Support">Support</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -38,9 +43,12 @@
 					<div class="box">
 						<div class="content">
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Commande</h3>
-							<select name="" id="" class="select">
-								<option value="0" disabled hidden selected>Please choose a type</option>
-							</select>
+							<div class="select-box">
+								<select name="" id="" class="select">
+									<option value="0" disabled hidden selected>Please choose a delivery</option>
+									
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -48,7 +56,11 @@
 
 			<div class="Bottom">
 				<div class="comment">
-
+					<div class="box">
+						<h1 class="title">Comment</h1>
+						<textarea class="text"></textarea>
+						<input type="submit" Value='Create Ticket' class="button">
+					</div>
 				</div>
 			</div>
 		</div>

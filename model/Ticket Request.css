@@ -1,5 +1,5 @@
 /* CSS Document */
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -18,6 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center; }
+    .main_container .Top .title {
+      font-weight: 700; }
   .main_container .Middle {
     width: 70%;
     height: 32%;
@@ -43,21 +45,36 @@
         background-color: whitesmoke;
         border-radius: .5vw; }
         .main_container .Middle .type .box .content {
-          width: 60%;
+          width: 70%;
           height: 80%;
           display: flex;
           align-items: flex-start;
           justify-content: center;
           flex-direction: column; }
           .main_container .Middle .type .box .content .title {
-            font-size: .8vw;
+            font-size: .85vw;
             font-weight: 600;
             margin: 0 .5vw .4vw; }
             .main_container .Middle .type .box .content .title .fa-bullseye {
               font-size: .7vw;
               margin-right: .2vw; }
-          .main_container .Middle .type .box .content .select {
+          .main_container .Middle .type .box .content .select-box {
             width: 100%; }
+            .main_container .Middle .type .box .content .select-box .select {
+              border: none;
+              border-bottom: solid;
+              border-width: .1vw;
+              appearance: none;
+              width: 100%;
+              background: none;
+              color: #C5C5C5;
+              font-size: 1vw;
+              transition: all 0.3s ease; }
+              .main_container .Middle .type .box .content .select-box .select:focus {
+                outline: 0;
+                border-width: .2vw;
+                color: #585858;
+                transition: all 0.3s ease; }
     .main_container .Middle .commande {
       width: 50%;
       height: 80%;
@@ -77,24 +94,41 @@
         background-color: whitesmoke;
         border-radius: .5vw; }
         .main_container .Middle .commande .box .content {
-          width: 60%;
+          width: 70%;
           height: 80%;
           display: flex;
           align-items: flex-start;
           justify-content: center;
           flex-direction: column; }
           .main_container .Middle .commande .box .content .title {
-            font-size: .8vw;
+            font-size: .85vw;
             font-weight: 600;
             margin: 0 .5vw .4vw; }
             .main_container .Middle .commande .box .content .title .fa-bullseye {
               font-size: .7vw;
               margin-right: .2vw; }
-          .main_container .Middle .commande .box .content .select {
+          .main_container .Middle .commande .box .content .select-box {
             width: 100%; }
+            .main_container .Middle .commande .box .content .select-box .select {
+              border: none;
+              border-bottom: solid;
+              border-width: .1vw;
+              appearance: none;
+              width: 100%;
+              background: none;
+              color: #C5C5C5;
+              font-size: 1vw;
+              transition: all 0.3s ease; }
+              .main_container .Middle .commande .box .content .select-box .select:focus {
+                outline: 0;
+                border-width: .2vw;
+                color: #585858;
+                transition: all 0.3s ease; }
+              .main_container .Middle .commande .box .content .select-box .select option:enabled {
+                background-color: red; }
   .main_container .Bottom {
     width: 70%;
-    height: 50%;
+    height: 55%;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -104,6 +138,51 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       border-radius: .5vw;
-      background-color: blue; }
+      box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.1); }
+      .main_container .Bottom .comment .box {
+        width: calc(100% - 2vw);
+        height: calc(100% - 2vw);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: .5vw; }
+        .main_container .Bottom .comment .box .title {
+          font-size: .9vw;
+          margin-bottom: .5vw; }
+        .main_container .Bottom .comment .box .text {
+          background-color: #fafafa;
+          border: 0;
+          border-radius: .5vw;
+          border-bottom: solid;
+          border-width: .15vw;
+          border-color: #C5C5C5;
+          outline: 0;
+          padding: 1vw;
+          width: 60%;
+          height: 40%;
+          resize: none;
+          margin-bottom: 1vw;
+          text-align: center; }
+        .main_container .Bottom .comment .box .button {
+          width: 80%;
+          height: 25%;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px 25px;
+          font-weight: 500;
+          background: gold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          display: inline-block;
+          box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+          outline: none;
+          border: none;
+          font-size: .8vw;
+          font-weight: 600; }
+          .main_container .Bottom .comment .box .button:hover {
+            background: #ffe10a;
+            box-shadow: 7px 7px 25px 0px rgba(0, 0, 0, 0.1), 4px 4px 6px 0px rgba(0, 0, 0, 0.3); }
