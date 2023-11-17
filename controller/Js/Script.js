@@ -29,7 +29,21 @@ function validateemail(){
     alert('Form is valid. Submitting...');
     return true;
 }
-
+function validatemdp(){
+  var password = document.getElementById('newPassword').value;
+  var email = document.getElementById('email').value;
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (password.length < 8 || !/\d/.test(password)) {
+    alert('Password should be at least 8 characters long and contain at least one number.');
+    return false;
+  }
+    if (!emailRegex.test(email)) {
+      alert('Invalid email address. Please enter a valid email.');
+      return false;
+    }
+    alert('Form is valid. Submitting...');
+    return true;
+}
 function validateForm() {
     // Get the input values
     var name = document.getElementById('nom').value;

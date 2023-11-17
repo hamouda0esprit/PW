@@ -7,24 +7,76 @@ $email = $_POST['email'];
 $password = $_POST['password']; 
 
 try {
-    $query = $pdo->prepare("SELECT * FROM data WHERE email = :email");
-    $query->bindParam(':email', $email);
-    $query->execute();
-    $result = $query->fetchAll();
+    $query = "SELECT * FROM data WHERE email = '$email'";
+    $result = $pdo->query($query);
 
-    if (count($result) > 0) {
-        foreach ($result as $row) {
-            $hashed_password = $row['password'];
-            if (password_verify($password, $hashed_password)) {
-                echo "<script>alert('Valid Email');</script>";
+    if ($result) {
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+        if ($row) {
+            $storedPassword = $row['password'];
+            // Perform your comparison here
+            if ($password === $storedPassword) {
+                header("Location: ../view/Home.php");
+                exit();
             } else {
-                echo "<script>alert('Incorrect password');</script>";
+                echo "Password do not match";
+                ?>
+                <script>
+                window.onload = function() {
+                    var countdown = 3;
+                    var timer = setInterval(function() {
+                        document.getElementById('countdown').innerHTML = 'Returning in ' + countdown + ' seconds...';
+                        countdown--;
+                        if (countdown < 0) {
+                            clearInterval(timer);
+                            document.getElementById('countdown').style.display = 'none';
+                            window.location.href = '../view/index.php'; 
+                        }
+                    }, 1000);
+                }
+                </script>
+                <?php
+            }
+        } else {
+            echo "Email do not match";
+            ?>
+                <script>
+                window.onload = function() {
+                    var countdown = 3;
+                    var timer = setInterval(function() {
+                        document.getElementById('countdown').innerHTML = 'Returning in ' + countdown + ' seconds...';
+                        countdown--;
+                        if (countdown < 0) {
+                            clearInterval(timer);
+                            document.getElementById('countdown').style.display = 'none';
+                            window.location.href = '../view/index.php'; 
+                        }
+                    }, 1000);
+                }
+                </script>
+                <?php
             }
         }
     } else {
-        echo "<script>alert('Email do not exsiste');</script>";
+        echo "Request failed";
+        ?>
+                <script>
+                window.onload = function() {
+                    var countdown = 3;
+                    var timer = setInterval(function() {
+                        document.getElementById('countdown').innerHTML = 'Returning in ' + countdown + ' seconds...';
+                        countdown--;
+                        if (countdown < 0) {
+                            clearInterval(timer);
+                            document.getElementById('countdown').style.display = 'none';
+                            window.location.href = '../view/index.php'; 
+                        }
+                    }, 1000);
+                }
+                </script>
+                <?php
+            }
     }
-    
     exit();
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();

@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <form action="../model/Update password.php" method="POST" onsubmit="return validateemail()">
+    <form action="../model/Update password.php" method="POST" onsubmit="return validatemdp();">
     <section class="Container">
         <div class="Login">
             <div class="Content">
@@ -20,12 +20,7 @@
                         <input id="email" type="text" placeholder="Email" class="input" name="email">
                     </div>
                     <div class="Field">
-                        <input type="password" placeholder="Ancien Password" class="password" name="password">
-                        <i class='bx bx-hide eye-icon'></i>
-                    </div>
-
-                    <div class="Field">
-                        <input type="password" placeholder="New Password" class="password" name="newPassword">
+                        <input type="password" placeholder="New Password" class="password" name="newPassword" id="newPassword"">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
 
