@@ -92,3 +92,21 @@ body{
         display: none;
     }
 }
+
+.formFilter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.formFilter form{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.formFilter form select,input{
+    margin: 0.25vw;
+}
