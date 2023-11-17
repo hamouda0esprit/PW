@@ -1,6 +1,7 @@
 // JavaScript Document
 
  function validateForm() {
+		alert("test");
         var type = document.getElementById("type").value;
         var commande = document.getElementById("Commande").value;
         var description = document.getElementById("description").value;

@@ -28,7 +28,7 @@
 						<div class="content">
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Type</h3>
 							<div class="select-box">
-								<select name="" id="" class="select">
+								<select name="" id="type" class="select">
 									<option value="0" disabled hidden selected>Please choose a type</option>
 									<option value="Technical">Technical</option>
 									<option value="Payement">Payement</option>
@@ -44,7 +44,7 @@
 						<div class="content">
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Commande</h3>
 							<div class="select-box">
-								<select name="" id="" class="select">
+								<select name="" id="commande" class="select">
 									<option value="0" disabled hidden selected>Please choose a delivery</option>
 									
 								</select>
@@ -58,17 +58,15 @@
 				<div class="comment">
 					<div class="box">
 						<h1 class="title">Comment</h1>
-						<textarea class="text"></textarea>
+						<textarea class="text" id="description"></textarea>
 						<input type="submit" Value='Create Ticket' class="button">
 					</div>
 				</div>
 			</div>
 		</div>
+	</form>
 		<!--select commandes
-		<h1>Commande : </h1> <br>
-		<div class="select-box">
-			<select name="Commande" id="Commande">
-				<option value="0" disabled hidden selected>Please choose a delivery</option>
+
 				<?php
 					try{
 						$query = $pdo->prepare('SELECT `idDeliveries` FROM `activedeliveries`');
@@ -82,18 +80,8 @@
 				?>
 					<option value="<?php echo $row["idDeliveries"]?>"><?php echo $row["idDeliveries"]?></option>
 				<?php } ?>
-			</select>
-		</div>
-			
-		<h1>Description : </h1> <br>
-			
-		<textarea name="description" id="description" cols="30" rows="10"></textarea>
-		
-		<br>
-		
-		<div class="submit-container">
-			<input type="submit" class="input-submit" placeholder="Submit">
-		</div>
+
 		-->
-	</form>
+		
+	
 </body>
