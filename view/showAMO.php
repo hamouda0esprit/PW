@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <h2>Manage Orders</h2>
+    <h2>Admin Manage Orders</h2>
 
     <?php  
         require_once("..\controller\AdminManageOrders.php");

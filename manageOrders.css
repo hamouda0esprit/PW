@@ -110,3 +110,9 @@ body{
 .formFilter form select,input{
     margin: 0.25vw;
 }
+
+.tdAction{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

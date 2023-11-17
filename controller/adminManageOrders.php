@@ -48,7 +48,6 @@
             JOIN user ON activedeliveries.ID = user.ID
             JOIN livreur ON bids.idLivreur = livreur.idLivreur
             WHERE user.ID = '.$filterC.' AND livreur.idLivreur = '.$filterL;
-
         }
 ?>
     <div class="formFilter">
@@ -144,8 +143,8 @@
             <td><?php echo "#" . $row["idLivreur"] ?></td>
             <td><?php echo "#" . $row["idDeliveries"] ?></td>
             <td><?php echo " " . $row["montant"] ?></td>
-            <td>
-                <form action="../controller/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
+            <td class="tdAction">
+                <form action="../controller/deleteOrderAdmin.php" method="POST" onsubmit="return confirmdelete()">
                     <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
                     <input type="submit" value="delete" class="btn">
                 </form>
