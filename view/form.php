@@ -74,31 +74,31 @@
   <h2>Order Form</h2>
   <form id="orderForm" action="..\controller\client.php" method="POST" onsubmit="return validateForm()">
 
-    <label for="height">Height:</label>
+    <label >Height:</label>
     <input type="text" id="height" name="height">
     <span id="heightError" class="error-message"></span>
 
-    <label for="width">Width:</label>
+    <label >Width:</label>
     <input type="text" id="width" name="width">
     <span id="widthError" class="error-message"></span>
 
-    <label for="depth">Depth:</label>
+    <label>Depth:</label>
     <input type="text" id="depth" name="depth">
     <span id="depthError" class="error-message"></span>
 
-    <label for="weight">Weight:</label>
+    <label >Weight:</label>
     <input type="text" id="weight" name="poids">
     <span id="weightError" class="error-message"></span>
 
-    <label for="depart">Depart:</label>
+    <label >Depart:</label>
     <input type="text" id="depart" name="depart">
     <span id="departError" class="error-message"></span>
 
-    <label for="arrivee">Arrival:</label>
+    <label>Arrival:</label>
     <input type="text" id="arrivee" name="arrivee">
     <span id="arriveeError" class="error-message"></span>
 
-    <label for="budget">Budget:</label>
+    <label >Budget:</label>
     <input type="text" id="budget" name="budget">
     <span id="budgetError" class="error-message"></span>
 

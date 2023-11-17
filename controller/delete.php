@@ -3,7 +3,7 @@
 require_once("..\Model\config.php");
 
 
-$sql = "DELETE FROM colis WHERE idcolis = 9";
+$sql = "DELETE FROM colis WHERE id_client=1";
         $db = config::getConnexion();
         $req = $db->prepare($sql);
         

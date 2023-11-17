@@ -34,8 +34,8 @@
         <td><?php echo  $row['arrivee']?></td>
         <td><?php echo  $row['budget']?></td>
         <td class="button-container">
-          <button class="modify-button" onclick="modifyDelivery(this)">Modify</button>
-          <button class="suppress-button" onclick="suppressDelivery(this)">Suppress</button>
+          <form><button class="modify-button" onclick="modifyDelivery(this)">Modify</button></form>
+          <form><button class="suppress-button" onclick="suppressDelivery(this)">Suppress</button></form>
         </td>
       </tr>
       <?php 
