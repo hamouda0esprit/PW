@@ -146,16 +146,24 @@
 				flex-direction: column;
 				
 				.name{
-					font-size:.8vw;
+					font-size:.9vw;
 					font-weight: 600;
+					text-align: center;
 				}
 				
 				.PReviews{
+					margin-top: .6vw; 
 					.fa-star{
+						margin-right:.4vw;
 						color:#FFD700;
 					}
+				}
+				
+				.TasksC{
+					margin-top: .4vw;
 					.fa-circle-check{
-						
+						margin-right:.4vw;
+						color:rgb(29, 191, 114);
 					}
 				}
 			}

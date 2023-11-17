@@ -110,10 +110,19 @@
         align-items: center;
         flex-direction: column; }
         .third_container .FDD-box .top .details .name {
-          font-size: .8vw;
-          font-weight: 600; }
-        .third_container .FDD-box .top .details .PReviews .fa-star {
-          color: #FFD700; }
+          font-size: .9vw;
+          font-weight: 600;
+          text-align: center; }
+        .third_container .FDD-box .top .details .PReviews {
+          margin-top: .6vw; }
+          .third_container .FDD-box .top .details .PReviews .fa-star {
+            margin-right: .4vw;
+            color: #FFD700; }
+        .third_container .FDD-box .top .details .TasksC {
+          margin-top: .4vw; }
+          .third_container .FDD-box .top .details .TasksC .fa-circle-check {
+            margin-right: .4vw;
+            color: #1dbf72; }
       .third_container .FDD-box .top .pdp {
         width: 40%;
         height: 100%;
