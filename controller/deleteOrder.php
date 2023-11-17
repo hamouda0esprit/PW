@@ -1,8 +1,6 @@
 <?php
 require_once("..\Model\config.php");
 
-$countbox = 0;
-$countannim = 0.5;
 $bd = new config();
 $pdo = $bd::getConnexion();
 
