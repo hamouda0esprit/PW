@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Ticket Request</title>
-	<link rel="stylesheet" href="../model/Ticket Request.css">
+	<link rel="stylesheet" href="../model/Ticket Request.scss">
 	<script src="../model/Control.js"></script>
 </head>
 
@@ -16,19 +16,36 @@
 	?>
 	<form action="../model/AddRequest.php" method="POST" class="cf" onsubmit="return validateForm()">
 		<!--select type-->
-		<h1>Type : </h1> <br>
-		<div class="select-box">
-			<select name="type" id="type">
-				<option value="0" disabled hidden selected>Please choose a type</option>
-				<option value="Technical">Technical</option>
-				<option value="Payement">Payement</option>
-				<option value="Support">Support</option>
-			</select>
+		<div class="main_container">
+			<div class="Top">
+				<h1 class="title">Create Ticket</h1>
+			</div>
+
+			<div class="Middle">
+				<div class="type">
+					<div class="box">
+						<div class="content">
+						
+						</div>
+					</div>
+				</div>
+
+				<div class="commande">
+					<div class="box">
+						<div class="content">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="Bottom">
+				<div class="comment">
+
+				</div>
+			</div>
 		</div>
-		
-		<br>
-		
-		<!--select commandes-->
+		<!--select commandes
 		<h1>Commande : </h1> <br>
 		<div class="select-box">
 			<select name="Commande" id="Commande">
@@ -58,6 +75,6 @@
 		<div class="submit-container">
 			<input type="submit" class="input-submit" placeholder="Submit">
 		</div>
-		
+		-->
 	</form>
 </body>
