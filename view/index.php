@@ -55,7 +55,25 @@
 		</div>
 		
 		<div class="fifth_container">
-			
+			<form action="">
+				<div class="top">
+					<h1 class="title">Ready to get started?</h1>
+				</div>
+
+				<div class="split">
+					<div class="left">
+						<div class="image"></div>
+						<p class="text">Need an easy way to deliver your packages ? We got you !</p>
+						<input type="submit">
+					</div>
+
+					<div class="right">
+						<div class="image"></div>
+						<p class="text">Get exclusive offers and deliveries on daily bases.</p>
+						<input type="submit">
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </body>
