@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form onsubmit="return validateForm()" action="../model/Send.php" method="POST">
+    <form onsubmit="return validateForm()" action="../model/Send.php" method="POST" enctype="multipart/form-data">
     <section class="Container">
 
         <!-- Nheb norked -->
@@ -38,6 +38,7 @@
                         <input id="confirmPassword" type="password" placeholder="Confirm password" class="password">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
+                    <div class="Field"><input type="file" name="image_url" required></div>
                     <div class="Field">
                         <button type="submit">Sign In</button>
                     </div>
