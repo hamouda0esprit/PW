@@ -53,21 +53,25 @@
 				}
 				foreach($result as $row){ $AvgPositiveReviews = number_format((float)(($row["PositiveReview"] / $row["CompletedTasks"]) * 100), 2, '.', '') . "%";
 			?>
-			<!--<?php echo $AvgPositiveReviews?>-->
+			<!---->
 			
 			<div class="FDD-box">
 				<div class="top">
 					<div class="pdp">
-					
+						<img src="../Assets/index/6.jpg" class="image">
 					</div>
 					
 					<div class="details">
 						<h3 class="name"><?php echo $row["prenom"] . " " . $row["nom"]?> </h3>
+						<p class="PReviews"><i class="fa-solid fa-star"></i><?php echo $AvgPositiveReviews?> positive reviews</p>
+						<p class="TasksC"><i class="fa-solid fa-circle-check"></i><?php echo $row["CompletedTasks"]?> completed tasks</p>
 					</div>
 				</div>
 				
+				<hr>
+				
 				<div class="bottom">
-					
+					<p class="bio"><?php echo $row["Bio"]?></p>
 				</div>
 			</div>
 			

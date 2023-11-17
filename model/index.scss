@@ -120,14 +120,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 	
 	background-color:white;
 	
 	.FDD-box{
-		width: 12vw;
-		height: 14vw;
-		background-color:black;
+		width: 15vw;
+		height: 16vw;
+		margin:2vw;
+		box-shadow: 2px 4px 7px 3px rgba(0,0,0,.1);
 		
 		.top{
 			width:100%;
@@ -136,10 +137,8 @@
 			justify-content: center;
 			flex-direction: row;
 			
-			background-color:green;
-			
 			.details{
-				padding:.5vw;
+				padding:1vw .5vw;
 				width:60%;
 				height:100%;
 				display: flex;
@@ -147,24 +146,52 @@
 				flex-direction: column;
 				
 				.name{
-					font-size:80%;
-					font-weight: 500;
+					font-size:.8vw;
+					font-weight: 600;
+				}
+				
+				.PReviews{
+					.fa-star{
+						color:#FFD700;
+					}
+					.fa-circle-check{
+						
+					}
 				}
 			}
 			
 			.pdp{
 				width:40%;
 				height:100%;
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				
 				
 				background-color:rgba(250,250,250,1.00);
+				
+				.image{
+					width:75%;
+					margin-top:.6vw;
+					
+					border-radius: 50%;
+				}
 			}
 			
 		}
 		.bottom{
 			width:100%;
 			height:30%;
+			display: flex;
+			justify-content: center;
 			
-			background-color:red;
+			.bio{
+				max-width:80%;
+				margin-top:.5vw;
+				font-weight: 500;
+				font-size:.8vw;
+			}
+			background-color:rgba(250,250,250,1.00);
 		} 
 	}
 }
