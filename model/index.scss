@@ -290,7 +290,7 @@
 }
 
 .fifth_container{
-	width:100;
+	width:100%;
 	height:30vw;
 	display: flex;
 	flex-direction: column;
@@ -340,11 +340,11 @@
 				margin: 1vw 0;
 			}
 			.button {
-				width: 130px;
-				height: 40px;
+				width: 7vw;
+				height: 2vw;
 			  	color: #fff;
-			  	border-radius: 5px;
-			  	padding: 10px 25px;
+			  	border-radius: .3vw;
+			  	padding: .1vw;
 			  	font-weight: 500;
 			  	background: rgb(29, 191, 114);
 			  	cursor: pointer;
@@ -386,11 +386,11 @@
 			}
 			
 			.button {
-				width: 130px;
-				height: 40px;
+				width: 7vw;
+				height: 2vw;
 			  	color: #fff;
-			  	border-radius: 5px;
-			  	padding: 10px 25px;
+			  	border-radius: .3vw;
+			  	padding: .1vw;
 			  	font-weight: 500;
 			  	background: rgb(29, 191, 114);
 			  	cursor: pointer;
