@@ -5,6 +5,7 @@
 	<title>Ticket Request</title>
 	<link rel="stylesheet" href="../model/Ticket Request.scss">
 	<script src="../model/Control.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -25,7 +26,10 @@
 				<div class="type">
 					<div class="box">
 						<div class="content">
-						
+							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Type</h3>
+							<select name="" id="" class="select">
+								<option value="0" disabled hidden selected>Please choose a type</option>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -33,7 +37,10 @@
 				<div class="commande">
 					<div class="box">
 						<div class="content">
-						
+							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Commande</h3>
+							<select name="" id="" class="select">
+								<option value="0" disabled hidden selected>Please choose a type</option>
+							</select>
 						</div>
 					</div>
 				</div>
