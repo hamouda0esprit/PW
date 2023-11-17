@@ -57,7 +57,8 @@
       flex-direction: column; }
       .second_container .left .main_text .title {
         font-weight: 600;
-        font-size: 1.4vw; }
+        font-size: 1.4vw;
+        color: #002b54; }
       .second_container .left .main_text .first {
         font-weight: 200;
         margin-top: .8vw; }
@@ -112,7 +113,8 @@
       flex-direction: column; }
       .fourth_container .right .main_text .title {
         font-weight: 600;
-        font-size: 1.4vw; }
+        font-size: 1.4vw;
+        color: #002b54; }
       .fourth_container .right .main_text .first {
         font-weight: 200;
         margin-top: .8vw; }
@@ -131,11 +133,15 @@
   display: flex;
   flex-direction: column; }
   .fifth_container .top {
-    margin: 3vw 0 2vw;
+    margin: 3vw 0 .5vw;
     width: 100%;
     height: 10%;
     display: flex;
     justify-content: center; }
+    .fifth_container .top .title {
+      font-size: 1.5vw;
+      font-weight: 600;
+      color: #002b54; }
   .fifth_container .split {
     width: 100%;
     height: 90%;
@@ -161,6 +167,24 @@
         text-align: center;
         font-weight: 400;
         margin: 1vw 0; }
+      .fifth_container .split .left .button {
+        width: 130px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-weight: 500;
+        background: #1dbf72;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+        outline: none;
+        border: none; }
+        .fifth_container .split .left .button:hover {
+          background: #27c97c;
+          box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 25px 0px rgba(0, 0, 0, 0.1), 4px 4px 6px 0px rgba(0, 0, 0, 0.3); }
     .fifth_container .split .right {
       width: 35%;
       height: 100%;
@@ -180,3 +204,21 @@
         text-align: center;
         font-weight: 400;
         margin: 1vw 0; }
+      .fifth_container .split .right .button {
+        width: 130px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-weight: 500;
+        background: #1dbf72;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+        outline: none;
+        border: none; }
+        .fifth_container .split .right .button:hover {
+          background: #27c97c;
+          box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 25px 0px rgba(0, 0, 0, 0.1), 4px 4px 6px 0px rgba(0, 0, 0, 0.3); }
