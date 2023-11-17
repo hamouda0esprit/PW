@@ -76,3 +76,51 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
+
+.third_container {
+  width: 100%;
+  height: 30vw;
+  background-color: white; }
+
+.fourth_container {
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fafafa; }
+  .fourth_container .left {
+    width: 40%;
+    height: 100%;
+    background-image: url("../Assets/index/3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .fourth_container .right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .fourth_container .right .main_text {
+      height: 100%;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column; }
+      .fourth_container .right .main_text .title {
+        font-weight: 600;
+        font-size: 1.4vw; }
+      .fourth_container .right .main_text .first {
+        font-weight: 200;
+        margin-top: .8vw; }
+      .fourth_container .right .main_text .second {
+        font-weight: 600;
+        font-size: .8vw;
+        margin-top: 1vw; }
+      .fourth_container .right .main_text .fa-check {
+        color: #1dbf72;
+        font-size: 1vw;
+        margin-right: .6vw; }
