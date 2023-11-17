@@ -5,14 +5,11 @@ require("Connection.php");
     function generateRandomString($length) {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         $randomString = '';
-
         for ($i = 0; $i < $length; $i++) {
             $randomString .= $characters[rand(0, strlen($characters) - 1)];
         }
-
         return 'C' . $randomString;
     }
-        
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $numero = $_POST['numero'];
@@ -31,7 +28,6 @@ require("Connection.php");
         // Insert data into the database
         $sql = "INSERT INTO data (nom, prenom, numero, email, password, image_url,ID) VALUES (:nom, :prenom, :numero, :email, :password, :image_url,:ID)";
         $stmt = $pdo->prepare($sql);
-
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':prenom', $prenom);
         $stmt->bindParam(':numero', $numero);
