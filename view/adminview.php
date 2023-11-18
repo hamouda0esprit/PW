@@ -68,8 +68,13 @@
     </thead>
     <tbody>
    <?php 
+<<<<<<< HEAD
    require("..\controller\admin.php");
    admin();?>
+=======
+   require("..\controller\select.php");
+   select();?>
+>>>>>>> d2abfdf95b21a350f9023592cd099f4151421383
     </tbody>
   </table>
 
