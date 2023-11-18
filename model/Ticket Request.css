@@ -126,6 +126,8 @@
                 transition: all 0.3s ease; }
               .main_container .Middle .commande .box .content .select-box .select option:enabled {
                 background-color: red; }
+    .main_container .Middle .hidden {
+      display: none; }
   .main_container .Bottom {
     width: 70%;
     height: 55%;
@@ -168,10 +170,9 @@
           text-align: center; }
         .main_container .Bottom .comment .box .button {
           width: 80%;
-          height: 25%;
           color: #fff;
-          border-radius: 5px;
-          padding: 10px 25px;
+          border-radius: .3vw;
+          padding: .2vw 0;
           font-weight: 500;
           background: gold;
           cursor: pointer;
