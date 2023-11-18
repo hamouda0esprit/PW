@@ -6,8 +6,8 @@ $countannim = 0.5;
 $bd = new config();
 $pdo = $bd::getConnexion();
 
-$sql = "INSERT INTO `bids`(`idBid`, `idLivreur`, `idDeliveries`, `montant`, `dateDepart`, `dateArrive`, `comment`)
-        VALUES ('', :idLivreur, :idDeliveries, :montant, :dateDepart, :dateArrive, :comment)";
+$sql = "INSERT INTO `colis_a_encherer`(`idBid`, `idLivreur`, `idcolis`, `montant`, `dateDepart`, `dateArrive`, `comment`,`status`)
+        VALUES ('', :idLivreur, :idDeliveries, :montant, :dateDepart, :dateArrive, :comment,0)";
 $db = config::getConnexion();
 try {
     $query = $db->prepare($sql);

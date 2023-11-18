@@ -17,7 +17,7 @@
         $pdo = $bd::getConnexion();
         try{
             $query = $pdo->prepare(
-                'SELECT u.nom, u.prenom, a.depart, a.arrive, a.idDeliveries, a.size, a.poid, MIN(b.montant) AS montant_minimum FROM user u JOIN activedeliveries a ON u.ID = a.ID LEFT JOIN bids b ON a.idDeliveries = b.idDeliveries GROUP BY u.nom, u.prenom, a.depart, a.arrive, a.size, a.poid;'
+                'SELECT u.nom, u.prenom, a.depart, a.arrivee, a.idcolis, a.size, a.poids,a.budget, MIN(b.montant) AS montant_minimum FROM user u JOIN colis a ON u.ID = a.id_client LEFT JOIN colis_a_encherer b ON a.idcolis = b.idcolis GROUP BY u.nom, u.prenom, a.depart, a.arrivee, a.size, a.poids,a.budget;'
             );
 
             $query->execute();
@@ -41,9 +41,9 @@
             </div>
             <div class="delInfo">
                 <p>Delivery Info</p>
-                <b><p><?php echo $row["depart"]  ?> -> <?php echo $row["arrive"]  ?></p></b>
+                <b><p><?php echo $row["depart"]  ?> -> <?php echo $row["arrivee"]  ?></p></b>
                 <b><p><?php echo $row["size"]  ?></p></b>
-                <b><p><?php echo $row["poid"]  ." kg"?></p></b>
+                <b><p><?php echo $row["poids"]  ." kg"?></p></b>
             </div>
             <div class="bidInfo">
                 <p>BID</p>
@@ -68,7 +68,7 @@
         <div class="bidForm hide">
             <h3 class="bidTitle">bid form</h3>
                 <form action="..\controller\addBid.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
-                    <input type="number" class="normal" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idDeliveries"]?>">
+                    <input type="number" class="normal" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idcolis"]?>">
                     <input type="text" class="normal" name="montant" id="bid" placeholder="bid">
                     <div id="dateHolder">
                         <input type="date" class="normal" name="dateDepart" id="dateDepart" placeholder="Date Depart">

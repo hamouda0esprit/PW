@@ -4,7 +4,7 @@ require_once("..\Model\config.php");
 $bd = new config();
 $pdo = $bd::getConnexion();
 
-$sql = "DELETE FROM `bids` WHERE idBid = :idBid;";
+$sql = "DELETE FROM `colis_a_encherer` WHERE idBid = :idBid;";
 
 $db = config::getConnexion();
 try {

@@ -29,24 +29,24 @@
         
         // changing sql line for filter
         if($filterC == "-1" && $filterL == "-1"){
-            $sqlSelectLine = 'SELECT * FROM `bids`;';
+            $sqlSelectLine = 'SELECT * FROM `colis_a_encherer`;';
         }else if($filterL == "-1"){
-            $sqlSelectLine = 'SELECT bids.*
-            FROM bids
-            JOIN activedeliveries ON bids.idDeliveries = activedeliveries.idDeliveries
-            JOIN user ON activedeliveries.ID = user.ID
+            $sqlSelectLine = 'SELECT colis_a_encherer.*
+            FROM colis_a_encherer
+            JOIN colis ON colis_a_encherer.idcolis = colis.idcolis
+            JOIN user ON colis.id_client = user.ID
             WHERE user.ID ='.$filterC;
         }else if($filterC == "-1"){
-            $sqlSelectLine = 'SELECT bids.*
-            FROM bids
-            JOIN livreur ON bids.idLivreur = livreur.idLivreur
+            $sqlSelectLine = 'SELECT colis_a_encherer.*
+            FROM colis_a_encherer
+            JOIN livreur ON colis_a_encherer.idLivreur = livreur.idLivreur
             WHERE livreur.idLivreur ='.$filterL;
         }else{
-            $sqlSelectLine = 'SELECT bids.*
-            FROM bids
-            JOIN activedeliveries ON bids.idDeliveries = activedeliveries.idDeliveries
-            JOIN user ON activedeliveries.ID = user.ID
-            JOIN livreur ON bids.idLivreur = livreur.idLivreur
+            $sqlSelectLine = 'SELECT colis_a_encherer.*
+            FROM colis_a_encherer
+            JOIN colis ON colis_a_encherer.idcolis = colis.idcolis
+            JOIN user ON colis.id_client = user.ID
+            JOIN livreur ON colis_a_encherer.idLivreur = livreur.idLivreur
             WHERE user.ID = '.$filterC.' AND livreur.idLivreur = '.$filterL;
         }
 ?>
@@ -102,7 +102,7 @@
                     }
                 ?>
             </select>
-            <input type="submit" value="CLEAR">
+            <input type="reset" value="CLEAR">
             <input type="submit" value="SORT">
         </form>
     </div>
@@ -141,7 +141,7 @@
         ?>">
             <td><?php echo "#" . $row["idBid"] ?></td>
             <td><?php echo "#" . $row["idLivreur"] ?></td>
-            <td><?php echo "#" . $row["idDeliveries"] ?></td>
+            <td><?php echo "#" . $row["idcolis"] ?></td>
             <td><?php echo " " . $row["montant"] ?></td>
             <td class="tdAction">
                 <form action="../controller/deleteOrderAdmin.php" method="POST" onsubmit="return confirmdelete()">
@@ -160,8 +160,4 @@
     </center>
         <?php
     }
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 431a57e37d96d28fad6a2c0f5555d5daf9f498fe

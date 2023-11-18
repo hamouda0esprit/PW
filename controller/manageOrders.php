@@ -28,7 +28,7 @@
         $pdo = $bd::getConnexion();
         try{
             $query = $pdo->prepare(
-                'SELECT * FROM `bids` WHERE idLivreur = 1;'
+                'SELECT * FROM `colis_a_encherer` WHERE idLivreur = 1;'
             );
 
             $query->execute();
@@ -51,7 +51,7 @@
             <td><?php echo "#" . $row["idBid"] ?></td>
             <td><?php echo $row["dateDepart"] . " -> " . $row["dateArrive"] ?></td>
             <td>
-                not assigned yet
+            <?php echo "status : " . $row["status"] ?>
             </td>
             <td>
                 <form action="../controller/updateOrder.php" method="POST">

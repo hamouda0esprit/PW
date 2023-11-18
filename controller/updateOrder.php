@@ -4,7 +4,7 @@ require_once("..\Model\config.php");
 $bd = new config();
 $pdo = $bd::getConnexion();
 
-$sql = "UPDATE bids SET montant = :montant WHERE idBid = :idBid;";
+$sql = "UPDATE colis_a_encherer SET montant = :montant WHERE idBid = :idBid;";
 
 $db = config::getConnexion();
 try {
