@@ -20,19 +20,6 @@
             <th>Bid</th>
             <th>Delete</th>
         </tr>
-        <!-- <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>
-                <select name="starus" id="starus">
-                    <option value="-1">not taken</option>
-                    <option value="0">on the way</option>
-                    <option value="1">delivered</option>
-                </select>
-            </td>
-            <td>test</td>
-            <td>test</td>
-        </tr> -->
         <?php
         require_once("..\model\config.php"); 
         $countbox = 0;
@@ -85,10 +72,59 @@
     ?>
     </table>
     </center>
-
+    <center>
+        <div class="smallScreenManageOrders">
+            <?php 
+                $bd = new config();
+                $pdo = $bd::getConnexion();
+                try{
+                    $query = $pdo->prepare(
+                        'SELECT * FROM `bids` WHERE idLivreur = 1;'
+                    );
+        
+                    $query->execute();
+                    $result = $query->fetchAll();
+        
+                }catch(PDOExcepion $e){
+                    echo "connection failed :". $e->getMessage();
+                }
+                foreach($result as $row){
+            ?>
+            <div class="content <?php
+         if($index%2 == 0){
+            echo "bwhite";
+         }else{
+            echo "bgrey";
+         }
+         $index++;
+        ?>">
+                <div><h3>Task : </h3><p>&nbsp; <?php echo $row["idBid"] ?> </p></div>
+                <div><h3>Delivery Date : </h3><p>&nbsp;<?php echo $row["dateDepart"] . " -> " . $row["dateArrive"] ?> </p></div>
+                <div><h3>Status : </h3><p>&nbsp;not assigned yet</p></div>
+                <div>
+                    <h3>Bid : </h3>
+                    <form action="../controller/updateOrder.php" method="POST">
+                        <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
+                        <input type="text" name="currentBid" id="currentBid" value="<?php echo $row["montant"]?>" class="inpt">
+                        <input type="submit" value="update" class="btn">
+                    </form>
+                </div>
+                <div>
+                    <h3>Delete :</h3> 
+                    <form action="../controller/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
+                        <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
+                        <input type="submit" value="delete" class="btn">
+                    </form>
+                </div>
+            </div>
+            <?php 
+                }
+            ?>
+        </div>
     <?php
     }   
     ?>
+    </center>
     <script>
         function confirmdelete() {
             x = confirm("are you sure ?");
