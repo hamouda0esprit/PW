@@ -56,3 +56,63 @@ body{
     padding: 0 5px;
     margin: 0 10px;
 }
+
+.smallScreenManageOrders{
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.smallScreenManageOrders .content{
+    border: 1.5px solid black;
+    border-radius: 15px;
+    width: 80%;
+    padding: 2vh 2vw;
+    margin: 2vh 2vw;
+}
+
+.content div{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .smallScreenManageOrders{
+        display: flex;
+    }
+
+    #tableOrders{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .smallScreenManageOrders{
+        display: none;
+    }
+}
+
+.formFilter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.formFilter form{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.formFilter form select,input{
+    margin: 0.25vw;
+}
+
+.tdAction{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
