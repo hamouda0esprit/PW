@@ -15,7 +15,7 @@
 		$bd = new config();
         $pdo = $bd::getConnexion();
 	?>
-	<form action="../model/AddRequest.php" method="POST" class="cf" onsubmit="return validateForm()">
+	<form action="../model/AddRequest.php" method="POST" class="cf" onsubmit="return validateForm();">
 		<!--select type-->
 		<div class="main_container">
 			<div class="Top">

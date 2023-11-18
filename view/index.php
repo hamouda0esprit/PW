@@ -10,7 +10,7 @@
 <body>
 	<?php
         require_once("..\model\config.php");
-	
+	 
 		$bd = new config();
         $pdo = $bd::getConnexion();
 	?>
