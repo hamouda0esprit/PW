@@ -17,7 +17,7 @@ require("Connection.php");
     $password = $_POST['password'];
     $ID = generateRandomString(8);
     // Handle image upload
-    $targetDirectory = "uploads/"; // Directory where images will be stored
+    $targetDirectory = "../view/uploads/"; // Directory where images will be stored
     $imageFileName = basename($_FILES["image_url"]["name"]); // Get the name of the image file
     $targetFilePath = $targetDirectory . $imageFileName; // Path to store the uploaded image
 
@@ -39,6 +39,22 @@ require("Connection.php");
         // Execute the query
         if ($stmt->execute()) {
             echo "Image upload successfully!";
+            echo "<p id='countdown'>Returning in 5 seconds...</p>";
+            ?>
+            <script>
+            window.onload = function() {
+                var countdown = 3;
+                var timer = setInterval(function() {
+                    document.getElementById('countdown').innerHTML = 'Returning in ' + countdown + ' seconds...';
+                    countdown--;
+                    if (countdown < 0) {
+                        clearInterval(timer);
+                        document.getElementById('countdown').style.display = 'none'; // Hide the countdown
+                        window.location.href = '../view/index.php'; 
+                    }
+                }, 1000); // Update every 1 second (1000 milliseconds)
+            }
+            </script>
         } else {
             echo "Error inserting data.";
         }
