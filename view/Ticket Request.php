@@ -93,7 +93,7 @@
 				catch(PDOExcepion $e){
 					echo "connection failed :". $e->getMessage();
 				}
-				foreach($result as $row){}
+				foreach($result as $row){
 			?>
 			<div class="ticket">
 				<div class="left">
@@ -105,16 +105,34 @@
 				<div class="middle">
 					<div class="top">
 						<div class="left">
-							
+							<div class="title">
+								<h3 class="text">Type : </h2>
+							</div>
+
+							<div class="box">
+								<p class="type"><?php echo $row["type"]?></p>
+							</div>
 						</div>
 						
 						<div class="right">
-							
+							<div class="title">
+								<h3 class="text">Delivery Id : </h2>
+							</div>
+
+							<div class="box">
+								<p class="idcommande"><?php echo $row["idCommande"]?></p>
+							</div>
 						</div>
 					</div>
 					
 					<div class="bottom">
+						<div class="title">
+							<h3 class="text">Description : </h2>
+						</div>
 						
+						<div class="box">
+							<p class="description"><?php echo $row["description"]?></p>
+						</div>
 					</div>
 				</div>
 				
@@ -124,7 +142,7 @@
 					</div>
 				</div>
 			</div>
-			<?php  ?>
+			<?php } ?>
 		</div>
 	</form>
 	

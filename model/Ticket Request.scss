@@ -292,6 +292,7 @@
 		display:flex;
 		flex-direction: row;
 		padding:1vw;
+		margin-top:5vw;
 		
 		border-radius: 2vw;
 		box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
@@ -314,10 +315,10 @@
 				align-items: center;
 				border-radius: 2vw;
 				
-				background-color:rgb(250,250,250);
+				background-color:rgb(240,240,240);
 				
 				.id{
-					font-size:6vw;
+					font-size:5vw;
 				}
 			}
 		}
@@ -336,19 +337,87 @@
 				
 				.left{
 					width:50%;
-					background-color:black;
+					height:100%;
+					display:flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					.title{
+						width:calc(100% - 1vw);
+						height:40%;
+						display:flex;
+						justify-content: flex-start;
+						align-items: center;
+					}
+
+					.box{
+						width:calc(100% - 1vw);
+						height:60%;
+						display:flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 2vw;
+
+						background-color:rgb(240,240,240);
+					}
 				}
 				
 				.right{
 					width:50%;
-					background-color:pink;
+					height:100%;
+					display:flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					.title{
+						width:calc(100% - 1vw);
+						height:40%;
+						display:flex;
+						justify-content: flex-start;
+						align-items: center;
+					}
+
+					.box{
+						width:calc(100% - 1vw);
+						height:60%;
+						display:flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 2vw;
+
+						background-color:rgb(240,240,240);
+					}
 				}
 			}
 			
 			.bottom{
 				width:100%;
 				height:50%;
-				background-color:green;	
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+
+				.title{
+					width:calc(100% - 1vw);
+					height:40%;
+					display:flex;
+					justify-content: flex-start;
+					align-items: center;
+				}
+				
+				.box{
+					width:calc(100% - 1vw);
+					height:60%;
+					display:flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 2vw;
+
+					background-color:rgb(240,240,240);
+				}
 			}
 		}
 		
@@ -367,7 +436,7 @@
 				align-items: center;
 				border-radius: 2vw;
 				
-				background-color:rgb(250,250,250);
+				background-color:rgb(240,240,240);
 			}
 		}
 	}

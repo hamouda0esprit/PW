@@ -213,6 +213,7 @@
     display: flex;
     flex-direction: row;
     padding: 1vw;
+    margin-top: 5vw;
     border-radius: 2vw;
     box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.1);
     background-color: white; }
@@ -229,9 +230,9 @@
         justify-content: center;
         align-items: center;
         border-radius: 2vw;
-        background-color: #fafafa; }
+        background-color: #f0f0f0; }
         .secondary_container .ticket .left .box .id {
-          font-size: 6vw; }
+          font-size: 5vw; }
     .secondary_container .ticket .middle {
       width: 60%;
       height: 100%;
@@ -244,14 +245,67 @@
         flex-direction: row; }
         .secondary_container .ticket .middle .top .left {
           width: 50%;
-          background-color: black; }
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .secondary_container .ticket .middle .top .left .title {
+            width: calc(100% - 1vw);
+            height: 40%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; }
+          .secondary_container .ticket .middle .top .left .box {
+            width: calc(100% - 1vw);
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2vw;
+            background-color: #f0f0f0; }
         .secondary_container .ticket .middle .top .right {
           width: 50%;
-          background-color: pink; }
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .secondary_container .ticket .middle .top .right .title {
+            width: calc(100% - 1vw);
+            height: 40%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; }
+          .secondary_container .ticket .middle .top .right .box {
+            width: calc(100% - 1vw);
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2vw;
+            background-color: #f0f0f0; }
       .secondary_container .ticket .middle .bottom {
         width: 100%;
         height: 50%;
-        background-color: green; }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        .secondary_container .ticket .middle .bottom .title {
+          width: calc(100% - 1vw);
+          height: 40%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center; }
+        .secondary_container .ticket .middle .bottom .box {
+          width: calc(100% - 1vw);
+          height: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 2vw;
+          background-color: #f0f0f0; }
     .secondary_container .ticket .right {
       width: 20%;
       height: 100%;
@@ -265,4 +319,4 @@
         justify-content: center;
         align-items: center;
         border-radius: 2vw;
-        background-color: #fafafa; }
+        background-color: #f0f0f0; }
