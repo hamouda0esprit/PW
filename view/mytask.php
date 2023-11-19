@@ -28,7 +28,7 @@
     }
 
     th {
-      background-color: #4caf50;
+      background-color: rgb(255, 215, 0);
       color: white;
     }
 
@@ -44,12 +44,22 @@
 
     .modify-button {
       background-color: #4285f4; /* Modify button color */
+      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1);
+      transition: all 0.3s ease;
       color: white;
+    }
+    .modify-button:hover{
+      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
     }
 
     .suppress-button {
       background-color: #dc3545; /* Suppress button color */
+      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1);
+      transition: all 0.3s ease;
       color: white;
+    }
+    .suppress-button:hover {
+      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
     }
   </style>
 </head>

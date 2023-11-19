@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
     <center>
@@ -75,7 +76,7 @@
         <td><?php echo  $row['arrivee']?></td>
         <td><?php echo  $row['budget']?></td>
         <td class="button-container">
-          <form action="..\controller\deleteAdmin.php" method="POST"><input type="text" id="delete" name="delete_id" value="<?php echo $row['idcolis']?>"/><button class="suppress-button" onclick="suppressDelivery(this)">Suppress</button></form>
+          <form action="..\controller\deleteAdmin.php" method="POST"><input type="text" id="delete" name="delete_id" class="hidden" value="<?php echo $row['idcolis']?>"/><button class="suppress-button" onclick="suppressDelivery(this)">Suppress</button></form>
         </td>
       </tr>
       <?php 

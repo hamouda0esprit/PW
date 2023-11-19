@@ -19,7 +19,7 @@ try {
         ':idcolis' => $_POST['idcolis'],
         ':depart' => $_POST['depart'],
         ':arrivee' => $_POST['arrivee'],
-        ':size' => $_POST['size'],
+        ':size' => $_POST['height']."*".$_POST['width']."*".$_POST['depth'],
         ':poids' => $_POST['poids'],
         ':budget' => $_POST['budget'],
     ]);
