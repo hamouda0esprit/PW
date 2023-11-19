@@ -28,7 +28,7 @@
 						<div class="content">
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Type</h3>
 							<div class="select-box">
-								<select name="type" id="type" class="select">
+								<select name="type" id="type" class="select" onchange="HideClass()">
 									<option value="0" disabled hidden selected>Please choose a type</option>
 									<option value="Technical">Technical</option>
 									<option value="Payement">Payement</option>
@@ -45,9 +45,20 @@
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Commande</h3>
 							<div class="select-box">
 								<select name="Commande" id="commande" class="select">
-									<option value="0" disabled hidden selected>Please choose a delivery</option>
-									<option value="1">wiw</option>
-									
+									<option value="0" disabled hidden selected>Please choose a delivery</option> 
+									<?php
+										try{
+											$query = $pdo->prepare('SELECT `idDeliveries` FROM `activedeliveries`');
+											$query->execute();
+											$result = $query->fetchAll();
+										}
+										catch(PDOExcepion $e){
+											echo "connection failed :". $e->getMessage();
+										}
+										foreach($result as $row){
+									?>
+										<option value="<?php echo $row["idDeliveries"]?>"><?php echo $row["idDeliveries"]?></option>
+									<?php } ?>
 								</select>
 							</div>
 						</div>
@@ -66,23 +77,55 @@
 			</div>
 		</div>
 	</form>
-		<!--select commandes
-
-				<?php
-					try{
-						$query = $pdo->prepare('SELECT `idDeliveries` FROM `activedeliveries`');
-						$query->execute();
-						$result = $query->fetchAll();
-					}
-					catch(PDOExcepion $e){
-						echo "connection failed :". $e->getMessage();
-					}
-					foreach($result as $row){
-				?>
-					<option value="<?php echo $row["idDeliveries"]?>"><?php echo $row["idDeliveries"]?></option>
-				<?php } ?>
-
-		-->
-		
+	
+	<div class="splitter_line">
+		<div class="line"></div>
+	</div>
+	
+	<form action="../model/PullRequest.php" method="POST">
+		<div class="secondary_container">
+			<?php
+				try{
+					$query = $pdo->prepare('SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc`');
+					$query->execute();
+					$result = $query->fetchAll();
+				}
+				catch(PDOExcepion $e){
+					echo "connection failed :". $e->getMessage();
+				}
+				foreach($result as $row){}
+			?>
+			<div class="ticket">
+				<div class="left">
+					<div class="box">
+						<h1 class="id">#<?php echo $row["idReclamationC"]?></h1>
+					</div>
+				</div>
+				
+				<div class="middle">
+					<div class="top">
+						<div class="left">
+							
+						</div>
+						
+						<div class="right">
+							
+						</div>
+					</div>
+					
+					<div class="bottom">
+						
+					</div>
+				</div>
+				
+				<div class="right">
+					<div class="box">
+						
+					</div>
+				</div>
+			</div>
+			<?php  ?>
+		</div>
+	</form>
 	
 </body>

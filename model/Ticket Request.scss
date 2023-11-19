@@ -7,8 +7,6 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-
-
 .main_container{
 	width:100%;
 	height:28vw;
@@ -114,7 +112,7 @@
 			justify-content: center;
 			flex-direction: column;
 			margin:1vw;
-			border-radius:.5vw;;
+			border-radius:.5vw;
 			
 			box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
 			
@@ -259,6 +257,117 @@
 						box-shadow:7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
 					}
 				}
+			}
+		}
+	}
+}
+
+.splitter_line{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	
+	margin:4vw 0vw;
+	box-shadow: 1px 2px 2px 1px rgba(0,0,0,.2);
+	
+	.line{
+		width:90%;
+		height:.1vw;
+		background-color: white;
+		border-radius: 1vw;
+	}
+}
+
+.secondary_container{
+	width:100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+	.ticket{
+		width:80%;
+		height:18vw;
+		display:flex;
+		flex-direction: row;
+		padding:1vw;
+		
+		border-radius: 2vw;
+		box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
+		
+		background-color:white;
+		
+		
+		.left{
+			width:20%;
+			height:100%;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			
+			.box{
+				width:calc(100% - 1vw);
+				height:calc(100% - 1vw);
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 2vw;
+				
+				background-color:rgb(250,250,250);
+				
+				.id{
+					font-size:6vw;
+				}
+			}
+		}
+		
+		.middle{
+			width:60%;
+			height:100%;
+			display:flex;
+			flex-direction: column;
+			
+			.top{
+				width:100%;
+				height:50%;
+				display:flex;
+				flex-direction: row;
+				
+				.left{
+					width:50%;
+					background-color:black;
+				}
+				
+				.right{
+					width:50%;
+					background-color:pink;
+				}
+			}
+			
+			.bottom{
+				width:100%;
+				height:50%;
+				background-color:green;	
+			}
+		}
+		
+		.right{
+			width:20%;
+			height:100%;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			
+			.box{
+				width:calc(100% - 1vw);
+				height:calc(100% - 1vw);
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 2vw;
+				
+				background-color:rgb(250,250,250);
 			}
 		}
 	}
