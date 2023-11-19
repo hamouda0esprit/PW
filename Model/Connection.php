@@ -2,7 +2,7 @@
     $servername = 'localhost';
     $username = 'root';
     $password = '';
-    $dbname = 'web';
+    $dbname = 'pw';
     try{
         $pdo = new PDO(
             "mysql:host=$servername;dbname=$dbname",
@@ -13,14 +13,12 @@
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
             ]
             );
-
-            echo"Connected successfully";
     }
     catch(PDOException $e){
         echo"Connection failed. ". $e->getMessge();
     }
 ?>
-<?php
+<?php 
 class Connection
 {
     public static function getConnexion()
@@ -28,7 +26,7 @@ class Connection
         $servername = 'localhost';
         $username = 'root';
         $password = '';
-        $dbname = 'web';
+        $dbname = 'pw';
 
         try {
             $pdo = new PDO(
