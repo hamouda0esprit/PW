@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    transition: all 0.3s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    ;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 400px;
+    
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+hr{
+    width: 25%;
+    height: 25%;
+    border: 2px ridge #000000;
+    margin-top: 4vw;
+}
+
+/* For table*/
+
+.historique table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.historique th,
+.historique td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    width: 20%;
+}
+.firstligne{
+    background-color: #FFD700;
+    border: 2px ridge #000000;
+}
+.montant{
+    border-left: 2px ridge #000000;
+    border-right: 2px ridge #000000;
+}
+
+/* For table*/
+
+/* For Buttons*/
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.buttonp{
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    margin-top: 1vw;
+    cursor: pointer;
+    border-radius: 1vw;
+}
+/* For Buttons*/
+
+
+/* For progressing*/
+.loading{
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.percent{
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+}
+.progress_bar{
+    
+    width: 50vw;
+    height: 2vw;
+    background: #111;
+    border-radius: 35px;
+}
+.progress{
+    
+    width: 0vw;
+    height: 2vw;
+    background: #FFD700;
+    border-radius: 35px;
+}
+.pp{
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%);
+    font-size: 1.5vw;
+}

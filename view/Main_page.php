@@ -1,116 +1,175 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Deliverable Points Calculator</title>
-    <style>
-        .button{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        .container {
-            margin: 0 auto;
-            max-width: 400px;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-
-        button {
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            padding: 20px 20px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Delivelink Points</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+       
 </head>
 <body>
     <?php
         require_once("..\model\config.php");
-	
 		$bd = new config();
         $pdo = $bd::getConnexion();
+        
 	?>
-    <div class="container">
-        <h1>Deliverable Points Calculator</h1>
-        <form id="calculator-form" action="../controller/controller.php" method = "POST" onsubmit = "return validateForm()">
-            <label for="clientId">Select Client:</label>
-            <select id="clientId" name="clientId" onchange="updateSelectedValue()">
-                <?php
-                    $iduser;
-					try{
-						$query = $pdo->prepare('SELECT `id_client` FROM `delivery_point`');
-						$query->execute();
-						$result = $query->fetchAll();
-					}
-					catch(PDOExcepion $e){
-						echo "connection failed :". $e->getMessage();
-					}
-					foreach($result as $row){
-				?>
-                <option value="<?php echo $row["id_client"]?>">Client <?php echo $row["id_client"]?></option>
-                <?php } ?>
-            </select>
-            <p id="selectedValueParagraph">Selected Value: </p>
-            <script>
-        function updateSelectedValue() {
-            // Get the select element
-            var select = document.getElementById('clientId');
+    <h1>Your DeliverLink Points</h1>
+    <div class ="historique">
+    <table border = 1>
+        <tr class = "firstligne">
+            <td>
+               Id - Livraison
+            </td>
+            <td class="montant">
+               Montant
+            </td>
+            <td>
+               Points(10% Du montant)
+            </td>
+            <td>
+               Date d'arrivee
+            </td>
+            <td>
+               Date d'envoie
+            </td>
+        </tr>
+        <?php 
+        $id_client = $_POST["clientId"];
+        $query = $pdo->prepare("SELECT * FROM `bids` WHERE idLivreur = :id_client");
+        $query->bindParam(':id_client', $id_client);
+        $query->execute();
+        $result = $query->fetchAll();
+        $somme=0;
+        if (count($result) > 0){
+        foreach ($result as $row){ 
+        ?>
+        <tr>
+            <td><?php 
+            echo $row["idDeliveries"];
+            ?></td>
+            <td>
+            <?php 
+            echo $row["montant"];
+            ?>
+            </td>
+            <td>
+            <?php 
+            $prix= $row["montant"];
+            $somme = $somme + (int)($prix/10);
+            echo (int)($prix/10) ;
+            ?>
+            </td>
+            <td>
+            <?php 
+            echo $row["dateDepart"];
+            ?>
+            </td>
+            <td>
+            <?php 
+            echo $row["dateArrive"];
+            ?>
+            </td>
+        </tr>
+    
+    <?php 
+    }}
+    else{
+        echo "noooooooooo";
+    }
+    $query = $pdo->prepare("UPDATE delivery_point SET Points = :Points WHERE id_client = :id_client");
+    $query->bindParam(':Points', $somme);
+    $query->bindParam(':id_client', $id_client);
+    try {
+        $query->execute();
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
-            // Get the selected value
-            var selectedValue = select.value;
-
-            // Update the paragraph with the selected value
-            var selectedValueParagraph = document.getElementById('selectedValueParagraph');
-            selectedValueParagraph.textContent = 'Selected Client ID: ' + selectedValue;
-
-            // You can now use the variable 'selectedValue' for further processing
-            console.log('Selected Client ID:', selectedValue);
-        }
-        </script>
-            
-            <br>
-            <p id="selectedUserName"></p>
-            <br>
-            <label for="pointsPerTask">Points per Task:</label>
-            <input type="text" id="point" name="point" min="0" value="1" required>
-            <br>
-            <div class="button">
-            <button type="submit" id="calculateButton">Submit</button>
-            </div>
-        </form>
-        <div id="result"></div>
+    ?>
+    </table>
+    <hr class = "hr">
     </div>
+    <div class = "loading">
+        <div class = "percent">0</div>
+        <div class="pp"></div>
+        <div class = "progress_bar"> 
+            
+            <div class = "progress">
+              
+                <?php
+                $id_client = $_POST["clientId"];
+                $query = $pdo->prepare("SELECT * FROM `delivery_point` WHERE id_client = :id_client");
+                $query->bindParam(':id_client', $id_client);
+                $query->execute();
+                $result = $query->fetchAll();
+                $Data = $result[0];
+                $Points = $Data['Points'];
+                if($Points > 0){
+                echo'
+                <script>
+                    var percent = document.querySelector(".percent");
+                    var progress = document.querySelector(".progress");
+                    var pp = document.querySelector(".pp");
+                    var count = 0 ;
+                    var per = 0;
+                    var goal =230;
+                    var loading = setInterval(Calcul,50);
+                    function Calcul(){
+                    if(count == '. $Points .' && per == '. $Points .' ){
+                    clearInterval(loading);}
+                    
+                    else{
+                        per = per + 1;
+                        count = count + 1;
+                        progress.style.width = (count*100)/goal + "%";
+                        percent.textContent = count + "/" + goal ;
+                        pp.textContent = ((count*100)/goal).toFixed(1) + "%"; ;
+                    } 
+                    }
+                </script>';}
+                else{ echo '
+                    <script>
+                    var goal =230;
+                    var percent = document.querySelector(".percent");
+                    var progress = document.querySelector(".progress");
+                    var pp = document.querySelector(".pp");
+                    progress.style.width = 0 + "%";
+                    percent.textContent = "0/" + goal ;
+                    pp.textContent = "Pas de credits";
+                    </script>
+                    ';
+                }
+            ?>
+            </div>
+       
+                
+            </div>
+            <div class="button">
+            <?php 
+            
+            
+            
+            ?>
+           
+            <script>
+        // Function to check the condition
+        function checkCondition() {
+            // Replace this with your actual condition
 
+            return false; // Enable the button if the condition is true
+        }
+
+        // Function to handle button click
+        function myFunction() {
+            alert("Button clicked!");
+        }
+
+        // Disable the button initially if the condition is not met
+        document.getElementById("buttonp").disabled = !checkCondition();
+    </script>
+     <button type="submit" class = "buttonp" onclick="myFunction()">Your Button</button>
+            </div>
+
+    </div>
     <script src ="verification.js">
     </script>
 </body>
