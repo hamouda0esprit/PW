@@ -110,39 +110,51 @@
                 if($Points > 0){
                 echo'
                 <script>
-                    var button =document.querySelector(".buttona");
-                    button.disabled = 1;
-                    var percent = document.querySelector(".percent");
-                    var progress = document.querySelector(".progress");
-                    var pp = document.querySelector(".pp");
-                    var count = 0 ;
-                    var per = 0;
-                    var goal =230;
-                    var loading = setInterval(Calcul,10);
-                    function Calcul(){
-                    if(count == '. $Points .' && per == '. $Points .' ){
-                    clearInterval(loading);}
-                    
-                    else{
-                        per = per + 1;
-                        count = count + 1;
-                        progress.style.width = (count*100)/goal + "%";
-                        percent.textContent = count + "/" + goal ;
-                        pp.textContent = ((count*100)/goal).toFixed(1) + "%";
-                    } 
-                    function checkCondition() {
-                        return count == goal;
-                    }
-                    // Enable or disable the button based on the condition
-                    function updateButtonState() {
-                        var button =document.querySelector(".buttona");
-                        button.disabled = !checkCondition();
-                    }
-            
-                    // Call the function to set the initial state
-                    updateButtonState();
-                    }
-                </script>';}
+    var button = document.querySelector(".buttona");
+    button.disabled = true;
+    var percent = document.querySelector(".percent");
+    var progress = document.querySelector(".progress");
+    var pp = document.querySelector(".pp");
+    var count = 0;
+    var per = 0;
+    var goal = 230;
+    var loading = setInterval(Calcul, 10);
+
+    function setMaxValue(value, maxValue) {
+        // Ensure the value is within the specified range
+        if (value > maxValue) {
+            return maxValue;
+        } else {
+            return value;
+        }
+    }
+
+    function Calcul() {
+        if (per === '. $Points .') {
+            clearInterval(loading);
+        } else {
+            per = per + 1;
+            count = count + 1;
+            progress.style.width = setMaxValue((count * 100) / goal, 100) + "%";
+            percent.textContent = count + "/" + goal;
+            pp.textContent = ((count * 100) / goal).toFixed(1) + "%";
+        }
+
+        function checkCondition() {
+            return count >= goal;
+        }
+
+        // Enable or disable the button based on the condition
+        function updateButtonState() {
+            var button = document.querySelector(".buttona");
+            button.disabled = !checkCondition();
+        }
+
+        // Call the function to set the initial state
+        updateButtonState();
+    }
+</script>'
+;}
                 else{ echo '
                     <script>
                     var goal =230;
