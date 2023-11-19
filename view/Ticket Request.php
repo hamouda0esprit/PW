@@ -15,7 +15,7 @@
 		$bd = new config();
         $pdo = $bd::getConnexion();
 	?>
-	<form action="../model/AddRequest.php" method="POST" class="cf" onsubmit="return validateForm();">
+	<form action="../controller/AddRequest.php" method="POST" class="cf" onsubmit="return validateForm();">
 		<!--select type-->
 		<div class="main_container">
 			<div class="Top">
@@ -82,68 +82,74 @@
 		<div class="line"></div>
 	</div>
 	
-	<form action="../model/PullRequest.php" method="POST">
-		<div class="secondary_container">
-			<?php
-				try{
-					$query = $pdo->prepare('SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc`');
-					$query->execute();
-					$result = $query->fetchAll();
-				}
-				catch(PDOExcepion $e){
-					echo "connection failed :". $e->getMessage();
-				}
-				foreach($result as $row){
-			?>
-			<div class="ticket">
-				<div class="left">
-					<div class="box">
-						<h1 class="id">#<?php echo $row["idReclamationC"]?></h1>
-					</div>
+	<div class="secondary_container">
+		<?php
+			try{
+				$query = $pdo->prepare('SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc`');
+				$query->execute();
+				$result = $query->fetchAll();
+			}
+			catch(PDOExcepion $e){
+				echo "connection failed :". $e->getMessage();
+			}
+			foreach($result as $row){
+		?>
+		<div class="ticket">
+			<div class="left">
+				<div class="box">
+					<h1 class="id">#<?php echo $row["idReclamationC"]?></h1>
 				</div>
-				
-				<div class="middle">
-					<div class="top">
-						<div class="left">
-							<div class="title">
-								<h3 class="text">Type : </h2>
-							</div>
-
-							<div class="box">
-								<p class="type"><?php echo $row["type"]?></p>
-							</div>
+			</div>
+			
+			<div class="middle">
+				<div class="top">
+					<div class="left">
+						<div class="title">
+							<h3 class="text">Type : </h2>
 						</div>
-						
-						<div class="right">
-							<div class="title">
-								<h3 class="text">Delivery Id : </h2>
-							</div>
-
-							<div class="box">
-								<p class="idcommande"><?php echo $row["idCommande"]?></p>
-							</div>
+						<div class="box">
+							<p class="type"><?php echo $row["type"]?></p>
 						</div>
 					</div>
 					
-					<div class="bottom">
+					<div class="right">
 						<div class="title">
-							<h3 class="text">Description : </h2>
+							<h3 class="text">Delivery Id : </h2>
 						</div>
-						
 						<div class="box">
-							<p class="description"><?php echo $row["description"]?></p>
+							<p class="idcommande"><?php echo $row["idCommande"]?></p>
 						</div>
 					</div>
 				</div>
 				
-				<div class="right">
+				<div class="bottom">
+					<div class="title">
+						<h3 class="text">Description : </h2>
+					</div>
+					
 					<div class="box">
-						
+						<p class="description"><?php echo $row["description"]?></p>
 					</div>
 				</div>
 			</div>
-			<?php } ?>
+			
+			<div class="right">
+				<div class="box">
+					<div class="top">
+						<form action="../controller/ChatRequest.php" method="POST" class="form">
+							<input type="submit" Value='Chat' class="button">
+						</form>
+					</div>
+					
+					<div class="bottom">
+						<form action="../controller/DeleteRequest.php" method="POST" class="form">
+							<input type="text" hidden name="idReclamationC" value="<?php echo $row["idReclamationC"]?>">
+							<input type="submit" Value='Delete' class="button">
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
-	</form>
-	
+		<?php } ?>
+	</div>
 </body>

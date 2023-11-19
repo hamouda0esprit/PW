@@ -1,5 +1,5 @@
 <?php
-require_once("..\model\config.php");
+require_once("../model/../model/config.php");
 
 $bd = new config();
 $pdo = $bd::getConnexion();
