@@ -73,7 +73,7 @@
     <?php 
     }}
     else{
-        echo "noooooooooo";
+        echo "Pas de livraison";
     }
     $query = $pdo->prepare("UPDATE delivery_point SET Points = :Points WHERE id_client = :id_client");
     $query->bindParam(':Points', $somme);
@@ -86,15 +86,18 @@
 
     ?>
     </table>
+    
     <hr class = "hr">
     </div>
+    
     <div class = "loading">
+    <button type="submit" class="buttona">Use Points</button>
+
         <div class = "percent">0</div>
-        <div class="pp"></div>
-        <div class = "progress_bar"> 
-            
+        <div class = "progress_bar">
+        <div class="pp"></div> 
             <div class = "progress">
-              
+            
                 <?php
                 $id_client = $_POST["clientId"];
                 $query = $pdo->prepare("SELECT * FROM `delivery_point` WHERE id_client = :id_client");
@@ -103,16 +106,19 @@
                 $result = $query->fetchAll();
                 $Data = $result[0];
                 $Points = $Data['Points'];
+                $pp = 0;
                 if($Points > 0){
                 echo'
                 <script>
+                    var button =document.querySelector(".buttona");
+                    button.disabled = 1;
                     var percent = document.querySelector(".percent");
                     var progress = document.querySelector(".progress");
                     var pp = document.querySelector(".pp");
                     var count = 0 ;
                     var per = 0;
                     var goal =230;
-                    var loading = setInterval(Calcul,50);
+                    var loading = setInterval(Calcul,10);
                     function Calcul(){
                     if(count == '. $Points .' && per == '. $Points .' ){
                     clearInterval(loading);}
@@ -122,8 +128,19 @@
                         count = count + 1;
                         progress.style.width = (count*100)/goal + "%";
                         percent.textContent = count + "/" + goal ;
-                        pp.textContent = ((count*100)/goal).toFixed(1) + "%"; ;
+                        pp.textContent = ((count*100)/goal).toFixed(1) + "%";
                     } 
+                    function checkCondition() {
+                        return count == goal;
+                    }
+                    // Enable or disable the button based on the condition
+                    function updateButtonState() {
+                        var button =document.querySelector(".buttona");
+                        button.disabled = !checkCondition();
+                    }
+            
+                    // Call the function to set the initial state
+                    updateButtonState();
                     }
                 </script>';}
                 else{ echo '
@@ -140,36 +157,15 @@
                 }
             ?>
             </div>
-       
+            
                 
             </div>
-            <div class="button">
-            <?php 
-            
-            
-            
-            ?>
            
-            <script>
-        // Function to check the condition
-        function checkCondition() {
-            // Replace this with your actual condition
-
-            return false; // Enable the button if the condition is true
-        }
-
-        // Function to handle button click
-        function myFunction() {
-            alert("Button clicked!");
-        }
-
-        // Disable the button initially if the condition is not met
-        document.getElementById("buttonp").disabled = !checkCondition();
-    </script>
-     <button type="submit" class = "buttonp" onclick="myFunction()">Your Button</button>
-            </div>
+    
 
     </div>
+    
+    
     <script src ="verification.js">
     </script>
 </body>

@@ -68,57 +68,77 @@ hr{
 /* For table*/
 
 /* For Buttons*/
-button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 20px 20px;
-    cursor: pointer;
+.buttona {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 20vw;
+    padding: 2% 2%;
+    
 }
 
-button:hover {
+
+
+.buttona:hover {
     background-color: #0056b3;
 }
-.buttonp{
+
+.buttona:enabled {
     background-color: #FFD700;
     color: black;
     border: none;
-    margin-top: 1vw;
     cursor: pointer;
     border-radius: 1vw;
 }
-/* For Buttons*/
 
-
-/* For progressing*/
-.loading{
-    position: absolute;
-    top : 50%;
-    left: 50%;
-    transform: translate(-50%);
+.buttona:disabled {
+    background-color: #999;
+    color: #666;
+    cursor: not-allowed;
+    border-radius: 1vw;
 }
-.percent{
+
+/* For progressing */
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Adjust the height as needed */
+}
+
+.percent {
     font-size: 1.5vw;
     margin-bottom: 2vw;
 }
-.progress_bar{
-    
+
+.progress_bar {
     width: 50vw;
     height: 2vw;
     background: #111;
     border-radius: 35px;
 }
-.progress{
-    
-    width: 0vw;
+
+.progress {
+    width: 0;
     height: 2vw;
     background: #FFD700;
     border-radius: 35px;
 }
-.pp{
+
+.pp {
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
     color: #fff;
-    transform: translate(-50%);
     font-size: 1.5vw;
 }
+
+
+
+
+
