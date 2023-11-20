@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Untitled Document</title>
+	<title>Ticket</title>
+	<script src="../model/Control.js"></script>
 	<link rel="stylesheet" href="../model/Ticket.scss">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -10,7 +11,6 @@
 <body>
 	<div class="main_container">
 		
-	
 		<div class="left">
 			<?php
 			require_once("..\model\config.php");
@@ -41,7 +41,8 @@
 				echo "connection failed :". $e->getMessage();
 			}
 			foreach($result as $row){
-	
+				$prenom = $row["prenom"];
+				$nom = $row["nom"];
 			}
 			
 			?>
@@ -50,7 +51,7 @@
 				<p class="Ticket-id">#<?php echo $idRec ?></p>
 				
 				<h3 class="title">Name :</h3>
-				<p class="text"><?php echo $row["prenom"] ?> <?php echo $row["nom"] ?></p>
+				<p class="text"><?php echo $prenom ?> <?php echo $nom ?></p>
 				
 				<h3 class="title">Type :</h3>
 				<p class="text"><?php echo $type ?></p>
@@ -65,13 +66,40 @@
 		<div class="right">
 			<div class="box">
 				<div class="top">
-					
+					<?php
+						$idP = 1;
+						try{
+							$query = $pdo->prepare("SELECT `idP`, `message`, `date` FROM `reclamationa` WHERE `idReclamationA` = '$idRec'");
+								
+							$query->execute();
+							$result = $query->fetchAll();
+						}
+						catch(PDOExcepion $e){
+							echo "connection failed :". $e->getMessage();
+						}
+						foreach($result as $row){
+							//$idP = $row["idP"];
+							try{
+							$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `livreur` WHERE `idLivreur` = '$idP'");
+								
+							$query->execute();
+							$result = $query->fetchAll();
+							}
+							catch(PDOExcepion $e){
+								echo "connection failed :". $e->getMessage();
+							}
+							foreach($result as $row2){?>
+								<p class="name"><?php echo $row2["prenom"]?> <?php echo $row2["nom"]?> : </p>
+								<p class="name"><?php echo $row["message"]?></p>
+						<?php }} ?>
 				</div>
 				
 				<div class="bottom">
 					<form action="../controller/AddMessage.php" method="POST" class="form">
-						<input type="text" class="message">
-						<input type="submit" class="submit">
+						<input type="text" name="idRec" value="<?php echo $idRec ?>" hidden>
+						<input type="text" class="message" name="message">
+						<input type="text" id="input_datetime" name="Date" value="" hidden>
+						<input type="submit" class="button" value="send" onclick="insertDatetime()">
 					</form>
 				</div>
 			</div>
