@@ -1,0 +1,70 @@
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; }
+
+.main_container {
+  width: 100%;
+  height: 28vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+  .main_container .left {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white; }
+    .main_container .left .box {
+      width: 13vw;
+      height: 23vw;
+      padding: 1vw;
+      display: flex;
+      flex-direction: column;
+      border-radius: 1vw;
+      margin-top: 2vw;
+      background-color: #f0f0f0;
+      box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.1); }
+      .main_container .left .box .title {
+        font-size: 2vw;
+        font-weight: 700; }
+      .main_container .left .box .text {
+        font-size: 1.4vw;
+        font-weight: 400; }
+      .main_container .left .box .Ticket-id {
+        font-size: 1.6vw;
+        font-weight: 600; }
+  .main_container .spacer {
+    width: .2vw;
+    height: 100%;
+    background-color: black; }
+  .main_container .right {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white; }
+    .main_container .right .box {
+      width: 90%;
+      height: 80%;
+      padding: 1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 1vw;
+      margin-top: 2vw;
+      background-color: #f0f0f0;
+      box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.1); }
+      .main_container .right .box .top {
+        width: 100%;
+        height: 90%;
+        margin: 2vw 2vw 0 2vw; }
+      .main_container .right .box .bottom {
+        width: 100%;
+        height: 10%; }

@@ -1,0 +1,99 @@
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.main_container{
+	width:100%;
+	height:28vw;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+
+	.left{
+		width:20%;
+		height: 100%;
+		display:flex;
+		justify-content: center;
+		align-items: flex-start;
+		
+		background-color:white;
+		
+		.box{
+			width:13vw;
+			height:23vw;
+			padding:1vw;
+			display:flex;
+			flex-direction: column;
+			
+			border-radius:1vw;
+			margin-top:2vw;
+			
+			background-color:rgb(240,240,240);
+			box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
+			
+			.title{
+				font-size:2vw;
+				font-weight:700;
+			}
+			
+			.text{
+				font-size:1.4vw;
+				font-weight:400;
+			}
+			.Ticket-id{
+				font-size:1.6vw;
+				font-weight:600;
+			}
+		}
+	}
+	
+	.spacer{
+		width:.2vw;
+		height:100%;
+		background-color:black;
+	}
+	
+	.right{
+		width:80%;
+		height: 100%;
+		display:flex;
+		justify-content: center;
+		align-items: flex-start;
+		
+		background-color:white;
+		
+		.box{
+			width:90%;
+			height:80%;
+			padding:1vw;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			
+			border-radius:1vw;
+			margin-top:2vw;
+			
+			background-color:rgb(240,240,240);
+			box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
+			
+			.top{
+				width:100%;
+				height:90%;
+				margin:2vw 2vw 0 2vw;
+			}
+			
+			.bottom{
+				width:100%;
+				height:10%;
+			}
+		}
+	}
+}
