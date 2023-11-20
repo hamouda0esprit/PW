@@ -55,6 +55,7 @@ require("Connection.php");
                 }, 1000); // Update every 1 second (1000 milliseconds)
             }
             </script>
+<?php
         } else {
             echo "Error inserting data.";
         }

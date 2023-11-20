@@ -16,7 +16,7 @@ try {
             $storedPassword = $row['password'];
             // Perform your comparison here
             if ($password === $storedPassword) {
-                header("Location: ../view/Home.php");
+                header("Location: ../view/Management.php");
                 exit();
             } else {
                 echo "Password do not match";
@@ -56,9 +56,10 @@ try {
                 </script>
                 <?php
             }
-        }
-    } else {
-        echo "Request failed";
+        }else {
+            echo "Request failed";
+        exit();
+    
         ?>
                 <script>
                 window.onload = function() {
@@ -76,8 +77,7 @@ try {
                 </script>
                 <?php
             }
-    }
-    exit();
+    
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }

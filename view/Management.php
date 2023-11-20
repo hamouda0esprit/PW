@@ -9,6 +9,19 @@
     <title>Account Management</title>
     <link rel="stylesheet" href="styleM.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+     .tablebot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20vh;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+</style>
 </head>
 
 <body>
@@ -151,19 +164,63 @@
                     </div>
                 </div>
             </div>
-            
             <div class="text-right mt-3">
                 <button type="submit" class="btn btn-primary">Save changes</button>&nbsp;
                 <button type="button" class="btn btn-default">Cancel</button>
             </div>
         </div>
     </form>
+    <?php 
+    $bd = new Connection();
+    $pdo = $bd::getConnexion();
+    if(isset($_POST['ID'])){
+        try{
+            $ID = $_POST['ID'];
+            $query = $pdo->prepare("SELECT colis.* FROM colis INNER JOIN data ON colis.id_client = data.ID WHERE data.ID = :ID");
+            $query->bindParam(':ID', $ID);
+            $query->execute();
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+            if (count($result) > 0) {
+?>
+            <div class="tablebot">
+            <table border="1" >
+                <tr>
+                    <th>Depart</th>
+                    <th>Arrivée</th>
+                    <th>Size</th>
+                    <th>Poids</th>
+                    <th>Budget</th>
+                </tr>
+                <?php
+                                foreach($result as $row){
+                ?>
+                                <tr>
+                                    <td><?php echo $row['depart']?></td>
+                                    <td><?php echo $row['arrivee']?></td>
+                                    <td><?php echo $row['size']?></td>
+                                    <td><?php echo $row['poids']?></td>
+                                    <td><?php echo $row['budget']?></td>
+                                </tr>
+                <?php
+                                }
+                ?>
+                            </table>
+                <?php
+                            } else {
+                                echo "No results found for the provided ID.";
+                            }
+                        } catch (PDOException $e) {
+                            echo "Connection failed: " . $e->getMessage();
+                        }
+                    } else {
+                        echo "Please provide an ID.";
+                    }
+                ?>
+                </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
-
     </script>
 </body>
-
 </html>

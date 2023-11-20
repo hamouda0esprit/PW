@@ -2,7 +2,7 @@
     $servername = 'localhost';
     $username = 'root';
     $password = '';
-    $dbname = 'clientpw';
+    $dbname = 'pw';
     try{
         $pdo = new PDO(
             "mysql:host=$servername;dbname=$dbname",
@@ -26,7 +26,7 @@ class Connection
         $servername = 'localhost';
         $username = 'root';
         $password = '';
-        $dbname = 'clientpw';
+        $dbname = 'pw';
 
         try {
             $pdo = new PDO(
