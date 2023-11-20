@@ -140,9 +140,9 @@
          $index++;
         ?>">
             <td><?php echo "#" . $row["idBid"] ?></td>
-            <td><?php echo "#" . $row["idLivreur"] ?></td>
             <td><?php echo "#" . $row["idcolis"] ?></td>
-            <td><?php echo " " . $row["montant"] ?></td>
+            <td><?php echo "#" . $row["idLivreur"] ?></td>
+            <td><?php echo " " . $row["montant"] ?> DT</td>
             <td class="tdAction">
                 <form action="../controller/deleteOrderAdmin.php" method="POST" onsubmit="return confirmdelete()">
                     <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
@@ -158,6 +158,53 @@
         }
         ?>
     </center>
+    <center>
+        <div class="smallScreenManageOrders">
+            <?php 
+                $bd = new config();
+                $pdo = $bd::getConnexion();
+                try{
+                    $query = $pdo->prepare($sqlSelectLine);
+        
+                    $query->execute();
+                    $result = $query->fetchAll();
+        
+                }catch(PDOExcepion $e){
+                    echo "connection failed :". $e->getMessage();
+                }
+                foreach($result as $row){
+            ?>
+            <div class="content <?php
+         if($index%2 == 0){
+            echo "bwhite";
+         }else{
+            echo "bgrey";
+         }
+         $index++;
+        ?>">
+                <div><h3>Task : </h3><p>&nbsp; <?php echo $row["idBid"] ?> </p></div>
+                <div><h3>idDelivery : </h3><p>&nbsp;<?php echo $row["idcolis"]?> </p></div>
+                <div><h3>iDdeliveryDriver : </h3><p>&nbsp;<?php echo $row["idLivreur"] ?></p></div>
+                <div><h3>Bid : </h3><p>&nbsp;<?php echo $row["montant"]?> DT</p></div>
+                <div>
+                    <h3>Action :</h3> 
+                    <form action="../controller/deleteOrderAdmin.php" method="POST" onsubmit="return confirmdelete()">
+                        <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
+                        <input type="submit" value="delete" class="btn">
+                    </form>
+                    <form action="../controller/openTerminal.php" method="POST">
+                        <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
+                        <input type="submit" value="open a terminal" class="btn">
+                    </form>
+                </div>
+            </div>
+            <?php 
+                }
+            ?>
+        </div>
+    <?php
+    }   
+    ?>
+    </center>
         <?php
-    }
 ?>
