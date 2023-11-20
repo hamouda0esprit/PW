@@ -11,6 +11,10 @@
     </style>
 </head>
 <body>
+    <?php  
+        require_once("../controller/navbar.php"); 
+        navbar();
+    ?>
     <h2>Admin Manage Orders</h2>
 
     <?php  

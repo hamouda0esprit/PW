@@ -7,6 +7,8 @@
 </head>
 <body>
     <?php 
+        require_once("../controller/navbar.php"); 
+        navbar();
         require_once("..\controller\activeDeliveries.php"); 
         ?>
         <center>
