@@ -18,7 +18,7 @@ body {
   background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibi        lity;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/image.jpg");

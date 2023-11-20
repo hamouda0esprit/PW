@@ -12,15 +12,12 @@
 <body>
             <?php
             require("../Model/Connection.php");
-
-            $ID = '1';
-
             $bd = new Connection();
             $pdo = $bd::getConnexion();
-
+            $ID = '1'; // the login person
             if ($ID == '1') {
                 $query = $pdo->prepare("
-                    SELECT rc.*, l.idLivreur AS livreur_id, l.nom AS livreur_nom, l.prenom AS livreur_prenom
+                    SELECT rc.*, l.idLivreur AS livreur_id, l.nom AS livreur_nom,
                     FROM relationchat rc
                     JOIN livreur l ON rc.idlivreur = l.idLivreur
                     WHERE rc.idclient = :idclient
@@ -57,13 +54,13 @@
                                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg" alt="" />
                                     <?php if ($ID == '1') { ?>
                                         <span class="name"><?php echo $row['livreur_nom'] ?></span>
-                                    <?php }else : ?>
+                                    <?php }else { ?>
                                         <span class="name"><?php echo $row['client_nom'] ?></span>
-                                    <?php endif; ?>
+                                    <?php }?>
                                     <span class="time">2:09 PM</span>
                                     <span class="preview">I was wondering...</span>
                                 </li>
-                            <?php ?>
+                            
                         </ul>
                     </div>
 
@@ -71,49 +68,42 @@
                     <!-- Start -->
 
                     <div class="right">
+                    <?php
+                    require("../Model/Connection.php");
+                    $bd = new Connection();
+                    $pdo = $bd::getConnexion();
+                    $ID = '1'; // the login person
+
+                    $query = $pdo->prepare("
+                        SELECT mc.*, rc.idclient, rc.idlivreur
+                        FROM messagechat mc
+                        INNER JOIN relationchat rc ON mc.idrelationel = rc.idrelationel
+                        WHERE rc.idclient = :idclient OR rc.idlivreur = :idlivreur
+                        ORDER BY mc.date ASC
+                    ");
+
+                    $query->bindParam(':idclient', $ID, PDO::PARAM_INT);
+                    $query->bindParam(':idlivreur', $ID, PDO::PARAM_INT);
+                    $query->execute();
+
+                    $messages = $query->fetchAll(PDO::FETCH_ASSOC);
+                    ?>
                         <div class="top"><span>To: <span class="name">Dog Woofson</span></span></div>
-                        <?php
-                        $bd = new Connection();
-                        $pdo = $bd::getConnexion();
-                        $query = $pdo->prepare("
-                            SELECT *
-                            FROM messagechat
-                            WHERE (idclient = :idclient AND idlivreur = :idlivreur) OR (idclient = :idlivreur AND idlivreur = :idclient)
-                            ORDER BY date ASC
-                        ");
-
-                        if ($ID == '1') {
-                            $query->bindParam(':idclient', $row['client_id'], PDO::PARAM_INT);
-                            $query->bindParam(':idlivreur', $row['livreur_id'], PDO::PARAM_INT);
-                        } else {
-                            $query->bindParam(':idclient', $row['client_id'], PDO::PARAM_INT);
-                            $query->bindParam(':idlivreur', $row['livreur_id'], PDO::PARAM_INT);
-                        }
-                    
-                        $query->execute();
-                        $messages = $query->fetchAll(PDO::FETCH_ASSOC); 
-                        foreach ($messages as $row) {
-                        ?>
-
                         <div class="chat" data-chat="<?php echo 'person' . $P;
                                                     $P = $P + 1 ?>">
+                            <?php foreach($messages as $row){ ?>
                             <div class="conversation-start">
-                                <span>Today, 6:48 AM</span>
+                                <span><?php echo $row['date']; ?></span>
                             </div>
                             <div class="bubble you">
-                                <?php echo $row['message'];?>
+                                    <?php echo $row['message']; ?>
                             </div>
-                            <div class="bubble you">
-                                it's me.
-                            </div>
-                            <div class="bubble you">
-                                I was wondering...
-                            </div>
+
                         </div>
-                        <?php}}?>
                     </div>
+                    <?php }?>
                 </div>
-            </div>
+            </div><?php }?>
 
 
                     <div class="write">
@@ -128,6 +118,6 @@
     </form>
 <!-- partial -->
   <script  src="./script.js"></script>
-
+                        
 </body>
 </html>

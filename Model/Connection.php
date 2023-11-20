@@ -15,7 +15,7 @@
             );
     }
     catch(PDOException $e){
-        echo"Connection failed. ". $e->getMessge();
+        echo"Connection failed. ". $e->getMessage();
     }
 ?>
 <?php 
@@ -28,7 +28,7 @@ class Connection
         $password = '';
         $dbname = 'pw';
 
-        try {
+        try {                                                                                                   
             $pdo = new PDO(
                 "mysql:host=$servername;dbname=$dbname",
                 $username,
