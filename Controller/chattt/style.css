@@ -415,3 +415,12 @@ body{
     width: 45px;
   }
 }
+
+.details{
+  display: flex;
+  align-items: center;
+}
+
+#idSupp{
+  display: none;
+}
