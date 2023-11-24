@@ -18,9 +18,11 @@
 <?php
     if ($identity == "C"){    
 ?>
-            <a href="#">Home</a>
-            <a href="showAD.php">Dashboard</a>
-            <a href="showMO.php">Services</a>
+<ul class="nav">
+          <li>  <a href="#">Home</a></li>
+           <li> <a href="showAD.php">Dashboard</a></li>
+          <li>  <a href="showMO.php">Services</a></li>
+            </ul>
 <?php
     }else if ("L"){
 ?>

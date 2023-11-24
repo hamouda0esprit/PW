@@ -79,7 +79,7 @@
                 $pdo = $bd::getConnexion();
                 try{
                     $query = $pdo->prepare(
-                        'SELECT * FROM `bids` WHERE idLivreur = 1;'
+                        'SELECT * FROM `colis_a_encherer` WHERE idLivreur = 1;'
                     );
         
                     $query->execute();
