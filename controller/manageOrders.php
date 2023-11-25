@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Orders</title>
-    <link rel="stylesheet" href="../manageOrders.css">
+    <!-- <link rel="stylesheet" href="../manageOrders.css"> -->
 </head>
 <body>
     <?php
@@ -22,8 +22,6 @@
         </tr>
         <?php
         require_once("..\model\config.php"); 
-        $countbox = 0;
-        $countannim = 0.5;
         $bd = new config();
         $pdo = $bd::getConnexion();
         try{
