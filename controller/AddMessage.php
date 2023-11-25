@@ -19,7 +19,7 @@ try {
     
 
     // Redirect to Ticket Request.php
-    header("Location: ../view/Ticket.php");
+    header("Location: ../view/Ticket Request.php");
     exit();
 }catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();

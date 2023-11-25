@@ -89,8 +89,9 @@
 								echo "connection failed :". $e->getMessage();
 							}
 							foreach($result as $row2){?>
+								<p class="dateT" style="font-size:.5vw;"><?php echo $row["date"]?></p>
 								<p class="name"><?php echo $row2["prenom"]?> <?php echo $row2["nom"]?> : </p>
-								<p class="name"><?php echo $row["message"]?></p>
+								<p class="name" style="margin-bottom:1.5vw;"><?php echo $row["message"]?></p>
 						<?php }} ?>
 				</div>
 				
