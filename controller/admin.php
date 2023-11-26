@@ -19,9 +19,14 @@
             $filterC = "-1";
         }
         if ($filterC == "-1") {
-            $sqlSelectLine = 'SELECT `idcolis`, `id_client`, `depart`, `arrivee`, `size`, `poids`, `budget` FROM colis;';
+            $sqlSelectLine = 'SELECT c.`idcolis`, c.`id_client`, c.`depart`, c.`arrivee`, c.`size`, c.`poids`, c.`budget`, i.`bin_image`
+                             FROM colis c
+                             LEFT JOIN images i ON c.`idcolis` = i.`idcolis`;';
         } else {
-            $sqlSelectLine = 'SELECT `idcolis`, `id_client`, `depart`, `arrivee`, `size`, `poids`, `budget` FROM colis WHERE id_client = ' . $filterC;
+            $sqlSelectLine = 'SELECT c.`idcolis`, c.`id_client`, c.`depart`, c.`arrivee`, c.`size`, c.`poids`, c.`budget`, i.`bin_image`
+                             FROM colis c
+                             LEFT JOIN images i ON c.`idcolis` = i.`idcolis`
+                             WHERE c.id_client = ' . $filterC;
         }
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
@@ -75,6 +80,16 @@
         <td><?php echo  $row['depart']?></td>
         <td><?php echo  $row['arrivee']?></td>
         <td><?php echo  $row['budget']?></td>
+        <td>
+                        <?php
+                        if (!empty($row['bin_image'])) {
+                            // Display the first image for simplicity. You can loop through all images if needed.
+                            echo '<img src="data:image/jpeg;base64,' . base64_encode($row['bin_image']) . '" width="50" height="50" />';
+                        } else {
+                            echo 'No image available';
+                        }
+                        ?>
+                    </td>
         <td class="button-container">
           <form action="..\controller\deleteAdmin.php" method="POST"><input type="text" id="delete" name="delete_id" class="hidden" value="<?php echo $row['idcolis']?>"/><button class="suppress-button" onclick="suppressDelivery(this)">Suppress</button></form>
         </td>

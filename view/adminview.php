@@ -66,6 +66,7 @@
         <th>Departure Location</th>
         <th>Arrival Location</th>
         <th>Budget</th>
+        <th>images</th>
         <th>Action</th>
       </tr>
     </thead>

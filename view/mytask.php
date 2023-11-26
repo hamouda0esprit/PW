@@ -8,7 +8,6 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
-      margin: 20px;
     }
 
     h2 {
@@ -68,11 +67,13 @@
   <table>
     <thead>
       <tr>
+        <th>Name</th>
         <th>Size</th>
         <th>Weight</th>
         <th>Departure Location</th>
         <th>Arrival Location</th>
         <th>Budget</th>
+        <th>Images</th>
         <th>Action</th>
       </tr>
     </thead>

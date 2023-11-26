@@ -249,15 +249,20 @@
        
         $bd = new config();
         $pdo = $bd::getConnexion();
-        try{
-            $query = $pdo->prepare(
-                'SELECT `idcolis`, `id_client`, `depart`, `arrivee`, `size`, `poids`, `budget` FROM `colis` where idcolis=:idcolis'
-            );
-
-            $query->execute([
-                ':idcolis' => $_POST["update_id"],
-            ]);
-            $result = $query->fetchAll();
+        try {
+          $query = $pdo->prepare('
+        SELECT c.`idcolis`, c.`depart`, c.`arrivee`, c.`size`, c.`poids`, c.`budget`, i.`bin_image`
+        FROM `colis` c
+        LEFT JOIN `images` i ON c.`idcolis` = i.`idcolis`
+        WHERE c.`idcolis` = :idcolis
+    ');
+      
+      $query->execute([
+          ':idcolis' => $_POST["update_id"],
+      ]);
+      
+      $result = $query->fetchAll();
+      
 
         }catch(PDOExcepion $e){
             echo "connection failed :". $e->getMessage();
@@ -279,7 +284,7 @@ $depth = $sizeArray[2];
 ?>
 
   <h2>Order Form</h2>
-  <<form action="..\controller\update.php" method="POST" onsubmit="return validateForm()" class="createReq">
+  <form action="..\controller\update.php" method="POST" onsubmit="return validateForm()" class="createReq" enctype="multipart/form-data">
   <input type="text" id="idcolis" style="display:none;" name="idcolis" class="input-wht input" value="<?php echo $row['idcolis']?>">
     <div class="inner_card">
       <div>
@@ -301,6 +306,15 @@ $depth = $sizeArray[2];
         </div>
       </div>
     </div>
+    <div class="inner_card">
+        <div>
+          <p class="titles">Add Pictures</p>
+          <div class="image-upload">
+            <label for="pictures" class="sub-title"><i class="fa-solid fa-image"></i> Upload Pictures</label>
+            <input type="file" id="pictures" name="images" accept="image/*" >
+          </div>
+        </div>
+      </div>
     <div class="inner_infos_card">
       <p class="titles">Give an estimate for your delivery</p>
       <div class="colis_info">
