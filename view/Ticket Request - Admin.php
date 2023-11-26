@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ticket Request</title>
+    <title>Manage Request - Admin</title>
     <link rel="stylesheet" href="../model/Ticket Request - Admin.scss">
     <script src="../model/Control - Admin.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,7 +41,7 @@
     <!--select type-->
     <div class="main_container">
         <div class="Top">
-            <h1 class="title">Create Ticket</h1>
+            <h1 class="title">Manage Request - Admin</h1>
         </div>
 		
 		

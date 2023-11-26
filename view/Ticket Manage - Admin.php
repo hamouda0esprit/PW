@@ -15,17 +15,22 @@
 		$bd = new config();
         $pdo = $bd::getConnexion();
 	?>
+	<div class="main_container" style="height:6vw;">
+		<div class="Top">
+            <h1 class="title">Manage Request - Admin</h1>
+        </div>
+	</div>
 	
 	<div class="secondary_container">
 		<?php
-                $type = $_POST["selectedType"];
+                $selectedType = $_POST["selectedType"];
                 $idUser = $_POST["idUser"];
                 $idDelivery = $_POST["idDelivery"];
 				
 			try{
-				if ($type == "Client") {
+				if ($selectedType == "Client") {
                 	$query = $pdo->prepare("SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc` WHERE  `idC` = '$idUser' AND `idCommande` = '$idDelivery'");
-                } elseif ($type == "DeliveryDriver") {
+                } elseif ($selectedType == "DeliveryDriver") {
 					$query = $pdo->prepare("SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc` WHERE  `idL` = '$idUser' AND `idCommande` = '$idDelivery'");
                 }
 				

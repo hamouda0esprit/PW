@@ -78,11 +78,8 @@
 					<div class="bottom">
 						<p class="bio"><?php echo $row["Bio"]?></p>
 					</div>
-				</div>
-			
-			<?php }} ?>
+				</div>			<?php }} ?>
 			</div>
-			
 		</div>
 		
 		<div class="fourth_container">
