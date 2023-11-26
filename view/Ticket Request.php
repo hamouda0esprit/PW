@@ -64,7 +64,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> 
 
 			<div class="Bottom">
 				<div class="comment">
