@@ -26,7 +26,11 @@
                     $output .= '<div class="chat incoming">
                                 <img src="php/images/'.$row['img'].'" alt="">
                                 <div class="details">
-                                    <p>'. $row['msg'] .'</p>
+                                    <p>'. $row['msg'] .'</p>&nbsp;&nbsp;
+                                    <form name="suppform" action="php/report.php" method="POST">
+                                            <input type="text" name="idReport" id="idSupp" value='.$row["msg_id"].'>
+                                            <input type="submit" value="!">
+                                        </form>    
                                 </div>
                                 </div>';
                 }
