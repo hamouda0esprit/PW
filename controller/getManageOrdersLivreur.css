@@ -158,6 +158,7 @@ tbody tr {
 
 tbody tr.hide {
     opacity: 0;
+    height: 0;
     transform: translateX(-100%);
 }
  /* .hide {
@@ -176,7 +177,9 @@ tbody tr:hover {
 tbody tr td,
 tbody tr td p,
 tbody tr td img,
-tbody tr td form {
+tbody tr td form,
+tbody tr td button 
+ {
     transition: .2s ease-in-out;
 }
 
@@ -185,7 +188,8 @@ tbody tr td form {
 tbody tr.hide td,
 tbody tr.hide td p,
 tbody tr.hide td form,
-tbody tr.hide td form input {
+tbody tr.hide td form input,
+tbody tr.hide td button {
     padding: 0;
     margin: 0;
     font: 0 / 0 sans-serif;

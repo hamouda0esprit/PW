@@ -75,5 +75,6 @@
 
     </script>
     <script src="..\controller\getManageOrdersLivreur.js"></script>
+    <script src="..\controller\activeDeliveries\bidFormControl.js"></script>
 </body>
 </html>
