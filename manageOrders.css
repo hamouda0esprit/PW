@@ -16,9 +16,6 @@ table , th , td {
 .bwhite td{
     background-color: rgb(255, 255, 255);
 }
-body{
-    background-color: whitesmoke;
-}
 
 #tableOrders{
     width: 80%;

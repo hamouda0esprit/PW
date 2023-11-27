@@ -1,31 +1,32 @@
 <?php
 
 function getManageOrdersLivreur(){
-
+    $countbox = 0;
     require_once("..\model\config.php"); 
     $bd = new config();
     $pdo = $bd::getConnexion();
     try{
         $query = $pdo->prepare("
-            SELECT
-            cae.idBid,
-            u.nom AS nomClient,
-            u.prenom AS prenomClient,
-            c.idcolis,
-            cae.dateDepart,
-            cae.dateArrive,
-            cae.status,
-            c.depart AS villeDepart,
-            c.arrivee AS villeArrivee,
-            cae.montant,
-            l.nom AS nomLivreur
-            FROM
-                colis_a_encherer cae
-            JOIN colis c ON cae.idcolis = c.idcolis
-            JOIN user u ON c.id_client = u.ID
-            JOIN livreur l ON cae.idLivreur = l.idLivreur
-            WHERE cae.idLivreur = 1   
-            ");
+        SELECT
+        cae.idBid,
+        u.nom AS nomClient,
+        u.prenom AS prenomClient,
+        c.idcolis,
+        cae.dateDepart,
+        cae.dateArrive,
+        cae.status,
+        c.depart AS villeDepart,
+        c.arrivee AS villeArrivee,
+        cae.montant,
+        cae.comment,
+        l.nom AS nomLivreur
+        FROM
+            colis_a_encherer cae
+        JOIN colis c ON cae.idcolis = c.idcolis
+        JOIN user u ON c.id_client = u.ID
+        JOIN livreur l ON cae.idLivreur = l.idLivreur
+        WHERE cae.idLivreur = 1;
+        ");
 
         $query->execute();
         $result = $query->fetchAll();
@@ -55,17 +56,33 @@ function getManageOrdersLivreur(){
                 }
             ?></td>
         <td>
+                <button class="btn update"onclick="hideBid(<?php echo $countbox;?>)">update</button>
             <form action="../controller/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
-                <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
-                <input type="submit" value="update" class="btn">
-            </form>
-            <form action="../controller/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
-                <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>">
-                <input type="submit" value="delete" class="btn">
+                <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>" style="display:none;">
+                <input type="submit" value="delete" class="btn delete">
             </form>
         </td>
     </tr>
-
+    <div class="bidForm hide">
+        <div>
+            <div class="closeDiv"><button onclick="hideBid(<?php 
+                echo $countbox;
+                $countbox++;
+            
+            ?>)">x</button></div>
+            <h3 class="bidTitle">bid form</h3>
+            <form action="../controller/updateOrder.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
+                <input type="number" class="normal" name="idBid" id="idDeliveries" value="<?php echo $row["idBid"]?>">
+                <input type="text" class="normal" name="montant" id="bid" placeholder="bid" value="<?php echo $row["montant"]?>">
+                <div id="dateHolder">
+                    <input type="date" class="normal" name="dateDepart" id="dateDepart" placeholder="Date Depart" value="<?php echo $row["dateDepart"]?>">
+                    <input type="date" class="normal" name="dateArrive" id="dateArrive" placeholder="Date Arrive" value="<?php echo $row["dateArrive"]?>">
+                </div>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment"><?php echo $row["comment"]?></textarea>
+                <input type="submit" value="BID" id="sendBid">
+            </form>
+        </div>
+    </div>
 
 
 
@@ -75,12 +92,3 @@ function getManageOrdersLivreur(){
 }
 
 ?>
-<script>
-    function confirmdelete() {
-        x = confirm("are you sure ?");
-        if(x == false){
-            return false
-        }
-    }
-</script>
-<script src="..\controller\getManageOrdersLivreur.js"></script>

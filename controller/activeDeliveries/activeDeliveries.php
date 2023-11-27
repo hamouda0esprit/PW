@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../activeDeliveries.css">
+    
 </head>
 <body>
     <center>
@@ -12,7 +12,7 @@
     function showActiveDeliveries(){ 
         require_once("..\model\config.php"); 
         $countbox = 0;
-        $countannim = 0.3;
+        $countannim = 0.2;
         $bd = new config();
         $pdo = $bd::getConnexion();
         try{
@@ -28,7 +28,7 @@
         }
         foreach($result as $row){
             ?>
-    <div class="cardActDel" style="animation-duration:<?php echo $countannim;$countannim = $countannim +0.3;?>s;">
+    <div class="cardActDel" style="animation-duration:<?php echo $countannim;$countannim = $countannim +0.15;?>s;">
         <div class="cardTile">
             <p>Get an estimate for your delivery</p>
         </div>  
@@ -61,33 +61,37 @@
         <div class="btnDet">
             <button class="bidBtn" onclick="hideBid(<?php 
                 echo $countbox;
-                $countbox++;
             
             ?>)"><b>Start Bidding</b></button>
         </div>
-        <div class="bidForm hide">
+        
+    </div>
+    <div class="bidForm hide">
+        <div>
+            <div class="closeDiv"><button onclick="hideBid(<?php 
+                echo $countbox;
+                $countbox++;
+            
+            ?>)">x</button></div>
             <h3 class="bidTitle">bid form</h3>
-                <form action="..\controller\addBid.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
-                    <input type="number" class="normal" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idcolis"]?>">
-                    <input type="text" class="normal" name="montant" id="bid" placeholder="bid">
-                    <div id="dateHolder">
-                        <input type="date" class="normal" name="dateDepart" id="dateDepart" placeholder="Date Depart">
-                        <input type="date" class="normal" name="dateArrive" id="dateArrive" placeholder="Date Arrive">
-                    </div>
-                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment"></textarea>
-                    <input type="submit" value="BID" id="sendBid">
-                </form>
-            </div>
+            <form action="..\controller\addBid.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
+                <input type="number" class="normal" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idcolis"]?>">
+                <input type="text" class="normal" name="montant" id="bid" placeholder="bid">
+                <div id="dateHolder">
+                    <input type="date" class="normal" name="dateDepart" id="dateDepart" placeholder="Date Depart">
+                    <input type="date" class="normal" name="dateArrive" id="dateArrive" placeholder="Date Arrive">
+                </div>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment"></textarea>
+                <input type="submit" value="BID" id="sendBid">
+            </form>
+        </div>
     </div>
 
-            <?php
+<?php
         }
     }
-
-
-    ?>
+?>
     </center>
-    <script src="..\activeDeliveries.js"></script>
-    <script src="..\bidFormControl.js"></script>
+    
 </body>
 </html>
