@@ -52,16 +52,31 @@
             text-decoration: none;
             color: #3498db;
         }
+
+        .btn{
+    width: 6rem;
+    border-radius: 2rem;
+    border: 1px solid #d5d1defe;
+    outline: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: .2s;
+    background-color: #d5d1defe;
+}
     </style>
 
 </head>
 <body>
+    
+
     
     <table border="1"  >
         <tr>
             <th>id report</th>
             <th>message</th>
             <th>actions</th>
+    
         </tr>
         
         <?php

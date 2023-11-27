@@ -17,7 +17,7 @@
                                     <div class="details">
                                         <form name="suppform" action="php/supprimer.php" method="POST">
                                             <input type="text" name="idSupp" id="idSupp" value='.$row["msg_id"].'>
-                                            <input type="submit" value="x">
+                                            <input type="submit" class="custom-button" value="x">
                                         </form>    
                                         &nbsp;&nbsp;<p>'. $row['msg'] .'</p>
                                     </div>
@@ -29,7 +29,7 @@
                                     <p>'. $row['msg'] .'</p>&nbsp;&nbsp;
                                     <form name="suppform" action="php/report.php" method="POST">
                                             <input type="text" name="idReport" id="idSupp" value='.$row["msg_id"].'>
-                                            <input type="submit" value="!">
+                                            <input type="submit"  class="custom-button" value="!">
                                         </form>    
                                 </div>
                                 </div>';
