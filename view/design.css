@@ -43,7 +43,10 @@ hr{
 }
 
 /* For table*/
-
+.status-1 {
+    background-color: rgb(164, 164, 164);
+    /* Add any other styles you want to apply */
+}
 .historique table {
     width: 100%;
     border-collapse: collapse;
@@ -54,7 +57,7 @@ hr{
     padding: 12px;
     text-align: center;
     vertical-align: middle;
-    width: 20%;
+    width: 10%;
 }
 .firstligne{
     background-color: #FFD700;
@@ -68,36 +71,34 @@ hr{
 /* For table*/
 
 /* For Buttons*/
-.buttona {
+.buttonaa {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-top: 20vw;
-    padding: 2% 2%;
+    top: 12vw;
+    left: 49vw;
+    transform: translate(-50%, -50%);
+}
+.buttonaa{
     
 }
-
-
-
-.buttona:hover {
-    background-color: #0056b3;
-}
-
 .buttona:enabled {
     background-color: #FFD700;
     color: black;
     border: none;
     cursor: pointer;
-    border-radius: 1vw;
+    border-radius: 5vw;
+    padding: 2.5vw 2.5vh;
 }
 
 .buttona:disabled {
     background-color: #999;
     color: #666;
     cursor: not-allowed;
-    border-radius: 1vw;
+    border-radius: 0vw;
+    padding: 1.5vw 1.5vh;
 }
 
 /* For progressing */
@@ -137,6 +138,7 @@ hr{
     color: #fff;
     font-size: 1.5vw;
 }
+
 
 
 

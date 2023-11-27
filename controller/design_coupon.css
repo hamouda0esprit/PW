@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    transition: all 0.3s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    ;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 400px;
+    
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+hr{
+    width: 25%;
+    height: 25%;
+    border: 2px ridge #000000;
+    margin-top: 4vw;
+}
+.status-1 {
+    background-color: rgb(164, 164, 164);
+    /* Add any other styles you want to apply */
+}
+.historique table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.historique th,
+.historique td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    width: 10%;
+}
+.firstligne{
+    background-color: #FFD700;
+    border: 2px ridge #000000;
+}
+.montant{
+    border-left: 2px ridge #000000;
+    border-right: 2px ridge #000000;
+}

@@ -65,6 +65,5 @@
     </div>
     </form>
     </script src ="verification.js">
-    
 </body>
 </html>
