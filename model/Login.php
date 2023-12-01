@@ -15,11 +15,14 @@ try {
         if ($row) {
             $storedPassword = $row['password'];
             // Perform your comparison here
-            if ($password === $storedPassword) {
+            $test = password_verify($password,$storedPassword);
+            var_dump($test);
+            if (password_verify($password, $storedPassword)) {
                 header("Location: ../view/Management.php");
                 exit();
             } else {
-                echo "Password do not match";
+                
+                //echo "Password do not match";
                 ?>
                 <script>
                 window.onload = function() {

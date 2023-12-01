@@ -54,7 +54,6 @@
                     <span>Login with Facebook</span>
                 </a>
             </div>
-
             <div class="media">
                 <a href="#" class="GG">
                     <img src="../controller/Assets/Google.png" alt="" class="google-img">

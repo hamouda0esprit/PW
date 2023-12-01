@@ -1,5 +1,5 @@
 
-
+//aaaaaaaaaaaa123
 <?php
 require("Connection.php");
     function generateRandomString($length) {
@@ -15,6 +15,8 @@ require("Connection.php");
     $numero = $_POST['numero'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    
     $ID = generateRandomString(8);
     // Handle image upload
     $targetDirectory = "../view/uploads/"; // Directory where images will be stored
@@ -32,7 +34,7 @@ require("Connection.php");
         $stmt->bindParam(':prenom', $prenom);
         $stmt->bindParam(':numero', $numero);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':password', $hashed_password);
         $stmt->bindParam(':image_url', $imageFileName);
         $stmt->bindParam(':ID', $ID);
 
