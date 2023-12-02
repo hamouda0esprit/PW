@@ -98,7 +98,5 @@ function getManageOrdersLivreur($act){
 
 <?php
     }
-
 }
-
 ?>

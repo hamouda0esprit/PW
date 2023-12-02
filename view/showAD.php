@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="..\controller\activeDeliveries\activeDeliveries.css">
-    <link rel="stylesheet" href="..\navbar.css">
+    <link rel="stylesheet" href="../controller/navbar/navbar.css">
 </head>
 <body>
     <?php 
-        require_once("../controller/navbar.php"); 
+        require_once("../controller/navbar/navbar.php"); 
         navbar();
         require_once("..\controller\activeDeliveries\activeDeliveries.php"); 
         ?>

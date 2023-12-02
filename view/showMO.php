@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="..\controller\pagination\pagination.css">
-    <link rel="stylesheet" href="..\controller\getManageOrdersLivreur.css">
-    <link rel="stylesheet" href="..\navbar.css">
+    <link rel="stylesheet" href="..\controller\manageOrders\getManageOrdersLivreur.css">
+    <link rel="stylesheet" href="../controller/navbar/navbar.css">
 </head>
 <body>
     <?php  
@@ -15,7 +15,7 @@
         }else{
             $act= 1;
         }
-        require_once("../controller/navbar.php"); 
+        require_once("../controller/navbar/navbar.php"); 
         navbar();
     ?>
 <!-- 
@@ -49,7 +49,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            require_once("..\controller\getManageOrdersLivreur.php");
+                            require_once("..\controller\manageOrders\getManageOrdersLivreur.php");
                             getManageOrdersLivreur($act);
                         ?>
                     </tbody>
@@ -89,7 +89,7 @@
         }
 
     </script>
-    <script src="..\controller\getManageOrdersLivreur.js"></script>
+    <script src="..\controller\manageOrders\getManageOrdersLivreur.js"></script>
     <script src="..\controller\activeDeliveries\bidFormControl.js"></script>
 </body>
 </html>
