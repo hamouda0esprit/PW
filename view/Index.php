@@ -9,7 +9,6 @@
 
 </head>
 <body>
-    
     <form action="../model/Login.php" method="POST" onsubmit="return validateemail()">
     <section class="Container">
         <div class="Login">

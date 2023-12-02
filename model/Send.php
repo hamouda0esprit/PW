@@ -1,7 +1,5 @@
-
-//aaaaaaaaaaaa123
 <?php
-require("Connection.php");
+session_start();
     function generateRandomString($length) {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         $randomString = '';
@@ -10,24 +8,23 @@ require("Connection.php");
         }
         return 'C' . $randomString;
     }
+    
+    $ID = generateRandomString(8);
+
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $numero = $_POST['numero'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    
-    $ID = generateRandomString(8);
-    // Handle image upload
-    $targetDirectory = "../view/uploads/"; // Directory where images will be stored
-    $imageFileName = basename($_FILES["image_url"]["name"]); // Get the name of the image file
-    $targetFilePath = $targetDirectory . $imageFileName; // Path to store the uploaded image
 
-    // Upload the image file
+
+    $targetDirectory = "../view/uploads/";
+    $imageFileName = basename($_FILES["image_url"]["name"]);
+    $targetFilePath = $targetDirectory . $imageFileName;
+
     if (move_uploaded_file($_FILES["image_url"]["tmp_name"], $targetFilePath)) {
-        // Database connection (replace with your database connection code)
         $pdo = Connection::getConnexion();
-        // Insert data into the database
         $sql = "INSERT INTO data (nom, prenom, numero, email, password, image_url,ID) VALUES (:nom, :prenom, :numero, :email, :password, :image_url,:ID)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':nom', $nom);
@@ -51,10 +48,10 @@ require("Connection.php");
                     countdown--;
                     if (countdown < 0) {
                         clearInterval(timer);
-                        document.getElementById('countdown').style.display = 'none'; // Hide the countdown
+                        document.getElementById('countdown').style.display = 'none';
                         window.location.href = '../view/index.php'; 
                     }
-                }, 1000); // Update every 1 second (1000 milliseconds)
+                }, 1000);
             }
             </script>
 <?php

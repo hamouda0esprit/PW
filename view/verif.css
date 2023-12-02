@@ -1,0 +1,29 @@
+body {
+    background: #f6f6f9;
+    padding: 4vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form {
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    max-width: 400px;
+    background: #fff;
+    
+    .form-control {
+      display: block;
+      height: 50px;
+      margin-right: 0.5rem;
+      text-align: center;
+      font-size: 1.25rem;
+      min-width: 0;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }

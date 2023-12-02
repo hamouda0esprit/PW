@@ -1,6 +1,6 @@
 <?php
 require("Connection.php"); 
-
+session_start();
 $bd = new Connection();
 $pdo = $bd::getConnexion();
 $email = $_POST['email'];
@@ -10,19 +10,24 @@ try {
     $query = "SELECT * FROM data WHERE email = '$email'";
     $result = $pdo->query($query);
 
+    
     if ($result) {
         $row = $result->fetch(PDO::FETCH_ASSOC);
         if ($row) {
             $storedPassword = $row['password'];
-            // Perform your comparison here
-            $test = password_verify($password,$storedPassword);
-            var_dump($test);
             if (password_verify($password, $storedPassword)) {
-                header("Location: ../view/Management.php");
-                exit();
+                if($row['status'] == 0){
+                    $_SESSION['email'] = $email;
+                    header("Location: ../view/Verification.php");
+                    exit();
+                }else{
+                    header("Location: ../view/Management.php");
+                    exit();
+                }
             } else {
                 
-                //echo "Password do not match";
+                echo "Password do not match";
+                echo "<p id='countdown'>Returning in 5 seconds...</p>";
                 ?>
                 <script>
                 window.onload = function() {
