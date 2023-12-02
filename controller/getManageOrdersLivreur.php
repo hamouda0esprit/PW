@@ -1,13 +1,13 @@
 <?php
 
-function getManageOrdersLivreur(){
-    $countbox = 0;
+function getManageOrdersLivreur($act){
+    $avencement = strval(intval($act) - 1)."0";
     require_once("..\model\config.php"); 
     $bd = new config();
     $pdo = $bd::getConnexion();
     try{
         $query = $pdo->prepare("
-        SELECT
+    SELECT
         cae.idBid,
         u.nom AS nomClient,
         u.prenom AS prenomClient,
@@ -20,13 +20,19 @@ function getManageOrdersLivreur(){
         cae.montant,
         cae.comment,
         l.nom AS nomLivreur
-        FROM
-            colis_a_encherer cae
-        JOIN colis c ON cae.idcolis = c.idcolis
-        JOIN user u ON c.id_client = u.ID
-        JOIN livreur l ON cae.idLivreur = l.idLivreur
-        WHERE cae.idLivreur = 1;
-        ");
+    FROM
+        colis_a_encherer cae
+    JOIN 
+        colis c ON cae.idcolis = c.idcolis
+    JOIN 
+        user u ON c.id_client = u.ID
+    JOIN 
+        livreur l ON cae.idLivreur = l.idLivreur
+    WHERE 
+        cae.idLivreur = 1
+    LIMIT 10 OFFSET $avencement;
+");
+
 
         $query->execute();
         $result = $query->fetchAll();
@@ -39,8 +45,10 @@ function getManageOrdersLivreur(){
     <tr>
         <td><p><?php echo $row["idBid"] ?></p></td>
         <td class="tdUser"><img src="..\Assets\user.png" alt="user"><p><?php echo $row["prenomClient"] . " " . $row["nomClient"] ?></p></td>
-        <td><p><?php echo $row["villeDepart"] . " -> " . $row["villeArrivee"] ?></p></td>
-        <td><p><?php echo $row["dateDepart"] . " -> " . $row["dateArrive"] ?></p></td>
+        <td><p><?php echo $row["villeDepart"] ?></p></td>
+        <td><p><?php echo $row["villeArrivee"] ?></p></td>
+        <td><p><?php echo $row["dateDepart"] ?></p></td>
+        <td><p><?php echo $row["dateArrive"] ?></p></td>
         <td><p><strong><?php echo $row["montant"] ?> DT</strong></p></td>
         <td><?php   
                 if( intval($row["status"]) == -1 ){
@@ -56,10 +64,12 @@ function getManageOrdersLivreur(){
                 }
             ?></td>
         <td>
-                <button class="btn update"onclick="hideBid(<?php echo $countbox;?>)">update</button>
+        
+            <button class="btn update"onclick="hideBid(<?php echo $countbox;?>)" <?php if(intval($row["status"]) != 0){echo "disabled";}?>>update</button>
+
             <form action="../controller/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
                 <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>" style="display:none;">
-                <input type="submit" value="delete" class="btn delete">
+                <input type="submit" value="delete" class="btn delete" <?php if(intval($row["status"]) == 1 || intval($row["status"]) == 2){echo "disabled";}?>>
             </form>
         </td>
     </tr>

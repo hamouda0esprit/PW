@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="..\controller\getManageOrdersLivreur.css">
     <link rel="stylesheet" href="..\controller\pagination\pagination.css">
+    <link rel="stylesheet" href="..\controller\getManageOrdersLivreur.css">
     <link rel="stylesheet" href="..\navbar.css">
 </head>
 <body>
     <?php  
+    	if(isset($_POST["nbpage"])){
+            $act=  intval($_POST["nbpage"]);
+        }else{
+            $act= 1;
+        }
         require_once("../controller/navbar.php"); 
         navbar();
     ?>
@@ -33,8 +38,10 @@
                         <tr>
                             <th> id </th>
                             <th> Customer</th>
-                            <th> Location </th>
-                            <th> Order Date </th>
+                            <th> Departure Location </th>
+                            <th> Arrival Location </th>
+                            <th> Date of Departure </th>
+                            <th> Arrival Date </th>
                             <th> Amount </th>
                             <th> Status </th>
                             <th> Actions </th>
@@ -43,7 +50,7 @@
                     <tbody>
                         <?php
                             require_once("..\controller\getManageOrdersLivreur.php");
-                            getManageOrdersLivreur();
+                            getManageOrdersLivreur($act);
                         ?>
                     </tbody>
                 </table>
@@ -51,7 +58,7 @@
         </main>
         <?php
         require_once("..\controller\pagination\pagination.php");
-        pagination();
+        pagination($act);
         ?>
     </div>
    

@@ -1,30 +1,69 @@
 <?php
-function pagination(){
+function pagination($act){	
 ?>
-	<div class="content_detail__pagination cdp" actpage="1">
-		<a href="#!-1" class="cdp_i">prev</a>
-		<a href="#!1" class="cdp_i">1</a>
-		<a href="#!2" class="cdp_i">2</a>
-		<a href="#!3" class="cdp_i">3</a>
-		<a href="#!4" class="cdp_i">4</a>
-		<a href="#!5" class="cdp_i">5</a>
-		<a href="#!6" class="cdp_i">6</a>
-		<a href="#!7" class="cdp_i">7</a>
-		<a href="#!8" class="cdp_i">8</a>
-		<a href="#!9" class="cdp_i">9</a>
-		<a href="#!10" class="cdp_i">10</a>
-		<a href="#!11" class="cdp_i">11</a>
-		<a href="#!12" class="cdp_i">12</a>
-		<a href="#!13" class="cdp_i">13</a>
-		<a href="#!14" class="cdp_i">14</a>
-		<a href="#!15" class="cdp_i">15</a>
- 		<a href="#!16" class="cdp_i">16</a>
-		<a href="#!17" class="cdp_i">17</a>
-		<a href="#!18" class="cdp_i">18</a>
-		<a href="#!19" class="cdp_i">19</a>
-		<a href="#!+1" class="cdp_i">next</a>
-	</div>
-  
+		<?php
+	require_once("..\model\config.php"); 
+    $bd = new config();
+    $pdo = $bd::getConnexion();
+    try{
+        $query = $pdo->prepare("SELECT CEILING(COUNT(`idBid`)/10) as nb  FROM `colis_a_encherer` WHERE `idLivreur`=1;");
+
+        $query->execute();
+        $result = $query->fetchAll();
+
+    }catch(PDOExcepion $e){
+        echo "connection failed :". $e->getMessage();
+    }
+    foreach($result as $row){
+
+?>
+	<div class="paginationDiv">
+
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" class="goStart">
+			<input type="text" name="nbpage" id="goStartVal" style="display:none;" value="1">
+			<button type="submit" class="pagBtn"><<</button>
+		</form>
 <?php
+	if($act > 1){
+?>
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" class="goPred">
+			<input type="text" name="nbpage" id="goPredVal" style="display:none;" value="<?php echo strval( intval($act) - 1 )?>">
+			<button type="submit" class="pagBtn"><</button>
+		</form>
+<?php
+	}
+?>
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" class="changePage">
+			<select name="nbpage" id="nbpage" onchange="this.form.submit()">
+				<?php 
+					for($i=1;$i<= $row["nb"] ;$i++){
+				?>
+				<option value="<?php echo $i?>" <?php if($i == $act) echo "selected" ;?>><?php echo $i?></option>
+				<?php
+					}
+				?>
+			</select>
+			<p>of <?php echo $row["nb"] ?></p>
+		</form>
+<?php
+	if($act < $row["nb"]){
+?>
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" class="goNext">
+			<input type="text" name="nbpage" id="goNextVal" style="display:none;" value="<?php echo strval( intval($act) + 1 )?>">
+			<button type="submit" class="pagBtn">></button>
+		</form>
+<?php
+	}
+?>
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" class="goLast">
+			<input type="text" name="nbpage" id="goLastVal" style="display:none;" value="<?php echo $row["nb"] ?>">
+			<button type="submit" class="pagBtn">>></button>
+		</form>
+
+	</div>	 
+<?php
+	}
 }
 ?>
+
+
