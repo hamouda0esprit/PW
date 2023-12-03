@@ -441,7 +441,7 @@
 				
 				.top{
 					width:90%;
-					height:50%;
+					height:33%;
 					display:flex;
 					justify-content: center;
 					align-items: center;
@@ -469,7 +469,6 @@
 							border:none;
 							font-size:.8vw;
 							font-weight:600;
-							margin-top:1vw;
 
 							&:hover{
 								background: rgb(255, 225, 10);
@@ -479,9 +478,9 @@
 					}
 				}
 				
-				.bottom{
+				.middle{
 					width:90%;
-					height:50%;
+					height:33%;
 					display:flex;
 					justify-content: center;
 					align-items: center;
@@ -509,10 +508,48 @@
 							border:none;
 							font-size:.8vw;
 							font-weight:600;
-							margin-top:1vw;
 
 							&:hover{
 								background: red;
+								box-shadow:7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
+							}
+						}
+					}
+				}
+				
+				.bottom{
+					width:90%;
+					height:33%;
+					display:flex;
+					justify-content: center;
+					align-items: center;
+					
+					.form{
+						display:flex;
+						justify-content: center;
+						align-items: center;
+						width:100%;
+						
+						.button {
+							width: 80%;
+
+							color: #fff;
+							border-radius: .3vw;
+							padding: .8vw 0;
+							font-weight: 500;
+							background: rgb(255, 215, 0);
+							cursor: pointer;
+							transition: all 0.3s ease;
+							position: relative;
+							display: inline-block;
+							box-shadow:7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1);
+							outline: none;
+							border:none;
+							font-size:.8vw;
+							font-weight:600;
+
+							&:hover{
+								background: rgb(100, 225, 10);
 								box-shadow:7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
 							}
 						}

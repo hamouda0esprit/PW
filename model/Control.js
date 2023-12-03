@@ -1,18 +1,31 @@
 // JavaScript Document
 
- function validateForm() {
-		//alert("test");
-        var type = document.getElementById("type").value;
-        var commande = document.getElementById("commande").value;
-        var description = document.getElementById("description").value;
-	 
-        if (type === "0" || (commande === "0" && type != "Technical") || description.trim() === "") {
-            alert("Please fill out all fields before submitting.");
-            return false;
-        }
+function containsBlacklistedWord(input, blacklist) {
+    const lowercasedInput = input.toLowerCase();
 
-        return true;
- }
+    return blacklist.some(word => lowercasedInput.includes(word.toLowerCase()));
+}
+
+const blacklist = ["badword1", "badword2"];
+
+function validateForm() {
+	var type = document.getElementById("type").value;
+	var commande = document.getElementById("commande").value;
+	var description = document.getElementById("description").value;
+	 
+	if (type === "0" || (commande === "0" && type != "Technical") || description.trim() === "") {
+		alert("Please fill out all fields before submitting.");
+		return false;
+	}
+	
+	if (containsBlacklistedWord(description, blacklist)) {
+    	alert("The use of bad words is forbidden !");
+		return false;
+	}
+	
+	return true;
+}
+
 
 
 function HideClass() {

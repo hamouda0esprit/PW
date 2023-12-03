@@ -48,7 +48,7 @@
 									<option value="0" disabled hidden selected>Please choose a delivery</option> 
 									<?php
 										try{
-											$query = $pdo->prepare('SELECT `idDeliveries` FROM `activedeliveries`');
+											$query = $pdo->prepare("SELECT `idDeliveries` FROM `activedeliveries` WHERE `ID` = '1'");
 											$query->execute();
 											$result = $query->fetchAll();
 										}
