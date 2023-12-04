@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        require_once("..\model\config.php");
+        require_once("..\..\model\config.php");
 		$bd = new config();
         $pdo = $bd::getConnexion();
         
@@ -104,7 +104,7 @@
     
     <div class = "loading">
         <div class="buttonaa">
-            <form action="../controller/controller.php" method="post">
+            <form action="..\..\controller\controller.php" method="post">
              <input type="hidden" name="clientId" value="<?php echo $id_client; ?>">
                 <button type="submit" class="buttona">Use Points</button>
             </form>
