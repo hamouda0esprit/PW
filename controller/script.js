@@ -10,3 +10,10 @@ $('.order').click(function(e) {
     }
 
 });
+function delay(){
+document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    setTimeout(function () {document.getElementById('form').submit();}, 11000);});
+
+}

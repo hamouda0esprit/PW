@@ -1,3 +1,4 @@
+
 function validateForm() {
   var height = document.getElementById('height').value;
   var width = document.getElementById('width').value;
@@ -6,7 +7,7 @@ function validateForm() {
   var depart = document.getElementById('depart').value;
   var arrivee = document.getElementById('arrivee').value;
   var budget = document.getElementById('budget').value;
-
+ 
   // Reset error messages
   resetErrorMessages();
  
@@ -14,43 +15,43 @@ function validateForm() {
   // Check if height, width, and depth are valid floats
   if (!isValidFloat(height)) {
     displayError('sizeError', 'Please enter a valid height (floating-point number).');
-  
+      return false;
   }
 
   if (!isValidFloat(width)) {
     displayError('sizeError', 'Please enter a valid width (floating-point number).');
-   
+    return false;
   }
 
   if (!isValidFloat(depth)) {
     displayError('sizeError', 'Please enter a valid depth (floating-point number).');
-   
+    return false;
   }
 
   // Check if weight is a valid float
   if (!isValidFloat(weight)) {
     displayError('weightError', 'Please enter a valid weight (floating-point number).');
-   
+    return false;
   }
 
   // Check if depart and arrivee are non-empty strings
   if (!isValidString(depart)) {
     displayError('departError', 'Please enter a valid departure location.');
-    
+    return false;
   }
 
   if (!isValidString(arrivee)) {
     displayError('arriveeError', 'Please enter a valid arrival location.');
-   
+    return false;
   }
 
   // Check if budget is a valid float
   if (!isValidFloat(budget)) {
     displayError('budgetError', 'Please enter a valid budget (floating-point number).');
-   
+    return false;
   }
 
-  
+  return true;
 }
 
 function isValidFloat(value) {
@@ -62,7 +63,8 @@ function isValidString(value) {
 }
 
 function displayError(elementId, message) {
-  var errorElement = document.getElementById(elementId + 'Error'); // Corrected ID here
+  var errorElement = document.getElementById(elementId);
+
   if (errorElement) {
     errorElement.textContent = message;
   }
@@ -74,17 +76,4 @@ function resetErrorMessages() {
     element.textContent = '';
   });
 }
-/*function HideClass() {
-  var type = document.getElementById("type").value;
-  var commande = document.getElementById("commande");
-  
-  if(type == "0" || type =="Technical"){
-          document.querySelectorAll(".commande")[0].classList.add("hidden");
-          commande.selectedIndex = 0;
-      
-          var event = new Event('change');
-          commande.dispatchEvent(event);
-      }else{
-          document.querySelectorAll(".commande")[0].classList.remove("hidden");
-  }
-}*/
+

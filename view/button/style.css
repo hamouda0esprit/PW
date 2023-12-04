@@ -1,0 +1,212 @@
+.color-1{
+  background: linear-gradient(to right, #ff4b1f, #1fddff);
+}
+
+.color-2{
+   background: linear-gradient(to right, #16a085, #f4d03f);
+}
+
+.color-3{
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  padding-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-border{
+  position: relative;
+  width: 220px;
+  height: 70px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.first-border:hover{
+  transform: scale(1.1);
+}
+
+.button{
+  box-sizing: border-box;
+  padding: 0 15px;
+  justify-content: space-between;
+  background: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 40px;
+  border: 5px solid #333;
+}
+
+.round{
+  position: absolute;
+  left: 150px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 5px solid #333;
+}
+
+.up{
+  position: absolute;
+  border: none;
+  width: 150px;
+  height: 40px;
+  margin-left: -20px;
+  border-radius: 40px 0 0 40px;
+}
+
+.row{
+  width: 900px;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.color-1 {
+  background: linear-gradient(to right, #ff4b1f, #1fddff);
+}
+
+.color-2 {
+  background: linear-gradient(to right, #16a085, #f4d03f);
+}
+
+.color-3 {
+  background: linear-gradient(to right, #3494e6, #ec6ead);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  padding-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  width: 900px;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.accept-button::before,
+.cancel-button::before {
+  font-family: 'Font Awesome'; /* Assuming you are using Font Awesome for icons */
+  font-size: 20px;
+  font-weight: bold;
+  content: ''; /* Leave content empty for icons */
+}
+
+.cancel-button::before {
+  content: '\2716'; /* Unicode character for "multiplication X" sign */
+}
+
+.accept-button::before {
+  content: '\2714'; /* Unicode character for "checkmark" sign */
+}
+
+.accept-button p,
+.cancel-button p {
+  visibility: hidden; /* Hide the text */
+}
+
+.accept-button.color-3:hover,
+.cancel-button.color-2:hover {
+  transform: scale(1.1);
+}
+
+
+.cancel-button,
+.accept-button{
+  position: relative;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+  transition: 1s;
+}
+
+.cube-right {
+  width:500px;
+  height:500px;
+
+  background-color:black;
+  border-bottom-right-radius:50%;
+}
+.cube-left {
+  width:500px;
+  height:500px;
+
+  background-color:black;
+  border-bottom-left-radius:50%;
+}
+
+.cancel-button:hover,
+.accept-button:hover{
+  transform: scale(1.1);
+}
+
+.cancel-button{
+  border-radius: 30px 0 30px 0;
+}
+
+.accept-button{
+    border-radius: 0 30px 0 30px;
+}
+
+.cancel-button p{
+  margin-left: -40px;
+}
+
+.accept-button p{
+  margin-right: -40px;
+}
+
+.cancel-button .cancel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 5px solid #333;
+  right: -5px;
+}
+
+.accept-button .cancel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 5px solid #333;
+  left: -5px;
+}

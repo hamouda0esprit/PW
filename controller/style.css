@@ -9,6 +9,7 @@
   --green: #16BF78;
   --sand: #DCB773;
   --sand-light: #EDD9A9;
+  --golfd:#f0f296;
 }
 
 .order {
@@ -16,7 +17,7 @@
      -moz-appearance: none;
           appearance: none;
   border: 0;
-  background: var(--dark);
+  background: var(--golfd);
   position: relative;
   height: 63px;
   width: 240px;

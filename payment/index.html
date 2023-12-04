@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Form with PayPal Integration</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://www.paypal.com/sdk/js?client-id=Aeed83dKapGzdLH-1RGsXfFU3ah8itNu-1x8mXfZ2KUWXkssHVxj3rGmVtKGboSEQbIrz70Jiutiv8qa"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="payment">
+      <div class="payment__shadow-dots"></div>
+      <div class="payment__dots">
+        <!-- Dots SVG Code -->
+      </div>
+      <div class="card">
+        <div class="card__visa">
+          <!-- Visa Logo SVG Code -->
+        </div>
+        <div class="card__number">0000&nbsp;0000&nbsp;0000&nbsp;0000</div>
+        <div class="card__name">
+          <h3>Card Holder</h3>
+          <p id="card-name">Nour Chokri</p>
+        </div>
+        <div class="card__expiry">
+          <h3>Valid Thru</h3>
+          <p>
+            <span id="month">MM</span>/<span id="year">YY</span>
+          </p>
+        </div>
+      </div>
+      <form class="form">
+        <h2>Payment Details</h2>
+        <div class="form__name form__detail">
+          <label for="name">Cardholder Name</label>
+          <ion-icon name="person-outline"></ion-icon>
+          <input type="text" placeholder="Nour Chokri" id="name" maxlength="24">
+          <div class="alert" id="alert-1">
+            <!-- Alert Icon SVG Code -->
+            Full name required
+          </div>
+        </div>
+        <div class="form__number form__detail">
+          <label for="number">Card Number</label>
+          <ion-icon name="card-outline"></ion-icon>
+          <input type="text" placeholder="0000 0000 0000 0000" id="number" onkeypress="return isNumeric(event)">
+          <div class="alert" id="alert-2">
+            <!-- Alert Icon SVG Code -->
+            Invalid card number
+          </div>
+        </div>
+        <div class="form__expiry form__detail">
+          <label for="date">Exp Date</label>
+          <ion-icon name="calendar-outline"></ion-icon>
+          <input type="text" placeholder="MM/YY" id="date" onkeypress="return isNumeric(event)" >
+          <div class="alert" id="alert-3">
+            <!-- Alert Icon SVG Code -->
+            Invalid date
+          </div>
+        </div>
+        <div class="form__cvv form__detail">
+          <label for="cvv">CVV
+            <ion-icon name="information-circle" class="info"></ion-icon>
+          </label>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" placeholder="0000" id="cvv" maxlength="4" onkeypress="return isNumeric(event)" >
+          <div class="alert" id="alert-4">
+            <!-- Alert Icon SVG Code -->
+            Invalid CVV
+          </div>
+        </div>
+        <button type="button" class="form__btn" onclick="showPayPalButton()">Confirm</button>
+      </form>
+    </div>
+
+    <!-- PayPal Button Container -->
+    <div id="paypal-button-container" style="display: none;"></div>
+  </div>
+
+  <script src='https://unpkg.com/ionicons@5.1.2/dist/ionicons.js'></script>
+  <script src="./script.js"></script>
+
+  <script>
+    function showPayPalButton() {
+      // Show the PayPal button
+      document.getElementById('paypal-button-container').style.display = 'block';
+
+      // You can add additional logic here if needed
+    }
+
+    paypal.Buttons({
+      createOrder: function (data, actions) {
+        // Get values from your form
+        var cardName = document.getElementById('name').value;
+        var cardNumber = document.getElementById('number').value;
+        var expiryDate = document.getElementById('date').value;
+        var cvv = document.getElementById('cvv').value;
+        var amount = '10.00'; // Replace with the actual amount logic
+
+        // Replace with your dynamic logic to set up the transaction details
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: amount
+            },
+            payment: {
+              payer_id: '', // Add the payer ID if available
+              payment_method: {
+                card: {
+                  number: cardNumber,
+                  expiry_date: expiryDate,
+                  name: cardName,
+                  cvv: cvv
+                  // Add other card details if needed
+                }
+              }
+            }
+          }]
+        });
+      },
+      onApprove: function (data, actions) {
+        // Capture the funds from the transaction
+        return actions.order.capture().then(function (details) {
+          // Replace with your server-side logic to handle the successful payment
+          console.log('Payment completed successfully:', details);
+
+          // Display a success message to the user
+          alert('Transaction completed by ' + details.payer.name);
+        });
+      },
+      onError: function (err) {
+        // Handle errors during the payment process
+        console.error('Error during payment:', err);
+        // Replace with your error handling logic, e.g., display an error message to the user
+        alert('Error during payment. Please try again.');
+      }
+    }).render('#paypal-button-container');
+  </script>
+</body>
+</html>

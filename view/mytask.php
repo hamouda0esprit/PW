@@ -35,7 +35,7 @@
       margin-top: 10px;
     }
 
-    .modify-button, .suppress-button {
+    .modify-button, .suppress-button, .bids-button {
       padding: 5px 10px;
       margin-right: 5px;
       cursor: pointer;
@@ -43,22 +43,32 @@
 
     .modify-button {
       background-color: #4285f4; /* Modify button color */
-      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1);
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
       transition: all 0.3s ease;
       color: white;
     }
-    .modify-button:hover{
-      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
+    .modify-button:hover {
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 25px 0px rgba(0, 0, 0, .1), 4px 4px 6px 0px rgba(0, 0, 0, .3);
     }
 
     .suppress-button {
       background-color: #dc3545; /* Suppress button color */
-      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1);
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
       transition: all 0.3s ease;
       color: white;
     }
     .suppress-button:hover {
-      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 25px 0px rgba(0, 0, 0, .1), 4px 4px 6px 0px rgba(0, 0, 0, .3);
+    }
+
+    .bids-button {
+      background-color: #28a745; /* Bids button color (green) */
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+      transition: all 0.3s ease;
+      color: white;
+    }
+    .bids-button:hover {
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 25px 0px rgba(0, 0, 0, .1), 4px 4px 6px 0px rgba(0, 0, 0, .3);
     }
   </style>
 </head>
@@ -75,12 +85,14 @@
         <th>Budget</th>
         <th>Images</th>
         <th>Action</th>
+  
       </tr>
     </thead>
     <tbody>
-   <?php 
-   require("..\controller\select.php");
-   select();?>
+      <?php 
+      require("..\controller\select.php");
+      select();
+      ?>
     </tbody>
   </table>
 
@@ -93,6 +105,11 @@
     function suppressDelivery(button) {
       // Add logic for suppressing the delivery based on the row or button clicked
       alert("Suppress button clicked");
+    }
+
+    function bidsAction(button) {
+      // Add logic for the "Bids" button action based on the row or button clicked
+      alert("Bids button clicked");
     }
   </script>
 </body>

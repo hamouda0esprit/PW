@@ -311,7 +311,7 @@ $depth = $sizeArray[2];
           <p class="titles">Add Pictures</p>
           <div class="image-upload">
             <label for="pictures" class="sub-title"><i class="fa-solid fa-image"></i> Upload Pictures</label>
-            <input type="file" id="pictures" name="images" accept="image/*" >
+            <input type="file" id="pictures" name="images[]" accept="image/*" >
           </div>
         </div>
       </div>
