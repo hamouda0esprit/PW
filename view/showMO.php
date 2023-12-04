@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="..\controller\pagination\pagination.css">
     <link rel="stylesheet" href="..\controller\manageOrders\getManageOrdersLivreur.css">
-    <link rel="stylesheet" href="../controller/navbar/navbar.css">
+    <link rel="stylesheet" href="../controller/navbar/navbar.scss">
 </head>
 <body>
     <?php  
@@ -24,27 +24,38 @@
         // showManageOrders();
     ?> -->
     <div class="container">
-        <main class="table">
+        <main class="table" >
             <section class="table__header">
                 <h1>Manage Orders</h1>
                 <div class="input-group">
                     <input type="search" placeholder="Search data...">
                     <img src="..\Assets\search.png" alt="">
                 </div>
+                <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="../Assets/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="../Assets/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="../Assets/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="../Assets/excel.png" alt=""></label>
+                </div>
+            </div>
             </section>
-            <section class="table__body">
+            <section class="table__body"id="customers_table">
                 <table>
                     <thead>
                         <tr>
-                            <th> id </th>
-                            <th> Customer</th>
-                            <th> Departure Location </th>
-                            <th> Arrival Location </th>
-                            <th> Date of Departure </th>
-                            <th> Arrival Date </th>
-                            <th> Amount </th>
-                            <th> Status </th>
-                            <th> Actions </th>
+                            <th> id <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Customer <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Departure Location <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Arrival Location <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Date of Departure <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Arrival Date <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Amount <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Status <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th> Actions <span class="icon-arrow">&UpArrow;</span> </th>
                         </tr>
                     </thead>
                     <tbody>

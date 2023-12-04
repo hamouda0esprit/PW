@@ -43,7 +43,7 @@ function getManageOrdersLivreur($act){
     foreach($result as $row){
 ?>
     <tr>
-        <td><p><?php echo $row["idBid"] ?></p></td>
+        <td class="tdId"><p>&nbsp;&nbsp;&nbsp;<?php echo $row["idBid"] ?>&nbsp;&nbsp;&nbsp;</p></td>
         <td class="tdUser"><img src="..\Assets\user.png" alt="user"><p><?php echo $row["prenomClient"] . " " . $row["nomClient"] ?></p></td>
         <td><p><?php echo $row["villeDepart"] ?></p></td>
         <td><p><?php echo $row["villeArrivee"] ?></p></td>

@@ -26,7 +26,7 @@ function updateStatus(){
             <h3 class="<?php if($state>=1) echo "done"; ?>"><b>confirmed</b></h3>
         </div>
         <div>
-            <i class="fa-solid fa-arrow-right fa-bounce <?php if($state>=1) echo "done"; ?> icn"   style="--fa-animation-iteration-count: 1;"></i>
+            <i class="fa-solid fa-bounce fa-arrow-right  <?php if($state>=1) echo "done"; ?> icn"   style="--fa-animation-iteration-count: 1;"></i>
         </div>
         <div>
             <i class="fa-solid fa-truck fa-bounce icn <?php if($state>=2) echo "done"; ?>" style="--fa-animation-iteration-count: 1;"></i>
@@ -46,7 +46,7 @@ function updateStatus(){
     <form action="..\controller\updateStatus\updateStateDataBase.php" method="post">
         <input type="text" name="state" id="state" style="display:none;" value="<?php echo $state ?>">
         <input type="text" name="idBid" id="idBid" style="display:none;" value="<?php echo $_POST["idBid"] ?>">
-        <input type="submit" value="<?php 
+        <input type="submit" class="nextBtn" value="<?php 
             if($state == 1){
                 echo("collect");
             }else{

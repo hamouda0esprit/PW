@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     min-height: 80vh;
     
 }
@@ -49,4 +49,32 @@
 
 .done{
     color: green;
+}
+
+@media screen and (max-width: 1200px){
+    .icons{
+        flex-direction: column;
+        width: 90%;
+    }
+    .fa-arrow-right{
+        transform: rotate(90deg);
+    }
+}
+
+
+.nextBtn{
+    width: 14rem;
+    height: 4rem;
+    font-size: 24px;
+    margin: 4rem 0;
+    background-color: rgb(255, 255, 255);
+    color: green;
+    border: 2px solid green;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.nextBtn:hover{
+    background-color: green;
+    color: white;
 }

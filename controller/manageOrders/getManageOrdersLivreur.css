@@ -215,6 +215,7 @@ tbody tr.hide td img {
     padding: .4rem 0;
     border-radius: 2rem;
     text-align: center;
+    width: 6rem;
 }
 
 .status.cancelled {
@@ -450,4 +451,117 @@ tbody tr.hide td img {
 	padding: 0;
 	cursor: pointer;
 	outline: none;
+}
+
+thead th span.icon-arrow {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1.4px solid transparent;
+    
+    text-align: center;
+    font-size: 1rem;
+    
+    transition: .2s ease-in-out;
+}
+thead th:hover span.icon-arrow{
+    border: 1.4px solid #209104;
+}
+
+thead th:hover {
+    color: 26bd00;
+}
+
+thead th.active span.icon-arrow{
+    background-color: #209104;
+    color: #fff;
+}
+
+thead th.asc span.icon-arrow{
+    transform: rotate(180deg);
+}
+
+thead th.active,tbody td.active {
+    color: #209104;
+}
+
+.export__file {
+    position: relative;
+}
+
+.export__file .export__file-btn {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: #fff6 url(../../Assets/export.png) center / 80% no-repeat;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-btn:hover { 
+    background-color: #fff;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.export__file input {
+    display: none;
+}
+
+.export__file .export__file-options {
+    position: absolute;
+    right: 0;
+    
+    width: 12rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    text-align: center;
+
+    opacity: 0;
+    transform: scale(.8);
+    transform-origin: top right;
+    
+    box-shadow: 0 .2rem .5rem #0004;
+    
+    transition: .2s;
+}
+.export__file input:checked + .export__file-options {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100;
+}
+
+.export__file input:not(:checked) + .export__file-options {
+    display: none;
+}
+
+
+.export__file .export__file-options label{
+    display: block;
+    width: 100%;
+    padding: .6rem 0;
+    background-color: #f2f2f2;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-options label:first-of-type{
+    padding: 1rem 0;
+    background-color: #86e49d !important;
+}
+
+.export__file .export__file-options label:hover{
+    transform: scale(1.05);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.export__file .export__file-options img{
+    width: 2rem;
+    height: auto;
 }
