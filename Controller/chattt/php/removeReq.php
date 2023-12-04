@@ -26,7 +26,7 @@ try {
     // Commit the transaction
     $pdo->commit();
 
-    // Redirect to adminTab.php
+    // Redirect to adminTab.phps
     header("Location: ../adminTab.php");
     exit();
 } catch (Exception $e) {

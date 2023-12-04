@@ -1,33 +1,39 @@
 <?php
 require_once("config2.php");
-
+session_start();
 $bd = new config();
 $pdo = $bd::getConnexion();
-
-$sql = "DELETE FROM users
-WHERE user_id IN (
-    SELECT DISTINCT users.user_id
-    FROM users
-    JOIN messages ON users.unique_id = messages.incoming_msg_id
-    WHERE messages.msg_id = :msg_id
-);
-
-DELETE FROM messages
-WHERE incoming_msg_id = :msg_id
-   OR outgoing_msg_id = :msg_id
-";
-
-$db = config::getConnexion();
+$action = $_POST["action"];
+if ($action == "ban") {
+    $sql = "UPDATE users SET banned = 1 WHERE user_id = :id";
+    $db = config::getConnexion();
 try {
     $query = $db->prepare($sql);
     $query->execute([
-        ':msg_id' => $_POST["request_id"],
+        ':id' => $_POST['id'],
     ]);
-
-    // Redirect to activeDeliveries.php
-    header("Location: ..\adminTab.php");
+    header("Location: ../adminTab.php");
     exit();
-} catch (Exception $e) {
-    echo 'Error: ' . $e->getMessage();
+    } catch (Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+    }
+} else {
+    $insertReportStatusSql = "INSERT INTO `report_status` (`reason`, `id_user`) VALUES (:reason, :id_user)";
+    $insertReportStatusQuery = $pdo->prepare($insertReportStatusSql);
+    $insertReportStatusQuery->execute([
+        ':reason' => $_POST["reason"], // Replace with your actual reason
+        ':id_user' => 4, // Replace with the actual user ID
+        
+    ]);
+    $removeReportSql = "DELETE FROM `report` WHERE `report_id` = :report_id;";
+    $removeReportQuery = $pdo->prepare($removeReportSql);
+    $removeReportQuery->execute([
+        ':report_id' => $_POST["request_id"],
+    ]);
+    header("Location: ../adminTab.php");
+    exit();
+    // Commit the transaction
+    // Redirect to adminTab.php
+   
 }
 ?>

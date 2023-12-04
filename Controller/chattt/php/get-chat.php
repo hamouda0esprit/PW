@@ -29,6 +29,7 @@
                                     <p>'. $row['msg'] .'</p>&nbsp;&nbsp;
                                     <form name="suppform" action="php/report.php" method="POST">
                                             <input type="text" name="idReport" id="idSupp" value='.$row["msg_id"].'>
+                                            <input type="text" name="userid" id="idSupp" value='.$row["user_id"].'>
                                             <input type="submit"  class="custom-button" value="!">
                                         </form>    
                                 </div>
