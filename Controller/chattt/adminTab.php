@@ -27,43 +27,78 @@
             width: 80%;
             border-collapse: collapse;
             margin: 20px;
-            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-        }
-
-        th, td {
-            padding: 12px;
-            
-            border-bottom: 1px solid #ddd;
+            overflow: hidden;
         }
 
         th {
-            background-color: #3498db;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-bottom: 1px solid #ddd;
             color: #fff;
             text-align: center;
+            opacity: 0;
+            animation: fadeInLeft 1s ease forwards;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         tr:hover {
             background-color: #f5f5f5;
         }
 
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        #charCount {
+            color: #333;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+
         a {
             text-decoration: none;
             color: #3498db;
         }
 
-        .btn{
-    width: 6rem;
-    border-radius: 2rem;
-    border: 1px solid #d5d1defe;
-    outline: none;
-    padding: 5px 10px;
-    margin: 5px 0;
-    cursor: pointer;
-    transition: .2s;
-    background-color: #d5d1defe;
-}
+
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: .2s;
+            margin: 5px 0;
+            outline: none;
+        }
+
     </style>
 
 </head>
@@ -78,11 +113,9 @@
             <th>actions</th>
     
         </tr>
-        
         <?php
-
         require_once("php/getReq.php"); 
-        getAdmin()
+        getAdmin();
         ?>
     </table>
 </body>
