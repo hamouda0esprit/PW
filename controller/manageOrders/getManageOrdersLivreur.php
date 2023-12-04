@@ -71,6 +71,11 @@ function getManageOrdersLivreur($act){
                 <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>" style="display:none;">
                 <input type="submit" value="delete" class="btn delete" <?php if(intval($row["status"]) == 1 || intval($row["status"]) == 2){echo "disabled";}?>>
             </form>
+
+            <form action="./ShowUpdateStatus.php" method="POST" onsubmit="return confirmdelete()">
+                <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>" style="display:none;">
+                <input type="submit" value="upade status" class="btn updateStatus" <?php if(intval($row["status"]) == 0 || intval($row["status"]) == -1){echo "disabled";}?>>
+            </form>
         </td>
     </tr>
     <div class="bidForm hide">

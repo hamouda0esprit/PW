@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.updateStatus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 80vh;
+    
+}
+.updateStatus h2{
+    padding: 6rem 0;
+    font-size: 48px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 4rem;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 4px 4px 14px 2px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 4px 4px 14px 2px rgba(0,0,0,0.33);
+    -moz-box-shadow: 4px 4px 14px 2px rgba(0,0,0,0.33);
+    border-radius: 10px;
+}
+.icons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.icn{
+    font-size: 6rem;
+    padding: 2rem 0;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+    -moz-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+    -ms-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+    -o-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+}
+
+.done{
+    color: green;
+}

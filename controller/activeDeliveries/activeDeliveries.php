@@ -34,19 +34,19 @@
         </div>  
         <div class="cardInfo">
             <div class="useInfo">
-                <p>user</p>
+                <p class="titleColor">user</p>
                 <img src="../Assets/userlogo.png" alt="user">
                 <h3><?php echo $row["prenom"]  ?></h3>
                 <h4><?php echo $row["nom"]  ?></h4>
             </div>
             <div class="delInfo">
-                <p>Delivery Info</p>
+                <p class="titleColor">Delivery Info</p>
                 <b><p><?php echo $row["depart"]  ?> -> <?php echo $row["arrivee"]  ?></p></b>
                 <b><p><?php echo $row["size"]  ?></p></b>
                 <b><p><?php echo $row["poids"]  ." kg"?></p></b>
             </div>
             <div class="bidInfo">
-                <p>BID</p>
+                <p class="titleColor">BID</p>
                 <img src="../Assets/bidLogo.png" alt="bid">
                 <p>Current Bid</p>
                 <p><?php
@@ -59,10 +59,10 @@
             
         </div>
         <div class="btnDet">
-            <button class="bidBtn" onclick="hideBid(<?php 
+            <div class="btn btn__primary" onclick="hideBid(<?php 
                 echo $countbox;
             
-            ?>)"><b>Start Bidding</b></button>
+            ?>)"><p>Start Bidding</p></div>
         </div>
         
     </div>

@@ -63,7 +63,7 @@
     </div>
    
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src="..\controller\pagination\pagination.js"></script>
+    <!-- <script src="..\controller\pagination\pagination.js"></script> -->
     <script>
         function confirmdelete() {
             x = confirm("are you sure ?");

@@ -17,6 +17,7 @@ function pagination($act){
     foreach($result as $row){
 
 ?>
+
 	<div class="paginationDiv">
 
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" class="goStart">
