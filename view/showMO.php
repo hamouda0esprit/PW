@@ -18,11 +18,7 @@
         require_once("../controller/navbar/navbar.php"); 
         navbar();
     ?>
-<!-- 
-    <?php  
-        // require_once("..\controller\manageOrders.php");
-        // showManageOrders();
-    ?> -->
+
     <div class="container">
         <main class="table" >
             <section class="table__header">
@@ -47,7 +43,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th> id <span class="icon-arrow">&UpArrow;</span> </th>
+                            <th class="idSize"> id <span class="icon-arrow">&UpArrow;</span> </th>
                             <th> Customer <span class="icon-arrow">&UpArrow;</span> </th>
                             <th> Departure Location <span class="icon-arrow">&UpArrow;</span> </th>
                             <th> Arrival Location <span class="icon-arrow">&UpArrow;</span> </th>
