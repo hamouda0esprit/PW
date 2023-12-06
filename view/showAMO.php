@@ -67,5 +67,13 @@
         </main>
     </div>
     <script src="..\controller\admin\getManageOrdersAdmin.js"></script>
+    <script>
+        function confirmdelete() {
+            x = confirm("are you sure ?");
+            if(x == false){
+                return false
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require_once("..\Model\config.php");
+require_once("..\..\Model\config.php");
 
 $bd = new config();
 $pdo = $bd::getConnexion();
@@ -14,7 +14,7 @@ try {
     ]);
 
     // Redirect to activeDeliveries.php
-    header("Location: ../view/showAMO.php");
+    header("Location: ../../view/showAMO.php");
     exit();
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();

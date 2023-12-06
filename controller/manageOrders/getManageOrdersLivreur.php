@@ -67,7 +67,7 @@ function getManageOrdersLivreur($act){
         
             <button class="btn update"onclick="hideBid(<?php echo $countbox;?>)" <?php if(intval($row["status"]) != 0){echo "disabled";}?>>update</button>
 
-            <form action="../controller/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
+            <form action="../controller/manageOrders/deleteOrder.php" method="POST" onsubmit="return confirmdelete()">
                 <input type="text" name="idBid" id="idBid" value="<?php echo $row["idBid"]?>" style="display:none;">
                 <input type="submit" value="delete" class="btn delete" <?php if(intval($row["status"]) == 1 || intval($row["status"]) == 2){echo "disabled";}?>>
             </form>
@@ -86,7 +86,7 @@ function getManageOrdersLivreur($act){
             
             ?>)">x</button></div>
             <h3 class="bidTitle">bid form</h3>
-            <form action="../controller/updateOrder.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
+            <form action="../controller/manageOrders/updateOrder.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
                 <input type="number" class="normal" name="idBid" id="idDeliveries" value="<?php echo $row["idBid"]?>">
                 <input type="text" class="normal" name="montant" id="bid" placeholder="bid" value="<?php echo $row["montant"]?>">
                 <div id="dateHolder">

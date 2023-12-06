@@ -74,7 +74,7 @@
             
             ?>)">x</button></div>
             <h3 class="bidTitle">bid form</h3>
-            <form action="..\controller\addBid.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
+            <form action="..\controller\activeDeliveries\addBid.php" method="POST" onsubmit="return control(<?php echo ($countbox-1);?>)">        
                 <input type="number" class="normal" name="idDeliveries" id="idDeliveries" value="<?php echo $row["idcolis"]?>">
                 <input type="text" class="normal" name="montant" id="bid" placeholder="bid">
                 <div id="dateHolder">

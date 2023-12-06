@@ -1,16 +1,19 @@
 <?php
-require_once("..\Model\config.php");
+require_once("..\..\Model\config.php");
 
+$countbox = 0;
+$countannim = 0.5;
 $bd = new config();
 $pdo = $bd::getConnexion();
 
-$sql = "UPDATE colis_a_encherer SET montant = :montant , dateDepart = :dateDepart , dateArrive = :dateArrive , comment = :comment WHERE idBid = :idBid;";
-
+$sql = "INSERT INTO `colis_a_encherer`(`idBid`, `idLivreur`, `idcolis`, `montant`, `dateDepart`, `dateArrive`, `comment`,`status`)
+        VALUES ('', :idLivreur, :idDeliveries, :montant, :dateDepart, :dateArrive, :comment,0)";
 $db = config::getConnexion();
 try {
     $query = $db->prepare($sql);
     $query->execute([
-        ':idBid' => $_POST["idBid"],
+        ':idLivreur' => 1,
+        ':idDeliveries' => $_POST["idDeliveries"],
         ':montant' => $_POST["montant"],
         ':dateDepart' => $_POST["dateDepart"],
         ':dateArrive' => $_POST["dateArrive"],
@@ -18,7 +21,7 @@ try {
     ]);
 
     // Redirect to activeDeliveries.php
-    header("Location: ../view/showMO.php");
+    header("Location: ../../view/showMO.php");
     exit();
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();
