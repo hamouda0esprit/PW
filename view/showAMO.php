@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Manage Orders</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/logo.png">
     <link rel="stylesheet" href="../controller/navbar/navbar.scss">
     <link rel="stylesheet" href="..\controller\admin\getManageOrdersAdmin.css">
     <style>

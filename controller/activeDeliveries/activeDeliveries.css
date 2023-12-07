@@ -1,7 +1,7 @@
 :root {
-    --primary-light: #afff8a;
-    --primary: #43ae16;
-    --primary-dark: #226700;
+    --primary-light: rgb(185, 254, 153);
+    --primary: rgb(29, 191, 114);
+    --primary-dark: rgb(26, 160, 95);
     --white: #FFFFFF;
     --greyLight-1: #efeeee;
     --greyLight-2: #e0dfdf;
@@ -72,7 +72,7 @@
 }
 
 .bidForm>div {
-    background-color: rgba(255, 215, 0, 1);
+    background-color: rgb(29, 191, 114);
     width: 80%;
     padding: 10%;
     border-radius: 10px;
@@ -311,7 +311,7 @@ button, input[type="submit"], input[type="reset"] {
     height: 35px;
 }
 #sendBid{
-    background-color: rgba(255, 215, 0, 1);
+    background-color: rgb(29, 191, 114);
     color: white;
     border: 2px solid white;
     transition: .2s;
@@ -319,7 +319,7 @@ button, input[type="submit"], input[type="reset"] {
 
 #sendBid:hover{
     background-color: rgb(255, 255, 255);
-    color: rgba(255, 215, 0, 1);
+    color: rgb(29, 191, 114);
 }
 #comment , #bid ,#sendBid,#dateDepart,#dateArrive{
     border-radius: 5px;

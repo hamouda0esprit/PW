@@ -80,7 +80,12 @@ main.table {
 
     transition: .2s;
 }
-
+.table__header .input-group input::placeholder {
+    color: rgb(255, 255, 255);
+  }
+.table__header .input-group img {
+    filter: invert(1);
+  }
 .table__header .input-group:hover {
     width: 45%;
     background-color: #fff8;
@@ -499,7 +504,7 @@ thead th.active,tbody td.active {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background: #fff6 url(../../Assets/export.png) center / 80% no-repeat;
+    background: #fff6 url(../../Assets/export.png) center / 80% no-repeat ;
     border-radius: 50%;
     transition: .2s ease-in-out;
 }
