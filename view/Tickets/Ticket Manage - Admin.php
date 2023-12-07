@@ -3,14 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<title>Ticket Request</title>
-	<link rel="stylesheet" href="../model/Ticket Manage - Admin.scss">
-	<script src="../model/Control.js"></script>
+	<link rel="stylesheet" href="../../model/Tickets/Ticket Manage - Admin.scss">
+	<script src="../../model/Control.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
+<?php
+    require_once ("../../model/Tickets/Navbar.php");
+    navbar();
+?>
 <body>
 	<?php
-        require_once("..\model\config.php");
+        require_once("../../model/Tickets/config.php");
 	
 		$bd = new config();
         $pdo = $bd::getConnexion();
@@ -29,9 +32,9 @@
 				
 			try{
 				if ($selectedType == "Client") {
-                	$query = $pdo->prepare("SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc` WHERE  `idC` = '$idUser' AND `idCommande` = '$idDelivery' AND `status` = '0' ");
+                	$query = $pdo->prepare("SELECT * FROM `reclamationc` WHERE  `idC` = '$idUser' AND `idCommande` = '$idDelivery'");
                 } elseif ($selectedType == "DeliveryDriver") {
-					$query = $pdo->prepare("SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc` WHERE  `idL` = '$idUser' AND `idCommande` = '$idDelivery' AND `status` = '0' ");
+					$query = $pdo->prepare("SELECT * FROM `reclamationc` WHERE  `idL` = '$idUser' AND `idCommande` = '$idDelivery'");
                 }
 				
 				$query->execute();
@@ -53,7 +56,7 @@
 				<div class="top">
 					<div class="left">
 						<div class="title">
-							<h3 class="text">Type : </h2>
+							<h2 class="text">Type : </h2>
 						</div>
 						<div class="box">
 							<p class="type"><?php echo $row["type"]?></p>
@@ -62,7 +65,7 @@
 					
 					<div class="right">
 						<div class="title">
-							<h3 class="text">Delivery Id : </h2>
+							<h2 class="text">Delivery Id : </h2>
 						</div>
 						<div class="box">
 							<p class="idcommande"><?php echo $row["idCommande"]?></p>
@@ -72,7 +75,7 @@
 				
 				<div class="bottom">
 					<div class="title">
-						<h3 class="text">Description : </h2>
+						<h2 class="text">Description : </h2>
 					</div>
 					
 					<div class="box">
@@ -84,7 +87,7 @@
 			<div class="right">
 				<div class="box">
 					<div class="top">
-						<form action="Ticket.php" method="POST" class="form">
+						<form action="../Tickets/Ticket.php" method="POST" class="form">
 							<input type="text" hidden name="idReclamationC" value="<?php echo $row["idReclamationC"]?>">
 							<input type="text" hidden name="idC" value="<?php echo $row["idC"]?>">
 							<input type="text" hidden name="idL" value="<?php echo $row["idL"]?>">
@@ -95,16 +98,20 @@
 					</div>
 					
 					<div class="middle">
-						<form action="../controller/DeleteRequest.php" method="POST" class="form">
+						<form action="../../controller/Tickets/DeleteRequest.php" method="POST" class="form">
 							<input type="text" hidden name="idReclamationC" value="<?php echo $row["idReclamationC"]?>">
 							<input type="submit" Value='Delete' class="button">
 						</form>
 					</div>
 					
 					<div class="bottom">
-						<form action="../controller/UpdateRequest.php" method="POST" class="form">
+						<form action="../../controller/Tickets/UpdateRequest.php" method="POST" class="form">
 							<input type="text" hidden name="idReclamationC" value="<?php echo $row["idReclamationC"]?>">
+							<?php if($row["Status"] == 0) { ?>
 							<input type="submit" Value='Close Ticket' class="button">
+							<?php }else{ ?>
+							<input disabled Value='Closed Ticket' class="closed-button">
+							<?php } ?>
 						</form>
 					</div>
 				</div>

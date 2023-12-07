@@ -553,6 +553,31 @@
 								box-shadow:7px 7px 25px 0px rgba(0,0,0,.1),4px 4px 6px 0px rgba(0,0,0,.3);
 							}
 						}
+						
+						.closed-button {
+							width: 80%;
+
+							color: #fff;
+							border-radius: .3vw;
+							padding: .8vw 0;
+							font-weight: 500;
+							background: rgba(115,196,57,.70);
+							cursor: not-allowed;
+							transition: all 0.3s ease;
+							position: relative;
+							display: inline-block;
+							box-shadow:7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1);
+							outline: none;
+							border:none;
+							font-size:.8vw;
+							font-weight:600;
+							text-align:center;
+
+							&:hover{
+								background: rgba(104,176,52,0.59);
+								box-shadow:4px 4px 15px 0px rgba(0,0,0,.05),4px 4px 6px 0px rgba(0,0,0,..1);
+							}
+						}
 					}
 				}
 			}

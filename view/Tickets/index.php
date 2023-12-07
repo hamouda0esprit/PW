@@ -3,18 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>Index</title>
-	<link rel="stylesheet" href="../model/index.scss">
+	<link rel="stylesheet" href="../../model/Tickets/index.scss">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
+<?php
+    require_once ("../../model/Tickets/Navbar.php");
+    navbar();
+?>
 <body>
 	<?php
-        require_once("..\model\config.php");
+        require_once("../../model/Tickets/config.php");
 	 
 		$bd = new config();
         $pdo = $bd::getConnexion();
 	?>
-	
+
 	<div class="Main_Container">
 		<div class="first_container">
 			<div class="box">
@@ -63,7 +66,7 @@
 				<div class="FDD-box">
 					<div class="top">
 						<div class="pdp">
-							<img src="../Assets/index/6.jpg" class="image">
+							<img src="../../Assets/index/6.jpg" class="image">
 						</div>
 
 						<div class="details">

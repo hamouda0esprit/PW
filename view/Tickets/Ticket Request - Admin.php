@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Manage Request - Admin</title>
-    <link rel="stylesheet" href="../model/Ticket Request - Admin.scss">
-    <script src="../model/Control - Admin.js"></script>
+    <link rel="stylesheet" href="../../model/Tickets/Ticket Request - Admin.scss">
+    <script src="../../model/Tickets/Control - Admin.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<?php
+    require_once ("../../model/Tickets/Navbar.php");
+    navbar();
+?>
 <body>
     <?php
-        require_once("..\model\config.php");
+        require_once("../../model/Tickets/config.php");
 
         $bd = new config();
         $pdo = $bd::getConnexion();
@@ -46,7 +50,7 @@
 		
 		
         <div class="Middle">
-			<form action="../view/Ticket Request - Admin.php" method="POST" class="cf">
+			<form action="../Tickets/Ticket Request - Admin.php" method="POST" class="cf">
 				<div class="type">
 					<div class="box">
 						<div class="content">
@@ -103,7 +107,7 @@
                     <div class="content">
                         <h3 class="title"><i class="fa-solid fa-bullseye"></i> Commande</h3>
                         <div class="select-box">
-                            <form action="../view/Ticket Request - Admin.php" method="POST" class="cf">
+                            <form action="../Tickets/Ticket Request - Admin.php" method="POST" class="cf">
                                 <select name="Commande" id="commande" class="select" onchange="saveSelection('Commande'); this.form.submit();">
                                     <option value="0" disabled hidden selected>Please choose a delivery</option>
                                     <?php
@@ -135,7 +139,7 @@
                             </form>
                         </div>
                         <?php if (!empty($result)) { ?>
-                        <form action="../view/Ticket Manage - Admin.php" method="POST" class="form" onSubmit="getvalue();">
+                        <form action="../Tickets/Ticket Manage - Admin.php" method="POST" class="form" onSubmit="getvalue();">
 							<input type="text" hidden name="selectedType" value="<?php echo $selectedType; ?>">
                             <input type="text" hidden name="idDelivery" id="idDelivery" value="<?php echo $selectedCommande; ?>">
                             <input type="text" hidden name="idUser" value="<?php echo ($selectedType == "DeliveryDriver") ? $selectedUser : ""; ?>">

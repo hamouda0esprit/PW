@@ -1,5 +1,5 @@
 <?php
-require_once("../model/../model/config.php");
+require_once("../../model/Tickets/config.php");
 
 $bd = new config();
 $pdo = $bd::getConnexion();
@@ -19,7 +19,7 @@ try {
     
 
     // Redirect to Ticket Request.php
-    header("Location: ../view/Ticket Request.php");
+    header("Location: ../../view/Tickets/Ticket.php");
     exit();
 }catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();

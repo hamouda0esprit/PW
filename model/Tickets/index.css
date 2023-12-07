@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../Assets/index/1.jpg");
+  background-image: url("../../Assets/index/1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -80,7 +80,7 @@
   .second_container .right {
     width: 60%;
     height: 100%;
-    background-image: url("../Assets/index/2.jpg");
+    background-image: url("../../Assets/index/2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
@@ -175,7 +175,7 @@
   .fourth_container .left {
     width: 40%;
     height: 100%;
-    background-image: url("../Assets/index/3.jpg");
+    background-image: url("../../Assets/index/3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
@@ -239,7 +239,7 @@
       .fifth_container .split .left .image {
         width: 15vw;
         height: 15vw;
-        background-image: url("../Assets/index/4.jpg");
+        background-image: url("../../Assets/index/4.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain; }
@@ -276,7 +276,7 @@
       .fifth_container .split .right .image {
         width: 15vw;
         height: 15vw;
-        background-image: url("../Assets/index/5.jpg");
+        background-image: url("../../Assets/index/5.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain; }
