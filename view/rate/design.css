@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    transition: all 0.3s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    ;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 400px;
+    
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+hr{
+    width: 25%;
+    height: 25%;
+    border: 2px ridge #000000;
+    margin-top: 4vw;
+}
+
+/* For table*/
+.status-1 {
+    background-color: rgb(164, 164, 164);
+    /* Add any other styles you want to apply */
+}
+.historique table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.historique th,
+.historique td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    width: 10%;
+}
+.firstligne{
+    background-color: #FFD700;
+    border: 2px ridge #000000;
+}
+.montant{
+    border-left: 2px ridge #000000;
+    border-right: 2px ridge #000000;
+}
+
+/* For table*/
+
+/* For Buttons*/
+.buttonaa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12vw;
+    left: 49vw;
+    transform: translate(-50%, -50%);
+}
+.buttonaa{
+    
+}
+.buttona:enabled {
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5vw;
+    padding: 2.5vw 2.5vh;
+}
+
+.buttona:disabled {
+    background-color: #999;
+    color: #666;
+    cursor: not-allowed;
+    border-radius: 0vw;
+    padding: 1.5vw 1.5vh;
+}
+
+/* For progressing */
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Adjust the height as needed */
+}
+
+.percent {
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+}
+
+.progress_bar {
+    width: 50vw;
+    height: 2vw;
+    background: #111;
+    border-radius: 35px;
+}
+
+.progress {
+    width: 0;
+    height: 2vw;
+    background: #FFD700;
+    border-radius: 35px;
+}
+
+.pp {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+

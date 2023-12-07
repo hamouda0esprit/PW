@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rate Livreur</title>
     <link rel="stylesheet" type="text/css" href="rate.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var commentTextarea = document.querySelector('textarea[name="comment"]');
+            var maxChars = 2;
+
+            commentTextarea.addEventListener('input', function () {
+                if (commentTextarea.value.length > maxChars) {
+                    commentTextarea.value = commentTextarea.value.substring(0, maxChars);
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <?php 
@@ -18,12 +30,11 @@
         <input type="number" name="stars" min="1" max="5" required>
         
         <label for="comment">Comment:</label>
-        <textarea name="comment" rows="4" cols="50" maxlength="255" required></textarea>
+        <textarea name="comment" rows="4" cols="50"  required></textarea>
     
         <input type="hidden" name="clientId" value="<?php echo $id_client; ?>">
         <input type="hidden" name="idLivreur" value="<?php echo $id_livreur; ?>">
         <input type="hidden" name="type" value="<?php echo $type; ?>">
-
 
         <!-- Add other hidden fields as needed -->
         
