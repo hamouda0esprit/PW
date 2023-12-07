@@ -13,7 +13,27 @@
     <section class="Container">
 
         <!-- Nheb norked -->
+        <?php 
+        require_once '../vendor/autoload.php';
+        $clientID = '661837775057-h6a0s2kc0h15338salccf63e1k018m27.apps.googleusercontent.com';
+        $clientSecret='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';
+        $redirecturi='http://localhost/PW/view/index.php';
 
+        $client = new Google_Client();
+        $client->setClientId($clientID);
+        $client->setClientSecret($clientSecret);
+        $client->setRedirectUri($redirecturi);
+        $client->addScope('profile');
+        $client->addScope('email');
+        if(isset($_GET['code'])){
+            $token=$client->fetchAccessTokenWithAuthCode($_GET['code']);
+            $client->setAccessToken($token);
+            $gauth = new Google_Service_Oauth2($client);
+            $google_info = $gauth->userinfo->get();
+            $email = $google_info->email;
+            $name = $google_info->name;
+        }else{
+        ?>
         <div class="Login">
             <div class="Content">
                 <header>Sign Up</header>
@@ -55,7 +75,7 @@
                 </a>
             </div>
             <div class="media">
-                <a href="#" class="GG">
+                <a href="<?php echo $client->createAuthUrl();?>" class="GG">
                     <img src="../controller/Assets/Google.png" alt="" class="google-img">
                     <span>Login with Google</span>
                 </a>
@@ -66,5 +86,8 @@
 </form>
     <!--Javascript-->
     <script src="../controller/Js/Script.js"></script>
+    <?php
+    }
+    ?>
 </body>
 </html>

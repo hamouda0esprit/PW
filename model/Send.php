@@ -1,4 +1,5 @@
 <?php
+require("Connection.php"); 
 session_start();
     function generateRandomString($length) {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
