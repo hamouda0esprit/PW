@@ -17,6 +17,8 @@
 	
 		$bd = new config();
         $pdo = $bd::getConnexion();
+
+        $userID = "C1";
 	?>
 	<form action="../../controller/Tickets/AddRequest.php" method="POST" class="cf" onsubmit="return validateForm();">
 		<!--select type-->
@@ -51,7 +53,7 @@
 									<option value="0" disabled hidden selected>Please choose a delivery</option> 
 									<?php
 										try{
-											$query = $pdo->prepare("SELECT `idDeliveries` FROM `activedeliveries` WHERE `ID` = '1'");
+											$query = $pdo->prepare("SELECT `idDeliveries` FROM `activedeliveries` WHERE `ID` = `$userID`");
 											$query->execute();
 											$result = $query->fetchAll();
 										}

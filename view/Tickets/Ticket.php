@@ -5,7 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION["idRec"] = $_POST["idReclamationC"];
     $_SESSION["description"] = $_POST["description"];
     $_SESSION["type"] = $_POST["type"];
-    $_SESSION["idC"] = $_POST["idC"];
     $_SESSION["idL"] = $_POST["idL"];
 }
 ?>
@@ -36,18 +35,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $idRec = isset($_SESSION["idRec"]) ? $_SESSION["idRec"] : "";
             $description = isset($_SESSION["description"]) ? $_SESSION["description"] : "";
             $type = isset($_SESSION["type"]) ? $_SESSION["type"] : "";
-            $idC = isset($_SESSION["idC"]) ? $_SESSION["idC"] : "";
-            $idL = isset($_SESSION["idL"]) ? $_SESSION["idL"] : "";
+            $idUser = isset($_SESSION["idL"]) ? $_SESSION["idL"] : "";
 
             $prenom = "";
 			$nom = "";
 
 			try{
-				if ($idL === ""){
-					$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `user` WHERE `ID` = '$idC'");
+				if ($idUser[0] == "C"){
+					$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `user` WHERE `ID` = '$idUser'");
 
-				}else{
-					$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `livreur` WHERE `idLivreur` = '$idL'");
+				}
+                if ($idUser[0] == "L"){
+					$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `livreur` WHERE `idLivreur` = '$idUser'");
 				}
 
 				$query->execute();
@@ -77,13 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</div>
 		</div>
 
-		<div class="spacer"></div>
-
 		<div class="right">
 			<div class="box">
 				<div class="top">
 					<?php
-						$idP = 1;
 						try{
 							$query = $pdo->prepare("SELECT `idP`, `message`, `date` FROM `reclamationa` WHERE `idReclamationA` = '$idRec'");
 
@@ -94,9 +90,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							echo "connection failed :". $e->getMessage();
 						}
 						foreach($result as $row){
-							//$idP = $row["idP"];
+							$idP = $row["idP"];
 							try{
-							$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `livreur` WHERE `idLivreur` = '$idP'");
+							$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `livreur` WHERE `idLivreur` = '$idUser'");
 
 							$query->execute();
 							$result = $query->fetchAll();
@@ -105,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								echo "connection failed :". $e->getMessage();
 							}
 							foreach($result as $row2){?>
-								<p class="dateT" style="font-size:.5vw;"><?php echo $row["date"]?></p>
+								<p class="dateT" style="font-size:.6vw;"><?php echo $row["date"]?></p>
 								<p class="name"><?php echo $row2["prenom"]?> <?php echo $row2["nom"]?> : </p>
 								<p class="name" style="margin-bottom:1.5vw;"><?php echo $row["message"]?></p>
 						<?php }} ?>
@@ -116,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<input type="text" name="idRec" value="<?php echo $idRec ?>" hidden>
 						<input type="text" class="message" name="message">
 						<input type="text" id="input_datetime" name="Date" value="" hidden>
-						<input type="submit" class="button" value="send" onclick="insertDatetime()">
+                        <button type="submit" class="button" onclick="insertDatetime()"> <i class="fa-solid fa-truck-ramp-box"></i> </button>
 					</form>
 				</div>
 			</div>

@@ -3,8 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Index</title>
+
 	<link rel="stylesheet" href="../../model/Tickets/index.scss">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="../../model/Tickets/Index.js"></script>
 </head>
 <?php
     require_once ("../../model/Tickets/Navbar.php");
@@ -27,7 +30,7 @@
 		
 		<div class="White_Line"></div>
 		
-		<div class="second_container">
+		<div class="second_container hidden">
 			<div class="left">
 				<div class="main_text">
 					<h3 class="title">Everyday life made easier.</h3>
@@ -43,7 +46,7 @@
 			</div>
 		</div>
 		
-		<div class="third_container">
+		<div class="third_container hidden">
 			<div class="top">
 				<h1 class="title">Featured Delivery Drivers</h1>
 			</div>
@@ -85,7 +88,7 @@
 			</div>
 		</div>
 		
-		<div class="fourth_container">
+		<div class="fourth_container hidden">
 			<div class="left">
 				
 			</div>
@@ -102,7 +105,7 @@
 			</div>
 		</div>
 		
-		<div class="fifth_container">
+		<div class="fifth_container hidden">
 			<form action="">
 				<div class="top">
 					<h1 class="title">Ready to get started?</h1>

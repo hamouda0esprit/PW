@@ -57,6 +57,25 @@
 	background-color:white;
 }
 
+.hidden{
+	opacity: 0;
+	filter: blur(50px);
+	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+.show{
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0%);
+}
+
+@media(prefers-reduced-motion) {
+	.hidden{
+		transition: none;
+	}
+}
+
 .second_container{
 	width: 100%;
 	height: 30vw;

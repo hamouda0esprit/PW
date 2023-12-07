@@ -8,11 +8,13 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+body {
+	overflow-x:hidden;
+}
+
 .main_container{
 	width:100%;
-	height:28vw;
 	display:flex;
-	align-items: center;
 	justify-content: center;
 	flex-direction: row;
 
@@ -55,17 +57,12 @@
 		}
 	}
 	
-	.spacer{
-		width:.2vw;
-		height:100%;
-		background-color:black;
-	}
-	
 	.right{
+		height: 100%;
 		width:80%;
 		display:flex;
 		justify-content: center;
-		align-items: flex-start;
+		align-items: flex-start ;
 		
 		background-color:white;
 		
@@ -74,10 +71,12 @@
 			height:80%;
 			padding:1vw;
 			display:flex;
-			justify-content: center;
-			align-items: center;
 			flex-direction: column;
-			
+
+			overflow-x: hidden;
+			overflow-y: scroll;
+			max-height: 34vw;
+
 			border-radius:1vw;
 			margin-top:2vw;
 			
@@ -91,8 +90,55 @@
 			}
 			
 			.bottom{
-				width:100%;
-				height:10%;
+				height:4vw;
+				width:20vw;
+				display:flex;
+				justify-content: center;
+				align-items: center ;
+
+				border-radius:1vw;
+
+				background-color:rgb(240,240,240) ;
+				box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
+
+				position:absolute;
+				top:42.5vw;
+
+				.message{
+					border:none;
+					border-bottom: solid;
+					border-width: .1vw;
+					appearance: none;
+					width: 80%;
+					background: none;
+					color: #C5C5C5;
+					font-size: 1vw;
+					transition: ease-in-out .1s;
+					margin-right:.4vw;
+
+					&:focus{
+						color: #6c6c6c;
+						transition: ease-in-out .1s;
+					}
+				}
+
+				.button {
+					background-color: transparent;
+					border: 2px solid #1dbf72;
+					color: #1dbf72;
+					cursor: pointer;
+					outline: none;
+					font-size:.9vw;
+					border-radius: 5px;
+					padding:.3vw .5vw;
+					transition: ease-in-out .3s;
+
+					&:hover{
+						background-color: #1dbf72;
+						color: #ffffff;
+						transition: ease-in-out .3s;
+					}
+				}
 			}
 		}
 	}
