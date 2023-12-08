@@ -70,7 +70,11 @@
     left: 0;
 }
 
-
+#descriptionMessage {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
     </style>
 </head>
 <body>
@@ -104,28 +108,36 @@ function getAdmin()
             <td>
                 <form action="php/ban.php" method="POST" onsubmit="return confirmdelete()">
                     <input type="text" name="request_id" style="display:none;" value="<?php echo $row["msg_id"] ?>">
-                    <input type="submit" name="action" value="ban" class="btn btn-ban-creative-animation">
+                    <input type="submit" name="action" value="ban" class="btn btn-ban-creative-animation" onclick="return validateForm()">
                     <input type="text" name="id" style="display:none;" value='<?php echo $row["userid"] ?>'>
                     <input type="text" name="request_id" style="display:none;" value="<?php echo $row["request_id"] ?>" oninput="limitCharacters(this, 15, 'charCount_<?php echo $row["request_id"]; ?>')">
-                    <input type="submit" name="action" value="remove" class="btn btn-remove">
+                    <input type="submit" name="action" value="remove" class="btn btn-remove" onclick="return validateForm()">
                     <textarea name="reason" cols="30" rows="10" oninput="limitCharacters(this, 15, 'charCount_<?php echo $row["request_id"]; ?>')" placeholder="Enter reason" required></textarea>
                     <p id="charCount_<?php echo $row["request_id"]; ?>">0 / 15 caractères</p>
+                    <div id="descriptionMessage"></div>
 
-                    <script>
-                        function limitCharacters(element, maxLength, charCountId) {
-                            // Récupérer la valeur du champ
-                            var inputValue = element.value;
+                        <script>
+                            function limitCharacters(element, maxLength, charCountId) {
+                                var inputValue = element.value;
+                                var limitedValue = inputValue.slice(0, maxLength);
+                                element.value = limitedValue;
+                                document.getElementById(charCountId).textContent = limitedValue.length + ' / ' + maxLength + ' caractères (maximum)';
+                                validateForm();
+                            }
 
-                            // Limiter la longueur à maxLength caractères
-                            var limitedValue = inputValue.slice(0, maxLength);
+                            function validateForm() {
+                                var textareaValue = document.querySelector('textarea[name="reason"]').value;
+                                var descriptionMessage = document.getElementById('descriptionMessage');
+                                var banButton = document.querySelector('input[value="ban"]');
+                                var removeButton = document.querySelector('input[value="remove"]');
+                                banButton.disabled = removeButton.disabled = textareaValue.trim() === "";
+                                descriptionMessage.textContent = textareaValue.trim() === "" ? "Remplissez la description." : "";
+                                return textareaValue.trim() !== "";
+                            }
 
-                            // Mettre à jour la valeur du champ
-                            element.value = limitedValue;
+                        </script>
 
-                            // Mettre à jour le compteur de caractères
-                            document.getElementById(charCountId).textContent = limitedValue.length + ' / ' + maxLength + ' caractères (maximum)';
-                        }
-                    </script>
+
                 </form>
             </td>
         </tr>
