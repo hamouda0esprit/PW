@@ -31,11 +31,12 @@
                 $idDelivery = $_POST["idDelivery"];
 				
 			try{
-				if ($selectedType == "Client") {
-                	$query = $pdo->prepare("SELECT * FROM `reclamationc` WHERE  `idC` = '$idUser' AND `idCommande` = '$idDelivery'");
-                } elseif ($selectedType == "DeliveryDriver") {
-					$query = $pdo->prepare("SELECT * FROM `reclamationc` WHERE  `idL` = '$idUser' AND `idCommande` = '$idDelivery'");
+                if ($idDelivery == "NULL"){
+                    $query = $pdo->prepare("SELECT * FROM `reclamationc` WHERE  `idP` = '$idUser' AND ISNULL(`idCommande`)");
+                }else{
+                    $query = $pdo->prepare("SELECT * FROM `reclamationc` WHERE  `idP` = '$idUser' AND `idCommande` = '$idDelivery'");
                 }
+
 				
 				$query->execute();
 				$result = $query->fetchAll();
@@ -89,7 +90,7 @@
 					<div class="top">
 						<form action="../Tickets/Ticket.php" method="POST" class="form">
 							<input type="text" hidden name="idReclamationC" value="<?php echo $row["idReclamationC"]?>">
-							<input type="text" hidden name="idL" value="<?php echo $row["idL"]?>">
+							<input type="text" hidden name="idP" value="<?php echo $row["idP"]?>">
 							<input type="text" hidden name="description" value="<?php echo $row["description"]?>">
 							<input type="text" hidden name="type" value="<?php echo $row["type"]?>">
 							<input type="submit" Value='Chat' class="button">

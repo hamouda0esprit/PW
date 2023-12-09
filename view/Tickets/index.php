@@ -55,7 +55,7 @@
 			<div class="bottom">
 			<?php
 				try{
-					$query = $pdo->prepare('SELECT `ID`, `nom`, `prenom`, `PositiveReview`, `CompletedTasks`, `Bio` FROM `user`');
+					$query = $pdo->prepare('SELECT `ID`, `nom`, `prenom`, `PositiveReview`, `CompletedTasks`, `Bio` FROM `Data`');
 					$query->execute();
 					$result = $query->fetchAll();
 					
@@ -63,7 +63,7 @@
 				catch(PDOExcepion $e){
 					echo "connection failed :". $e->getMessage();
 				}
-				foreach($result as $row){ $AvgPositiveReviews = number_format((float)(($row["PositiveReview"] / $row["CompletedTasks"]) * 100), 2, '.', ''); if ($AvgPositiveReviews>=15){
+				foreach($result as $row){ if ( $row["ID"][0] == "L" && $row["CompletedTasks"] != 0){ $AvgPositiveReviews = number_format((float)(($row["PositiveReview"] / $row["CompletedTasks"]) * 100), 2, '.', ''); if ($AvgPositiveReviews>=15){
 			?>
 			<!---->
 			
@@ -85,7 +85,7 @@
 					<div class="bottom">
 						<p class="bio"><?php echo $row["Bio"]?></p>
 					</div>
-				</div>			<?php }} ?>
+				</div>			<?php }}} ?>
 			</div>
 		</div>
 		

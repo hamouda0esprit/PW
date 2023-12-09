@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION["idRec"] = $_POST["idReclamationC"];
     $_SESSION["description"] = $_POST["description"];
     $_SESSION["type"] = $_POST["type"];
-    $_SESSION["idL"] = $_POST["idL"];
+    $_SESSION["idP"] = $_POST["idP"];
 }
 ?>
 
@@ -35,19 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $idRec = isset($_SESSION["idRec"]) ? $_SESSION["idRec"] : "";
             $description = isset($_SESSION["description"]) ? $_SESSION["description"] : "";
             $type = isset($_SESSION["type"]) ? $_SESSION["type"] : "";
-            $idUser = isset($_SESSION["idL"]) ? $_SESSION["idL"] : "";
+            $idUser = isset($_SESSION["idP"]) ? $_SESSION["idP"] : "";
 
             $prenom = "";
 			$nom = "";
 
 			try{
-				if ($idUser[0] == "C"){
-					$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `user` WHERE `ID` = '$idUser'");
-
-				}
-                if ($idUser[0] == "L"){
-					$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `livreur` WHERE `idLivreur` = '$idUser'");
-				}
+                $query = $pdo->prepare("SELECT * FROM `Data`");
 
 				$query->execute();
 				$result = $query->fetchAll();
@@ -92,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						foreach($result as $row){
 							$idP = $row["idP"];
 							try{
-							$query = $pdo->prepare("SELECT `nom`, `prenom` FROM `livreur` WHERE `idLivreur` = '$idUser'");
+							$query = $pdo->prepare("SELECT * FROM `data` WHERE `ID` = '$idP'");
 
 							$query->execute();
 							$result = $query->fetchAll();
@@ -101,9 +95,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								echo "connection failed :". $e->getMessage();
 							}
 							foreach($result as $row2){?>
-								<p class="dateT" style="font-size:.6vw;"><?php echo $row["date"]?></p>
-								<p class="name"><?php echo $row2["prenom"]?> <?php echo $row2["nom"]?> : </p>
-								<p class="name" style="margin-bottom:1.5vw;"><?php echo $row["message"]?></p>
+								<p class="dateT"><?php echo $row["date"]?></p>
+								<p class="name"><i class="fa-solid fa-user"></i> <?php echo $row2["prenom"]?> <?php echo $row2["nom"]?> : </p>
+								<p class="message"><?php echo $row["message"]?></p>
 						<?php }} ?>
 				</div>
 

@@ -57,7 +57,7 @@
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> Type</h3>
 							<div class="select-box">
                                 <select name="type" id="type" class="select" onchange="saveSelection('type'); this.form.submit();">
-                                    <option value="0" disabled hidden selected>Please choose a type</option>
+                                    <option value="0" disabled selected>Please choose a type</option>
                                     <option value="Client">Client</option>
                                     <option value="DeliveryDriver">Livreur</option>
                                 </select>
@@ -72,13 +72,13 @@
 							<h3 class="title"><i class="fa-solid fa-bullseye"></i> User</h3>
 							<div class="select-box">
                                 <select name="User" id="User" class="select" onchange="saveSelection('User'); this.form.submit();">
-                                    <option value="0" disabled hidden selected>Please choose a delivery</option>
+                                    <option value="0" disabled selected>Please choose a delivery</option>
                                     <?php
                                     try {
                                         if ($selectedType == "Client") {
-                                            $query = $pdo->prepare('SELECT * FROM `user`');
+                                            $query = $pdo->prepare("SELECT * FROM `data` WHERE `ID` LIKE 'C%'");
                                         } elseif ($selectedType == "DeliveryDriver") {
-                                            $query = $pdo->prepare('SELECT * FROM `livreur`');
+                                            $query = $pdo->prepare("SELECT * FROM `data` WHERE `ID` LIKE 'L%'");
                                         }
 
                                         // Execute the query
@@ -90,7 +90,7 @@
 
                                     foreach ($result as $row) {
                                         ?>
-                                        <option value="<?php echo ($selectedType == "DeliveryDriver") ? $row["idLivreur"] : $row["ID"]; ?>"><?php echo $row["prenom"] ?> <?php echo $row["nom"] ?></option>
+                                        <option value="<?php echo ($selectedType == "DeliveryDriver") ? $row["ID"] : $row["ID"]; ?>"><?php echo $row["prenom"] ?> <?php echo $row["nom"] ?></option>
                                     <?php } ?>
                                 </select>
 							</div>
@@ -109,13 +109,14 @@
                         <div class="select-box">
                             <form action="../Tickets/Ticket Request - Admin.php" method="POST" class="cf">
                                 <select name="Commande" id="commande" class="select" onchange="saveSelection('Commande'); this.form.submit();">
-                                    <option value="0" disabled hidden selected>Please choose a delivery</option>
+                                    <option value="0" disabled selected>Please choose a delivery</option>
+                                    <option value="NULL">NULL</option>
                                     <?php
                                     try {
                                         if ($selectedType == "Client") {
-                                            $query = $pdo->prepare('SELECT * FROM `activedeliveries` WHERE `ID` = :selectedUser');
+                                            $query = $pdo->prepare('SELECT * FROM `colis` WHERE `id_client` = :selectedUser');
                                         } else {
-                                            $query = $pdo->prepare('SELECT * FROM `bids` WHERE `idLivreur` = :selectedUser');
+                                            $query = $pdo->prepare('SELECT * FROM `colis_a_encherer` WHERE `idLivreur` = :selectedUser');
                                         }
 
                                         $query->bindParam(':selectedUser', $selectedUser);
@@ -129,7 +130,7 @@
                                     if (!empty($result)) {
                                         foreach ($result as $row) {
                                             ?>
-                                            <option value="<?php echo $row["idDeliveries"]; ?>"><?php echo $row["idDeliveries"]; ?></option>
+                                            <option value="<?php echo $row["idcolis"]; ?>"><?php echo $row["idcolis"]; ?></option>
                                             <?php }
                                         } else {
                                             ?>
@@ -142,7 +143,7 @@
                         <form action="../Tickets/Ticket Manage - Admin.php" method="POST" class="form" onSubmit="getvalue();">
 							<input type="text" hidden name="selectedType" value="<?php echo $selectedType; ?>">
                             <input type="text" hidden name="idDelivery" id="idDelivery" value="<?php echo $selectedCommande; ?>">
-                            <input type="text" hidden name="idUser" value="<?php echo ($selectedType == "DeliveryDriver") ? $selectedUser : ""; ?>">
+                            <input type="text" hidden name="idUser" value="<?php echo $selectedUser; ?>">
                             <input type="submit" value="Manage" class="button">
                         </form>
                         <?php } ?>

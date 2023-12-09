@@ -27,6 +27,8 @@
 				<h1 class="title">Create Ticket</h1>
 			</div>
 
+            <input type="text" hidden name="idP" value="<?php echo "$userID"?>">
+
 			<div class="Middle">
 				<div class="type">
 					<div class="box">
@@ -53,7 +55,7 @@
 									<option value="0" disabled hidden selected>Please choose a delivery</option> 
 									<?php
 										try{
-											$query = $pdo->prepare("SELECT `idDeliveries` FROM `activedeliveries` WHERE `ID` = `$userID`");
+											$query = $pdo->prepare("SELECT * FROM `colis` WHERE `id_client` ='$userID'");
 											$query->execute();
 											$result = $query->fetchAll();
 										}
@@ -62,7 +64,7 @@
 										}
 										foreach($result as $row){
 									?>
-										<option value="<?php echo $row["idDeliveries"]?>"><?php echo $row["idDeliveries"]?></option>
+										<option value="<?php echo $row["idcolis"]?>"><?php echo $row["idcolis"]?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -90,7 +92,7 @@
 	<div class="secondary_container">
 		<?php
 			try{
-				$query = $pdo->prepare("SELECT `idReclamationC`, `idC`, `idL`, `idCommande`, `type`, `description` FROM `reclamationc` WHERE `status` = '0'");
+				$query = $pdo->prepare("SELECT `idReclamationC`, `idP`, `idCommande`, `type`, `description` FROM `reclamationc` WHERE `status` = '0' AND `idP` ='$userID'");
 				$query->execute();
 				$result = $query->fetchAll();
 			}
@@ -143,8 +145,7 @@
 					<div class="top">
 						<form action="../Tickets/Ticket.php" method="POST" class="form">
 							<input type="text" hidden name="idReclamationC" value="<?php echo $row["idReclamationC"]?>">
-							<input type="text" hidden name="idC" value="<?php echo $row["idC"]?>">
-							<input type="text" hidden name="idL" value="<?php echo $row["idL"]?>">
+							<input type="text" hidden name="idP" value="<?php echo $row["idP"]?>">
 							<input type="text" hidden name="description" value="<?php echo $row["description"]?>">
 							<input type="text" hidden name="type" value="<?php echo $row["type"]?>">
 							<input type="submit" Value='Chat' class="button">

@@ -4,7 +4,7 @@ require_once("../../model/Tickets/config.php");
 $bd = new config();
 $pdo = $bd::getConnexion();
 
-$idUser = "1";
+$idUser = "L1";
 
 $sql = "INSERT INTO `reclamationa`(`idReclamationA`, `idP`, `message`, `date`) VALUES (:idReclamationA, :idP, :message, :date)";
 $db = config::getConnexion();
