@@ -47,7 +47,7 @@
                     if (countdown < 0) {
                         clearInterval(timer);
                         document.getElementById('countdown').style.display = 'none';
-                        window.location.href = '../view/index.php'; 
+                        window.location.href = '../view/Home.php'; 
                     }
                 }, 1000);
             }

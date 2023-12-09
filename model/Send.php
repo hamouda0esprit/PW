@@ -1,17 +1,21 @@
 <?php
 require("Connection.php"); 
 session_start();
-    function generateRandomString($length) {
+    function generateRandomString($length,$L) {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         $randomString = '';
         for ($i = 0; $i < $length; $i++) {
             $randomString .= $characters[rand(0, strlen($characters) - 1)];
         }
-        return 'C' . $randomString;
+        return $L . $randomString;
     }
     
-    $ID = generateRandomString(8);
-
+    $radio = $_POST['radio'];
+    if($radio==1){
+        $ID = generateRandomString(8,'L');
+    }else{
+        $ID = generateRandomString(8,'C');
+    }
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $numero = $_POST['numero'];
@@ -50,7 +54,7 @@ session_start();
                     if (countdown < 0) {
                         clearInterval(timer);
                         document.getElementById('countdown').style.display = 'none';
-                        window.location.href = '../view/index.php'; 
+                        window.location.href = '../view/Home.php'; 
                     }
                 }, 1000);
             }

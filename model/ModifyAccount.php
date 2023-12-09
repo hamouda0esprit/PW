@@ -4,6 +4,7 @@
     $bd = new Connection();
     $pdo = $bd::getConnexion();
     $Delete = $_POST['Delete'];
+
     session_start();
     $ID = $_SESSION['ID'];
     if ($Delete == 'Yes') {
@@ -23,7 +24,7 @@
                     if (countdown < 0) {
                         clearInterval(timer);
                         document.getElementById('countdown').style.display = 'none'; // Hide the countdown
-                        window.location.href = '../view/Account.php'; 
+                        window.location.href = '../view/Account.html'; 
                     }
                 }, 1000); // Update every 1 second (1000 milliseconds)
             }
@@ -36,8 +37,10 @@
             $email = $_POST['email'];
             $numero = $_POST['numero'];
             $password = $_POST['password'];
-            $query = $pdo->prepare("UPDATE data SET nom = :nom, prenom = :prenom, email = :email, numero = :numero , password = :password WHERE ID = :ID");
+            $Bio = $_POST['Bio'];
+            $query = $pdo->prepare("UPDATE data SET nom = :nom, prenom = :prenom, email = :email, numero = :numero , Bio = :Bio, password = :password WHERE ID = :ID");
             $query->bindParam(':nom', $nom);
+            $query->bindParam(':Bio', $Bio);
             $query->bindParam(':prenom', $prenom);
             $query->bindParam(':email', $email);
             $query->bindParam(':numero', $numero);
@@ -56,7 +59,7 @@
                     if (countdown < 0) {
                         clearInterval(timer);
                         document.getElementById('countdown').style.display = 'none'; // Hide the countdown
-                        window.location.href = '../view/Account.php'; 
+                        window.location.href = '../view/Account.html'; 
                     }
                 }, 1000); // Update every 1 second (1000 milliseconds)
             }

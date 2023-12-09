@@ -15,10 +15,11 @@ try {
 
     if (count($result) > 0) {
         // Email exists in the database
-        $updatePasswordQuery = "UPDATE data SET password = :newPassword WHERE email = :email";
+        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+        $updatePasswordQuery = "UPDATE data SET password = :hashedPassword WHERE email = :email";
         
         $updateQuery = $pdo->prepare($updatePasswordQuery);
-        $updateQuery->bindParam(':newPassword', $newPassword);
+        $updateQuery->bindParam(':hashedPassword', $hashedPassword);
         $updateQuery->bindParam(':email', $email);
         
         if ($updateQuery->execute()) {
@@ -34,7 +35,7 @@ try {
                     if (countdown < 0) {
                         clearInterval(timer);
                         document.getElementById('countdown').style.display = 'none'; // Hide the countdown
-                        window.location.href = '../view/index.php'; 
+                        window.location.href = '../view/Home.php'; 
                     }
                 }, 1000); // Update every 1 second (1000 milliseconds)
             }
@@ -52,7 +53,7 @@ try {
                     if (countdown < 0) {
                         clearInterval(timer);
                         document.getElementById('countdown').style.display = 'none'; // Hide the countdown
-                        window.location.href = '../view/index.php'; 
+                        window.location.href = '../view/Home.php'; 
                     }
                 }, 1000); // Update every 1 second (1000 milliseconds)
             }
@@ -71,7 +72,7 @@ try {
                     if (countdown < 0) {
                         clearInterval(timer);
                         document.getElementById('countdown').style.display = 'none';
-                        window.location.href = '../view/index.php'; 
+                        window.location.href = '../view/Home.php'; 
                     }
                 }, 1000);
             }

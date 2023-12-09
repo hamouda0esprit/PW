@@ -1,0 +1,126 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #3b8479;
+}
+
+.icon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  font-size: 15px;
+}
+
+.form-control {
+  width: 0;
+  position: absolute;
+  top: 50%;
+  overflow: hidden;
+  margin: 0;
+  transform: translateY(-50%);
+  height: 38px;
+  right: 18px;
+  border: none;
+  box-shadow: none;
+  font-size: 22px;
+  color: #000;
+  letter-spacing: 1px;
+}
+.form-control:focus {
+  outline: none;
+  border: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+.form-control:focus + .label-wrap {
+  opacity: 0;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-wrap {
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+svg {
+  position: absolute;
+  left: 20px;
+}
+
+.form-group {
+  margin: 0;
+  position: relative;
+}
+
+.label-wrap {
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100%;
+  height: 36px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+label {
+  position: absolute !important;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 18px;
+  z-index: 10;
+  font-size: 22px;
+  margin: 0;
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.github {
+  width: 40px;
+  height: 40px;
+  background: url(http://alikinvv.github.io/github.svg) no-repeat center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  -webkit-animation: github 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s infinite;
+          animation: github 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s infinite;
+}
+
+@-webkit-keyframes github {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes github {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

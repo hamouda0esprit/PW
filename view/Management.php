@@ -48,6 +48,7 @@
                 $email = $Data['email'];
                 $numero = $Data['numero'];
                 $mdp = $Data['password'];
+                $bio = $Data['Bio'];
                 $image = $Data['image_url'];
             }else{
                 echo"ID do not exsist";
@@ -56,7 +57,7 @@
             echo "Connection failed: " . $e->getMessage();
         }
     }else{
-        header("Location: Account.php");
+        header("Location: Account.html");
         exit();
     }
     ?>
@@ -117,21 +118,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Bio</label>
                                         <textarea class="form-control"
-                                            rows="5"><?php if($ID[0]=='C'){ echo"Client do not have this option"; }?></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Birthday</label>
-                                        <input type="text" class="form-control" value="May 3, 1995">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Country</label>
-                                        <select class="custom-select">
-                                            <option>USA</option>
-                                            <option selected>Tunisia</option>
-                                            <option>UK</option>
-                                            <option>Germany</option>
-                                            <option>France</option>
-                                        </select>
+                                            rows="5" name="Bio"><?php echo"$bio";?></textarea>
                                     </div>
                                 </div>
                                 <hr class="border-light m-0">
@@ -166,7 +153,8 @@
             </div>
             <div class="text-right mt-3">
                 <button type="submit" class="btn btn-primary">Save changes</button>&nbsp;
-                <button type="button" class="btn btn-default">Cancel</button>
+                <!-- <button type="button" class="btn btn-default">Cancel</button> -->
+                <a href="./Account.php" class="btn btn-default">Cancel</a>
             </div>
         </div>
     </form>
@@ -207,7 +195,7 @@
                             </table>
                 <?php
                             } else {
-                                echo "No results found for the provided ID.";
+                                
                             }
                         } catch (PDOException $e) {
                             echo "Connection failed: " . $e->getMessage();
