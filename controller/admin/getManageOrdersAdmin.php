@@ -1,6 +1,6 @@
 <?php
 function getManageOrdersAdmin(){
-    require_once("..\model\config.php"); 
+    require_once("..\..\model\config.php"); 
     $bd = new config();
     $pdo = $bd::getConnexion();
     try{
@@ -24,7 +24,7 @@ function getManageOrdersAdmin(){
         <td><p><?php echo $row["dateArrive"] ?></p></td>
         <td><p class="cmt"><?php echo $row["comment"] ?></p></td>
         <td>
-            <form action="../controller/admin/deleteOrderAdmin.php" method="POST" onsubmit="return confirmdelete()">
+            <form action="../../controller/admin/deleteOrderAdmin.php" method="POST" onsubmit="return confirmdelete()">
                 <input type="text" name="idBid" id="idBid"  value="<?php echo $row["idBid"]?>" style="display:none;">
                 <input type="submit" value="delete" class="btn delete">
             </form>

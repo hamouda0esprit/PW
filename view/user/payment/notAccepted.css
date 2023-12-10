@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.rej{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: red;
+    font-size: 40px;
+}

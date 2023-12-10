@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.formColis{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1700px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .formColis{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.inner_card , .inner_infos_card{
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.33);
+    padding: 0.8rem;
+    margin: 1rem 0;
+}
+
+.inner_card{
+    width: 300px;
+}
+.inner_infos_card img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 10px;
+}
+.top .topForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.inputs input{
+    width: 4rem;
+    height: 3rem;
+    margin: 0.6rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(185, 185, 185);
+    text-align: center;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom div input{
+    width: 6rem;
+    height: 3rem;
+    margin: 0.6rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(185, 185, 185);
+    text-align: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    color: #d7da26;
+}
+
+.inner_card input[type=text]{
+    width: 80%;
+    height: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgb(185, 185, 185);
+    outline: none;
+    padding: 0 1rem;
+}
+
+.inner_card input[type=file]{
+    width: 80%;
+    height: 2rem;
+}
+
+.borderInner{
+    border-radius: 10px;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 15px;
+}
+
+.btnAdd{
+    width: 13.3rem;
+    height: 3rem;
+    border-radius: 10px;
+    border:2px solid #d7da26;
+    background-color: white;
+    color: #d7da26;
+    font-size: 16px;
+    transition: .2s;
+}
+
+.btnAdd:hover{
+    background-color: #d7da26;
+    color: white;
+}

@@ -1,10 +1,10 @@
 <?php
-require_once("..\..\Model\config.php");
-
+require_once("..\..\..\Model\config.php");
+echo $_POST["idBid"];
 $bd = new config();
 $pdo = $bd::getConnexion();
 
-$sql = "DELETE FROM `colis_a_encherer` WHERE idBid = :idBid;";
+$sql = "UPDATE colis_a_encherer SET status = -1 WHERE idBid = :idBid;";
 
 $db = config::getConnexion();
 try {
@@ -13,8 +13,7 @@ try {
         ':idBid' => $_POST["idBid"],
     ]);
 
-    // Redirect to activeDeliveries.php
-    header("Location: ../../view/admin/showAMO.php");
+    header("Location: ../../../view/user/showMyTask.php");
     exit();
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();

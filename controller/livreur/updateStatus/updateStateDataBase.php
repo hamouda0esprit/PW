@@ -1,20 +1,21 @@
 <?php
-require_once("..\..\Model\config.php");
+require_once("..\..\..\Model\config.php");
 
 $bd = new config();
 $pdo = $bd::getConnexion();
 
-$sql = "DELETE FROM `colis_a_encherer` WHERE idBid = :idBid;";
+$sql = "UPDATE colis_a_encherer SET status = :status WHERE idBid = :idBid;";
 
 $db = config::getConnexion();
 try {
     $query = $db->prepare($sql);
     $query->execute([
         ':idBid' => $_POST["idBid"],
+        ':status' => strval(intval($_POST["state"])+1),
     ]);
 
     // Redirect to activeDeliveries.php
-    header("Location: ../../view/admin/showAMO.php");
+    header("Location: ../../../view/livreur/showMO.php");
     exit();
 } catch (Exception $e) {
     echo 'Error: ' . $e->getMessage();

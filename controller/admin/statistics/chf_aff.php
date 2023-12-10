@@ -3,7 +3,7 @@ function chf_aff(){
 ?>
     <div class="chf_affData" style="display:none">
         <?php
-            require_once("..\model\config.php"); 
+            require_once("..\..\model\config.php"); 
             $bd = new config();
             $pdo = $bd::getConnexion();
             $oldcollected=0;

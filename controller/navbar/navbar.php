@@ -14,7 +14,7 @@
 
             <div class="navbar">
                 <div class="left">
-                    <a href="../view/index.php"><img src="../Assets/logo.png" class="Logo-Img"></a>
+                    <a href="../view/index.php"><img src="../../Assets/logo.png" class="Logo-Img"></a>
                 </div>
                 <div class="right">
                     <div class="right-left">

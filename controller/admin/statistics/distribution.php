@@ -3,17 +3,17 @@
 ?>
     <div class="distributionData" style="display:none">
 <?php
-        require_once("..\model\config.php"); 
+        require_once("..\..\model\config.php"); 
         $bd = new config();
         $pdo = $bd::getConnexion();
         try{
             // Sélectionner le nombre de clients
-            $queryClients = $pdo->prepare("SELECT COUNT(*) AS nombre_de_clients FROM user");
+            $queryClients = $pdo->prepare("SELECT COUNT(*) AS nombre_de_clients FROM data where SUBSTR(ID,1,1) = 'C' ");
             $queryClients->execute();
             $resultClients = $queryClients->fetch();
 
             // Sélectionner le nombre de livreurs
-            $queryLivreurs = $pdo->prepare("SELECT COUNT(*) AS nombre_de_livreurs FROM livreur");
+            $queryLivreurs = $pdo->prepare("SELECT COUNT(*) AS nombre_de_livreurs FROM  data where SUBSTR(ID,1,1) = 'L'");
             $queryLivreurs->execute();
             $resultLivreurs = $queryLivreurs->fetch();
 ?>
