@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Room</class>
+ <widget class="QWidget" name="Room">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1192</width>
+    <height>791</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: transparent; /* Initially transparent background */
+    color:#3498db;
+    border: 2px solid #87CEEB;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+
+}
+*{
+  font: 75 11pt &quot;Poppins&quot;;
+}
+/* Hover effect */
+QPushButton:hover {
+    color:#fff;
+    background-color: #64a1c2;
+    border: 2px solid #4a7a8a;
+}
+
+/* Pressed effect */
+QPushButton:pressed {
+    background-color: #64a1c2;
+    border: 2px solid #64a1c2;
+    padding: 9px 19px;
+}
+QPushButton:checked {
+    background-color: #64a1c2; /* Your desired color */
+    border: none; /* Remove the border if needed */
+}
+
+QComboBox {
+    padding: 5px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background: #f8f8f8;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+    width: 20px; /* Ajustez la largeur selon vos besoins */
+    border-left: none;
+}
+
+QComboBox::down-arrow {
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/fleche.png&quot;);
+    width:10%; 
+    height: 10%; 
+}
+QComboBox::drop-down:hover {
+    background: #e0e0e0; /* Changer la couleur de fond au survol */
+}
+
+QGroupBox {
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+QGroupBox {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}
+QLineEdit {
+    padding: 5px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background: #f8f8f8;
+}
+
+
+QLabel {
+  
+	font: 75 11pt &quot;Poppins&quot;;
+	color: rgb(0, 0, 127);
+}
+
+QDateTimeEdit {
+    font: &quot;Poppins&quot;;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    padding: 3px;
+    background: #f8f8f8;
+}
+
+QDateTimeEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right; /* Ajusté pour centrer verticalement */
+    width: 15px;
+    border-left: 2px solid #3498db;
+    margin-right: 5px;
+}
+
+QDateTimeEdit::down-arrow {
+   
+    width: 10%;
+    height: 10%;
+    margin-right: 5px;
+}
+
+QDateTimeEdit::up-button, QDateTimeEdit::down-button {
+    width: 10%; 
+    height: 10%;
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/fleche2.png&quot;); 
+    margin-right: 5px;
+}
+
+QDateTimeEdit::down-button {
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/fleche.png&quot;);
+    margin-right: 5px;
+}
+QMenuBar {
+    background-color: #3498db; /* Couleur de fond de la barre de menu */
+}
+
+QMenuBar::item {
+    background-color: transparent; /* Couleur de fond des éléments de menu */
+    padding: 5px 10px; /* Espacement intérieur des éléments de menu */
+}
+
+QMenuBar::item:selected {
+    background-color: #2980b9; /* Couleur de fond lorsqu'un élément est sélectionné */
+    color: #ffffff; /* Couleur du texte lorsqu'un élément est sélectionné */
+}
+
+QMenu {
+    background-color: #ffffff; /* Couleur de fond des sous-menus */
+    border: 1px solid #3498db; /* Bordure des sous-menus */
+}
+
+QMenu::item {
+    padding: 5px 15px; /* Espacement intérieur des éléments de sous-menu */
+}
+
+QMenu::item:selected {
+    background-color: #3498db; /* Couleur de fond lorsqu'un élément de sous-menu est sélectionné */
+    color: #ffffff; /* Couleur du texte lorsqu'un élément de sous-menu est sélectionné */
+}
+QStatusBar {
+    background-color: #3498db; /* Couleur de fond de la barre d'état */
+    color: #ffffff; /* Couleur du texte dans la barre d'état */
+}
+
+QStatusBar::item {
+    border: none; /* Supprimer la bordure des éléments de la barre d'état */
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>80</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/statii.png&quot;);
+    width:10%; 
+    height: 10%; 
+}</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>80</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/list.png&quot;);
+    width:20%; 
+    height: 20%; 
+}</string>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="st">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>140</y>
+     <width>1041</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>10</y>
+       <width>931</width>
+       <height>541</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Salle</string>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Type:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>160</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Etat salle:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>240</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Capacité:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>330</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date début:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>400</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date fin:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>270</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>470</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>confirm</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>190</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>selectionner</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>en marche</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>En equipement</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>En reperation</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>360</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>450</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="equi">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>170</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>selectionner</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>non equipe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>equipe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>En reperation</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>140</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Etat equipement:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>100</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="whatsThis">
+       <string>ggg</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>selectionner</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>formation</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>impression</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>couture</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>chimie</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>informatique</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QWidget" name="widget_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>450</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/load.png&quot;);
+    width:10%; 
+    height: 10%; 
+}</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3"/>
+   <widget class="QWidget" name="page_2"/>
+  </widget>
+  <widget class="QPushButton" name="list">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>70</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Lister salle</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stat">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>70</y>
+     <width>211</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Statistiques</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>70</y>
+     <width>231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ajouter salle</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>74</x>
+     <y>74</y>
+     <width>56</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../reservation/res.qrc">:/icon/plus2.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>stat</zorder>
+  <zorder>list</zorder>
+  <zorder>add</zorder>
+  <zorder>widget_3</zorder>
+  <zorder>widget_2</zorder>
+  <zorder>st</zorder>
+  <zorder>label</zorder>
+ </widget>
+ <resources>
+  <include location="../reservation/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

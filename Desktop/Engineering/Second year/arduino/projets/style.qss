@@ -1,0 +1,115 @@
+/* Base style for QPushButton */
+QPushButton {
+    background-color: transparent; /* Initially transparent background */
+    color: black;
+    border: 2px solid #64a1c2;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+QPushButton:hover {
+    background-color: #64a1c2;
+    border: 2px solid #4a7a8a;
+}
+
+/* Pressed effect */
+QPushButton:pressed {
+    background-color: #64a1c2;
+    border: 2px solid #64a1c2;
+    padding: 9px 19px;
+}
+QPushButton:checked {
+    background-color: #64a1c2; /* Your desired color */
+    border: none; /* Remove the border if needed */
+}
+
+QLabel#title{
+
+    color: #64a1c2;
+    font-weight: bold;
+
+}
+QWidget#border1 {
+    border: 2px solid #64a1c2;
+    border-radius: 25px;
+    padding: 10px 20px;
+
+}
+QWidget#border2 {
+    border: 2px solid #64a1c2;
+    border-radius: 25px;
+    padding: 10px 20px;
+
+}
+QLabel#stat2 {
+    border: 2px solid #64a1c2;
+    border-radius: 25px;
+    padding: 10px 20px;
+
+}
+QLabel#stat1 {
+    border: 2px solid #64a1c2;
+    border-radius: 25px;
+    padding: 10px 20px;
+
+}
+
+QLabel#course_name{
+
+    color: #64a1c2;
+    font-weight: bold;
+
+}
+QLabel#course_ending{
+
+    color: #64a1c2;
+    font-weight: bold;
+
+}
+QLabel#course_type{
+
+    color: #64a1c2;
+    font-weight: bold;
+
+}
+QLabel#course_state{
+
+    color: #64a1c2;
+    font-weight: bold;
+
+}
+QLabel#course_description{
+
+    color: #64a1c2;
+    font-weight: bold;
+
+}
+QLabel#course_beginning{
+
+    color: #64a1c2;
+    font-weight: bold;
+
+}
+
+QLineEdit {
+    border: 2px solid #64a1c2;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QTextEdit {
+    border: 2px solid #64a1c2;
+    border-radius: 10px;
+    padding: 1.5px;
+}
+/* Apply styles to the QTableWidget */
+
+
+
+
+
+
+

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>liste</class>
+ <widget class="QDialog" name="liste">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1659</width>
+    <height>769</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: transparent; /* Initially transparent background */
+    color:#3498db;
+    border: 2px solid #87CEEB;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+
+}
+*{
+  font: 75 11pt &quot;Poppins&quot;;
+}
+/* Hover effect */
+QPushButton:hover {
+    color:#fff;
+    background-color: #64a1c2;
+    border: 2px solid #4a7a8a;
+}
+
+/* Pressed effect */
+QPushButton:pressed {
+    background-color: #64a1c2;
+    border: 2px solid #64a1c2;
+    padding: 9px 19px;
+}
+QPushButton:checked {
+    background-color: #64a1c2; /* Your desired color */
+    border: none; /* Remove the border if needed */
+}</string>
+  </property>
+  <widget class="QTableWidget" name="taable">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>80</y>
+     <width>1051</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* QTableWidget */
+QTableWidget {
+    border: 2px solid #87CEEB;
+    border-radius: 5px;
+    background-color: #f0f7ff;
+}
+
+/* Item */
+QTableWidget::item {
+    padding: 10px;
+}
+
+/* Item sélectionné */
+QTableWidget::item:selected {
+    background-color: #cce5ff;
+}
+
+/* HeaderView */
+QHeaderView::section {
+    background-color: #cce5ff;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+    color: #1a1a1a;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* HeaderView lorsqu'il est survolé */
+QHeaderView::section:hover {
+    background-color: #b3d9ff;
+}
+
+/* HeaderView horizontal */
+QHeaderView::section:horizontal {
+    border-bottom: 2px solid #4d94ff;
+}
+
+/* HeaderView vertical */
+QHeaderView::section:vertical {
+    border-right: 2px solid #4d94ff;
+}
+
+/* ScrollBar vertical */
+QScrollBar:vertical {
+    background-color: #f0f7ff;
+    width: 15px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* Poignée de la ScrollBar vertical */
+QScrollBar::handle:vertical {
+    background-color: #99ccff;
+    border-radius: 7px;
+}
+
+/* Boutons de la ScrollBar vertical */
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background-color: #f0f7ff;
+}
+
+/* Pages de la ScrollBar vertical */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background-color: #f0f7ff;
+}</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>etat</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>type</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>capacite</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>date_d</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>date_f</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>equipement</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="update">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>517</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mise à jour</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_2">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>520</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Supprimer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>520</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>exporter PDF</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirm">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>520</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>afiicher</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>490</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/pdf.png&quot;);
+    width:10%; 
+    height: 10%; 
+}</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>490</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/confirm.png&quot;);
+    width:10%; 
+    height: 10%; 
+}</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>500</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/supp.png&quot;);
+    width:10%; 
+    height: 10%; 
+}</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>500</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/mise.png&quot;);
+    width:10%; 
+    height: 10%; 
+}</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="trie">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>20</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    padding: 5px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background: #f8f8f8;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+    width: 20px; /* Ajustez la largeur selon vos besoins */
+    border-left: none;
+}
+
+QComboBox::down-arrow {
+    image: url(&quot;C:/Users/Emna/Desktop/Atelier_Connexion/image/fleche.png&quot;);
+    width:10%; 
+    height: 10%; 
+}
+QComboBox::drop-down:hover {
+    background: #e0e0e0; /* Changer la couleur de fond au survol */
+}
+</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

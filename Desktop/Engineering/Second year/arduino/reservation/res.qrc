@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/audit_6462731.png</file>
+        <file>icon/list_1441035.png</file>
+        <file>icon/pie-chart_11176378.png</file>
+        <file>icon/edit_1443396.png</file>
+        <file>icon/check-mark_1207330.png</file>
+        <file>icon/loading-arrows_11140996.png</file>
+        <file>icon/setting_6874449.png</file>
+        <file>icon/delete_3983957.png</file>
+        <file>icon/diploma_4706145.png</file>
+        <file>icon/pdf_8304568.png</file>
+        <file>icon/search_5807787.png</file>
+        <file>icon/aana.jpg</file>
+        <file>icon/uuuu.jpg</file>
+        <file>icon/plus (2).png</file>
+        <file>icon/statistic.png</file>
+        <file>icon/list1.png</file>
+        <file>icon/plus2.png</file>
+        <file>icon/statii.png</file>
+        <file>icon/fleche2.png</file>
+        <file>icon/fleche.png</file>
+        <file>icon/plus.png</file>
+        <file>icon/Untitled.png</file>
+        <file>icon/f.png</file>
+        <file>icon/e.png</file>
+    </qresource>
+</RCC>

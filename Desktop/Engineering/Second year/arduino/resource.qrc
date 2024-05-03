@@ -1,0 +1,50 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/account-logout-64.ico</file>
+        <file>icon/activity-feed-32.ico</file>
+        <file>icon/activity-feed-48.ico</file>
+        <file>icon/close-window-64.ico</file>
+        <file>icon/dashboard-5-32.ico</file>
+        <file>icon/dashboard-5-48.ico</file>
+        <file>icon/group-32.ico</file>
+        <file>icon/group-48.ico</file>
+        <file>icon/home-4-32.ico</file>
+        <file>icon/home-4-48.ico</file>
+        <file>icon/Logo.png</file>
+        <file>icon/menu-4-32.ico</file>
+        <file>icon/product-32.ico</file>
+        <file>icon/product-48.ico</file>
+        <file>icon/search-13-48.ico</file>
+        <file>icon/user-48.ico</file>
+        <file>icon/projectw.png</file>
+        <file>icon/projectt.png</file>
+        <file>icon/roomw.png</file>
+        <file>icon/rooom.webp</file>
+        <file>icon/equip.png</file>
+        <file>icon/equipw.png</file>
+        <file>icon/bookw.png</file>
+        <file>icon/bookingg.png</file>
+        <file>icon/aana.jpg</file>
+        <file>icon/audit_6462731.png</file>
+        <file>icon/book.png</file>
+        <file>icon/check-mark_1207330.png</file>
+        <file>icon/delete_3983957.png</file>
+        <file>icon/diploma_4706145.png</file>
+        <file>icon/edit_1443396.png</file>
+        <file>icon/edit-file_4134958.png</file>
+        <file>icon/list_1441035.png</file>
+        <file>icon/loading-arrows_11140996.png</file>
+        <file>icon/pdf_8304568.png</file>
+        <file>icon/pie-chart_11176378.png</file>
+        <file>icon/replay_2475690.png</file>
+        <file>icon/search_5807787.png</file>
+        <file>icon/setting_6874449.png</file>
+        <file>icon/uuuu.jpg</file>
+        <file>icon/compte.png</file>
+        <file>icon/pass.png</file>
+        <file>icon/logologin.png</file>
+    </qresource>
+    <qresource prefix="/FaceID">
+        <file>membres/FaceID/main.py</file>
+    </qresource>
+</RCC>

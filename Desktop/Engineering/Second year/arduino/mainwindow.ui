@@ -1,0 +1,4440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>775</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="QWidget" name="widget_3" native="true">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="1" column="0">
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <widget class="QWidget" name="page">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="font">
+              <font>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Home</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <widget class="QLabel" name="nour_list_icon_2">
+           <property name="geometry">
+            <rect>
+             <x>440</x>
+             <y>50</y>
+             <width>61</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icon/icon/list_1441035.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nour_add_icon_2">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>50</y>
+             <width>61</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icon/icon/audit_6462731.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="nour_f_add_course">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>50</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>add course</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="nour_f_liste_courses">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>50</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>list courses</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="stat_icon_2">
+           <property name="geometry">
+            <rect>
+             <x>850</x>
+             <y>50</y>
+             <width>61</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icon/icon/pie-chart_11176378.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="nour_f_statistics">
+           <property name="geometry">
+            <rect>
+             <x>920</x>
+             <y>50</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>statistics</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QStackedWidget" name="stackedWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>170</y>
+             <width>1121</width>
+             <height>531</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <widget class="QWidget" name="border1_2">
+            <widget class="QLabel" name="nour_title">
+             <property name="geometry">
+              <rect>
+               <x>460</x>
+               <y>30</y>
+               <width>181</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>course form</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_list_icon_3">
+             <property name="geometry">
+              <rect>
+               <x>610</x>
+               <y>10</y>
+               <width>50</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>6</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resource.qrc">:/icon/icon/edit_1443396.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_name">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>130</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_type">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>220</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Type</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_state">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>310</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>State</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_beginning">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>400</y>
+               <width>161</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Enrolement date</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_ending">
+             <property name="geometry">
+              <rect>
+               <x>560</x>
+               <y>130</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Ending date</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_description">
+             <property name="geometry">
+              <rect>
+               <x>560</x>
+               <y>220</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Description</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="nour_put_name">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>140</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Nour</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="nour_put_type">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>230</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Impression 3D</string>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="nour_description">
+             <property name="geometry">
+              <rect>
+               <x>710</x>
+               <y>210</y>
+               <width>211</width>
+               <height>121</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="nour_confirm_add">
+             <property name="geometry">
+              <rect>
+               <x>600</x>
+               <y>400</y>
+               <width>141</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>confirm add</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="nour_confirm_update">
+             <property name="geometry">
+              <rect>
+               <x>820</x>
+               <y>400</y>
+               <width>141</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>confirm update</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_confirm_icon">
+             <property name="geometry">
+              <rect>
+               <x>710</x>
+               <y>370</y>
+               <width>50</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resource.qrc">:/icon/icon/check-mark_1207330.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_update_icon">
+             <property name="geometry">
+              <rect>
+               <x>949</x>
+               <y>380</y>
+               <width>41</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resource.qrc">:/icon/icon/loading-arrows_11140996.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QDateEdit" name="nour_put_beginning">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>410</y>
+               <width>211</width>
+               <height>22</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QDateEdit" name="nour_put_ending">
+             <property name="geometry">
+              <rect>
+               <x>710</x>
+               <y>140</y>
+               <width>211</width>
+               <height>22</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="nour_put_state">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>320</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>pas encore</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>finie</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>en train</string>
+              </property>
+             </item>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="border2_2">
+            <widget class="QLineEdit" name="nour_search_course">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>20</y>
+               <width>211</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Search</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="nour_search_button">
+             <property name="geometry">
+              <rect>
+               <x>290</x>
+               <y>20</y>
+               <width>71</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/search_5807787.png</normaloff>:/icon/icon/search_5807787.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_name_7">
+             <property name="geometry">
+              <rect>
+               <x>480</x>
+               <y>20</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Sort by</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="nour_sort_button">
+             <property name="geometry">
+              <rect>
+               <x>810</x>
+               <y>20</y>
+               <width>81</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/setting_6874449.png</normaloff>:/icon/icon/setting_6874449.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_name_8">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>420</y>
+               <width>141</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Generate pdf</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="nour_generate_pdf">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>420</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/pdf_8304568.png</normaloff>:/icon/icon/pdf_8304568.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_name_10">
+             <property name="geometry">
+              <rect>
+               <x>840</x>
+               <y>400</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Update</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="nour_update_button">
+             <property name="geometry">
+              <rect>
+               <x>980</x>
+               <y>400</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/edit_1443396.png</normaloff>:/icon/icon/edit_1443396.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_name_11">
+             <property name="geometry">
+              <rect>
+               <x>840</x>
+               <y>450</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Delete</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="nour_delete_button">
+             <property name="geometry">
+              <rect>
+               <x>980</x>
+               <y>450</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/delete_3983957.png</normaloff>:/icon/icon/delete_3983957.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QTableWidget" name="nour_tableau_historique">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>111</y>
+               <width>821</width>
+               <height>261</height>
+              </rect>
+             </property>
+             <column>
+              <property name="text">
+               <string>ID</string>
+              </property>
+              <property name="background">
+               <color>
+                <red>100</red>
+                <green>161</green>
+                <blue>194</blue>
+               </color>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Name</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Type</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>State</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Description</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>enrolement_date</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ending_date</string>
+              </property>
+             </column>
+            </widget>
+            <widget class="QPushButton" name="nour_feelings_recog">
+             <property name="geometry">
+              <rect>
+               <x>570</x>
+               <y>410</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/search-13-48.ico</normaloff>:/icon/icon/search-13-48.ico</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_name_22">
+             <property name="geometry">
+              <rect>
+               <x>410</x>
+               <y>410</y>
+               <width>161</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>feelings recog</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="nour_sort_by">
+             <property name="geometry">
+              <rect>
+               <x>640</x>
+               <y>21</y>
+               <width>151</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>date_debut</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>date_fin</string>
+              </property>
+             </item>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="border3_2">
+            <widget class="QPushButton" name="nour_generate_certif">
+             <property name="geometry">
+              <rect>
+               <x>950</x>
+               <y>200</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/diploma_4706145.png</normaloff>:/icon/icon/diploma_4706145.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_course_name_9">
+             <property name="geometry">
+              <rect>
+               <x>790</x>
+               <y>200</y>
+               <width>161</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Generate certif</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_participant_name">
+             <property name="geometry">
+              <rect>
+               <x>700</x>
+               <y>70</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="nour_participant_name_2">
+             <property name="geometry">
+              <rect>
+               <x>840</x>
+               <y>70</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Nour</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_pie_label">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>20</y>
+               <width>581</width>
+               <height>421</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_widgetForStateDistribution">
+             <property name="geometry">
+              <rect>
+               <x>640</x>
+               <y>260</y>
+               <width>451</width>
+               <height>231</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="nour_formation_name">
+             <property name="geometry">
+              <rect>
+               <x>840</x>
+               <y>140</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>certificate name</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="nour_certif_name">
+             <property name="geometry">
+              <rect>
+               <x>690</x>
+               <y>140</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>certif</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_3">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="font">
+              <font>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Reservations</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_4">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="stackedWidget_4">
+             <widget class="QWidget" name="page_8">
+              <widget class="QStackedWidget" name="stackedWidget_5">
+               <property name="geometry">
+                <rect>
+                 <x>-1</x>
+                 <y>-1</y>
+                 <width>1181</width>
+                 <height>691</height>
+                </rect>
+               </property>
+               <widget class="QWidget" name="page_10">
+                <widget class="QPushButton" name="listBtn">
+                 <property name="geometry">
+                  <rect>
+                   <x>378</x>
+                   <y>20</y>
+                   <width>191</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>LIST PROJECTS</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="addProjBtn">
+                 <property name="geometry">
+                  <rect>
+                   <x>87</x>
+                   <y>20</y>
+                   <width>191</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>ADD PROJECT</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="statBtn">
+                 <property name="geometry">
+                  <rect>
+                   <x>960</x>
+                   <y>20</y>
+                   <width>191</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>STATISTICS</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="stat_icon_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>890</x>
+                   <y>20</y>
+                   <width>61</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resource.qrc">:/icon/icon/pie-chart_11176378.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="add_icon_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>20</y>
+                   <width>61</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resource.qrc">:/icon/icon/audit_6462731.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="projet_update_icon">
+                 <property name="geometry">
+                  <rect>
+                   <x>610</x>
+                   <y>20</y>
+                   <width>51</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resource.qrc">:/icon/icon/loading-arrows_11140996.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="editBtn">
+                 <property name="geometry">
+                  <rect>
+                   <x>669</x>
+                   <y>20</y>
+                   <width>191</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>EDIT PROJECTS</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="list_icon_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>320</x>
+                   <y>20</y>
+                   <width>61</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resource.qrc">:/icon/icon/list_1441035.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QStackedWidget" name="ProjectStackedWidget">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>90</y>
+                   <width>1121</width>
+                   <height>571</height>
+                  </rect>
+                 </property>
+                 <property name="currentIndex">
+                  <number>1</number>
+                 </property>
+                 <widget class="QWidget" name="addProjectPage_6">
+                  <widget class="QLineEdit" name="projectNameInput_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>280</x>
+                     <y>130</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Project Name</string>
+                   </property>
+                  </widget>
+                  <widget class="QTextEdit" name="ProjectDescInput_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>280</x>
+                     <y>230</y>
+                     <width>211</width>
+                     <height>151</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Project Description</string>
+                   </property>
+                  </widget>
+                  <widget class="QDateEdit" name="dateDebutInput_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>810</x>
+                     <y>130</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="readOnly">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                  <widget class="QDateEdit" name="dateFinInput_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>810</x>
+                     <y>180</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_71">
+                   <property name="geometry">
+                    <rect>
+                     <x>60</x>
+                     <y>120</y>
+                     <width>161</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Project Name : </string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="projectTypeInput_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>280</x>
+                     <y>180</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Project Type</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_73">
+                   <property name="geometry">
+                    <rect>
+                     <x>60</x>
+                     <y>230</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Project Description : </string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_74">
+                   <property name="geometry">
+                    <rect>
+                     <x>590</x>
+                     <y>110</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Starting Date : </string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_75">
+                   <property name="geometry">
+                    <rect>
+                     <x>590</x>
+                     <y>160</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>End date : </string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_76">
+                   <property name="geometry">
+                    <rect>
+                     <x>60</x>
+                     <y>180</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Project Type :</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_title_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>480</x>
+                     <y>40</y>
+                     <width>181</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>13</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>ADD A PROJECT</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_list_icon_7">
+                   <property name="geometry">
+                    <rect>
+                     <x>660</x>
+                     <y>20</y>
+                     <width>50</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>6</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="resource.qrc">:/icon/icon/edit_1443396.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="AddButton_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>590</x>
+                     <y>340</y>
+                     <width>201</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>confirm add</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_confirm_icon_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>760</x>
+                     <y>310</y>
+                     <width>50</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="resource.qrc">:/icon/icon/check-mark_1207330.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="ProjectListPage_6">
+                  <widget class="QTableWidget" name="ProjectTable_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>20</x>
+                     <y>150</y>
+                     <width>1061</width>
+                     <height>351</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QTableWidget{
+background-color:#D9D9D9;
+alternate-background-color:#CCCCCC;
+selection-background-color:#282828;
+}
+QHeaderView::section  {
+	background-color: #0C455B;
+	color: white;
+	padding: 4px;
+	border:0px solid white;
+	border-top:1px solid #082F3E;
+	border-bottom:1px solid #082F3E;
+	
+}
+/*QHeaderView::section:first{
+	border-top-left-radius: 10px;
+}
+QHeaderView::section:last{
+border-top-right-radius: 10px;
+}*/
+ QTableWidget {
+border-bottom-radius: 10px;  
+	border: 1px solid #0C455B00;
+};</string>
+                   </property>
+                   <property name="editTriggers">
+                    <set>QAbstractItemView::NoEditTriggers</set>
+                   </property>
+                   <property name="dragEnabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alternatingRowColors">
+                    <bool>true</bool>
+                   </property>
+                   <property name="selectionMode">
+                    <enum>QAbstractItemView::SingleSelection</enum>
+                   </property>
+                   <property name="selectionBehavior">
+                    <enum>QAbstractItemView::SelectItems</enum>
+                   </property>
+                   <property name="textElideMode">
+                    <enum>Qt::ElideLeft</enum>
+                   </property>
+                   <property name="showGrid">
+                    <bool>false</bool>
+                   </property>
+                   <property name="sortingEnabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="rowCount">
+                    <number>3</number>
+                   </property>
+                   <attribute name="horizontalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <attribute name="horizontalHeaderDefaultSectionSize">
+                    <number>100</number>
+                   </attribute>
+                   <attribute name="horizontalHeaderStretchLastSection">
+                    <bool>true</bool>
+                   </attribute>
+                   <attribute name="verticalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <column>
+                    <property name="text">
+                     <string>Id</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Project Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Project Type</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Start Date</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>End Date</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>State</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Price Estimation</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Actions</string>
+                    </property>
+                   </column>
+                   <item row="0" column="0">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="0" column="1">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="0" column="2">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="0" column="4">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="0" column="5">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="0" column="6">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="0" column="7">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="1" column="0">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="1" column="1">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="1" column="2">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="1" column="4">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="1" column="5">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="1" column="6">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="1" column="7">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="2" column="0">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="2" column="1">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="2" column="2">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="2" column="4">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="2" column="5">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="2" column="6">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item row="2" column="7">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                  </widget>
+                  <widget class="QFrame" name="frame_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>20</x>
+                     <y>90</y>
+                     <width>1061</width>
+                     <height>61</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame{
+background-color:#0C455B;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="titreAddProject_7">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>261</width>
+                      <height>61</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color:#FFF;
+font-size:24px;
+</string>
+                    </property>
+                    <property name="text">
+                     <string>LIST OF PROJECTS</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QLineEdit" name="projet_search_course_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>40</x>
+                     <y>20</y>
+                     <width>211</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Search</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="projet_search_button_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>260</x>
+                     <y>20</y>
+                     <width>71</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="resource.qrc">
+                     <normaloff>:/icon/icon/search_5807787.png</normaloff>:/icon/icon/search_5807787.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>30</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="flat">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_course_name_17">
+                   <property name="geometry">
+                    <rect>
+                     <x>390</x>
+                     <y>20</y>
+                     <width>131</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color:rgb(100, 161, 194)</string>
+                   </property>
+                   <property name="text">
+                    <string>Sort by</string>
+                   </property>
+                   <property name="textFormat">
+                    <enum>Qt::RichText</enum>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="projet_sort_button_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>720</x>
+                     <y>20</y>
+                     <width>81</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="resource.qrc">
+                     <normaloff>:/icon/icon/setting_6874449.png</normaloff>:/icon/icon/setting_6874449.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>30</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_course_name_18">
+                   <property name="geometry">
+                    <rect>
+                     <x>850</x>
+                     <y>20</y>
+                     <width>141</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color:rgb(100, 161, 194)</string>
+                   </property>
+                   <property name="text">
+                    <string>Generate pdf</string>
+                   </property>
+                   <property name="textFormat">
+                    <enum>Qt::RichText</enum>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="projet_generate_pdf_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>1000</x>
+                     <y>20</y>
+                     <width>61</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="resource.qrc">
+                     <normaloff>:/icon/icon/pdf_8304568.png</normaloff>:/icon/icon/pdf_8304568.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>40</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="flat">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                  <widget class="QComboBox" name="ProjectSortt">
+                   <property name="geometry">
+                    <rect>
+                     <x>500</x>
+                     <y>20</y>
+                     <width>211</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>ID_PROJET</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>NOM_PROJET</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>DATE_DEBUT</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>DATE_FIN</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>ETAT</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>TYPE</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="page_17">
+                  <widget class="QLineEdit" name="projectTypeInput_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>300</x>
+                     <y>260</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Project Type</string>
+                   </property>
+                  </widget>
+                  <widget class="QDateEdit" name="dateFinInput_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>830</x>
+                     <y>260</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_77">
+                   <property name="geometry">
+                    <rect>
+                     <x>610</x>
+                     <y>190</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Starting Date : </string>
+                   </property>
+                  </widget>
+                  <widget class="QTextEdit" name="ProjectDescInput_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>300</x>
+                     <y>310</y>
+                     <width>211</width>
+                     <height>151</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Project Description</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="projectNameInput_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>300</x>
+                     <y>210</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Project Name</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_79">
+                   <property name="geometry">
+                    <rect>
+                     <x>80</x>
+                     <y>260</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Project Type :</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_80">
+                   <property name="geometry">
+                    <rect>
+                     <x>610</x>
+                     <y>240</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>End date : </string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_81">
+                   <property name="geometry">
+                    <rect>
+                     <x>80</x>
+                     <y>310</y>
+                     <width>201</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Project Description : </string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_82">
+                   <property name="geometry">
+                    <rect>
+                     <x>80</x>
+                     <y>200</y>
+                     <width>161</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Project Name : </string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_title_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>470</x>
+                     <y>30</y>
+                     <width>181</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>13</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>EDIT PROJECTS</string>
+                   </property>
+                  </widget>
+                  <widget class="QDateEdit" name="dateDebutInput_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>830</x>
+                     <y>210</y>
+                     <width>211</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="readOnly">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="AddButton_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>610</x>
+                     <y>420</y>
+                     <width>201</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>confirm update</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_update_icon_14">
+                   <property name="geometry">
+                    <rect>
+                     <x>630</x>
+                     <y>20</y>
+                     <width>51</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="resource.qrc">:/icon/icon/loading-arrows_11140996.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="projet_update_icon_15">
+                   <property name="geometry">
+                    <rect>
+                     <x>790</x>
+                     <y>400</y>
+                     <width>41</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="resource.qrc">:/icon/icon/loading-arrows_11140996.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QComboBox" name="ProjectIDCB_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>420</x>
+                     <y>100</y>
+                     <width>371</width>
+                     <height>31</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_83">
+                   <property name="geometry">
+                    <rect>
+                     <x>290</x>
+                     <y>90</y>
+                     <width>161</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI Semilight</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Project Id : </string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="LoadBtn_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>800</x>
+                     <y>90</y>
+                     <width>111</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>load</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="statPage_6">
+                  <widget class="QLabel" name="projet_pie_label">
+                   <property name="geometry">
+                    <rect>
+                     <x>280</x>
+                     <y>50</y>
+                     <width>581</width>
+                     <height>421</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_11"/>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="page_9"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_5">
+          <widget class="QPushButton" name="ahmed_f_statistics">
+           <property name="geometry">
+            <rect>
+             <x>920</x>
+             <y>50</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>251</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Statistics</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="list_icon">
+           <property name="geometry">
+            <rect>
+             <x>440</x>
+             <y>50</y>
+             <width>61</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>61</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icon/icon/list_1441035.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="stat_icon">
+           <property name="geometry">
+            <rect>
+             <x>850</x>
+             <y>50</y>
+             <width>61</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>61</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icon/icon/pie-chart_11176378.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="add_icon">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>50</y>
+             <width>61</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>61</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icon/icon/audit_6462731.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ahmed_f_add_course">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>50</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>251</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Add/Update Client</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ahmed_f_liste_courses">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>50</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>251</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>List Client</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QStackedWidget" name="stackedWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>170</y>
+             <width>1121</width>
+             <height>531</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>1121</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="currentIndex">
+            <number>3</number>
+           </property>
+           <widget class="QWidget" name="border1">
+            <widget class="QLabel" name="ahmed_title">
+             <property name="geometry">
+              <rect>
+               <x>460</x>
+               <y>30</y>
+               <width>181</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Client Form</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_list_icon_2">
+             <property name="geometry">
+              <rect>
+               <x>580</x>
+               <y>20</y>
+               <width>50</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>6</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resource.qrc">:/icon/icon/edit_1443396.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_nom">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>130</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Nom</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_prenom">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>220</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Prenom</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_state">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>310</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Email</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="ahmed_put_name">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>140</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Votre Nom</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="ahmed_put_prenom">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>230</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Votre Prenom</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="ahmed_put_email">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>310</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Votre Email</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_confirm_add">
+             <property name="geometry">
+              <rect>
+               <x>600</x>
+               <y>400</y>
+               <width>141</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>confirm add</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_confirm_update">
+             <property name="geometry">
+              <rect>
+               <x>820</x>
+               <y>400</y>
+               <width>141</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>confirm update</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_confirm_icon">
+             <property name="geometry">
+              <rect>
+               <x>710</x>
+               <y>370</y>
+               <width>50</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resource.qrc">:/icon/icon/check-mark_1207330.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_update_icon">
+             <property name="geometry">
+              <rect>
+               <x>949</x>
+               <y>380</y>
+               <width>41</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resource.qrc">:/icon/icon/loading-arrows_11140996.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="ahmed_put_age">
+             <property name="geometry">
+              <rect>
+               <x>800</x>
+               <y>140</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Votre Age</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_age">
+             <property name="geometry">
+              <rect>
+               <x>580</x>
+               <y>130</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Age</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_numero">
+             <property name="geometry">
+              <rect>
+               <x>580</x>
+               <y>220</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Numero</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="ahmed_put_numero">
+             <property name="geometry">
+              <rect>
+               <x>800</x>
+               <y>230</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Votre Numero</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_image_add">
+             <property name="geometry">
+              <rect>
+               <x>800</x>
+               <y>310</y>
+               <width>211</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Add Image</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_image">
+             <property name="geometry">
+              <rect>
+               <x>580</x>
+               <y>310</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Image</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="border2">
+            <widget class="QLineEdit" name="ahmed_search_course">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>20</y>
+               <width>211</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="placeholderText">
+              <string>Search</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_search_button">
+             <property name="geometry">
+              <rect>
+               <x>290</x>
+               <y>20</y>
+               <width>71</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/search_5807787.png</normaloff>:/icon/icon/search_5807787.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_name_7">
+             <property name="geometry">
+              <rect>
+               <x>480</x>
+               <y>20</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Sort by</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_sort_button">
+             <property name="geometry">
+              <rect>
+               <x>810</x>
+               <y>20</y>
+               <width>81</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/setting_6874449.png</normaloff>:/icon/icon/setting_6874449.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_name_8">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>420</y>
+               <width>141</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Generate pdf</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_generate_pdf">
+             <property name="geometry">
+              <rect>
+               <x>220</x>
+               <y>420</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/pdf_8304568.png</normaloff>:/icon/icon/pdf_8304568.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_name_9">
+             <property name="geometry">
+              <rect>
+               <x>340</x>
+               <y>420</y>
+               <width>161</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Face ID</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_face_id_button">
+             <property name="geometry">
+              <rect>
+               <x>460</x>
+               <y>420</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/search-13-48.ico</normaloff>:/icon/icon/search-13-48.ico</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_name_10">
+             <property name="geometry">
+              <rect>
+               <x>840</x>
+               <y>400</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Update</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_update_button">
+             <property name="geometry">
+              <rect>
+               <x>980</x>
+               <y>400</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/replay_2475690.png</normaloff>:/icon/icon/replay_2475690.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_name_11">
+             <property name="geometry">
+              <rect>
+               <x>840</x>
+               <y>450</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Delete</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_delete_button">
+             <property name="geometry">
+              <rect>
+               <x>980</x>
+               <y>450</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/delete_3983957.png</normaloff>:/icon/icon/delete_3983957.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QTableWidget" name="ahmed_tableau_historique">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>111</y>
+               <width>821</width>
+               <height>261</height>
+              </rect>
+             </property>
+             <column>
+              <property name="text">
+               <string>ID</string>
+              </property>
+              <property name="background">
+               <color>
+                <red>100</red>
+                <green>161</green>
+                <blue>194</blue>
+               </color>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Nom</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Prenom</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Email</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Age</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Numero</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Image</string>
+              </property>
+             </column>
+            </widget>
+            <widget class="QComboBox" name="ahmed_sort_by">
+             <property name="geometry">
+              <rect>
+               <x>590</x>
+               <y>20</y>
+               <width>211</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Nom</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Age</string>
+              </property>
+             </item>
+            </widget>
+            <widget class="QLabel" name="ahmed_course_name_12">
+             <property name="geometry">
+              <rect>
+               <x>590</x>
+               <y>420</y>
+               <width>161</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Nirmala UI Semilight</family>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(100, 161, 194)</string>
+             </property>
+             <property name="text">
+              <string>Historique</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::RichText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="ahmed_historique_button">
+             <property name="geometry">
+              <rect>
+               <x>710</x>
+               <y>420</y>
+               <width>61</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/icon/icon/search-13-48.ico</normaloff>:/icon/icon/search-13-48.ico</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="border3">
+            <widget class="QLabel" name="ahmed_pie_label">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>20</y>
+               <width>651</width>
+               <height>500</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="border4">
+            <widget class="QTableWidget" name="ahmed_tableau_historique_2">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>110</y>
+               <width>821</width>
+               <height>261</height>
+              </rect>
+             </property>
+             <column>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Nom Projet</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Description</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Date Debut</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Date Fin</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Etat</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Type</string>
+              </property>
+             </column>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_6">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="font">
+              <font>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Search</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_7">
+          <widget class="QLabel" name="label_10">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>12</y>
+             <width>1001</width>
+             <height>401</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>User Page</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QWidget" name="widget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>9</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="change_btn">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icon/icon/menu-4-32.ico</normaloff>:/icon/icon/menu-4-32.ico</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>236</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>232</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="user_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icon/icon/user-48.ico</normaloff>:/icon/icon/user-48.ico</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="account">
+            <property name="minimumSize">
+             <size>
+              <width>32</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="icon_only_widget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="logo_label_1">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icon/icon/Logo.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="home_btn_1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/home-4-32.ico</normaloff>
+             <normalon>:/icon/icon/home-4-48.ico</normalon>:/icon/icon/home-4-32.ico</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Employee_2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/user-48.ico</normaloff>
+             <normalon>:/icon/icon/projectw.png</normalon>:/icon/icon/user-48.ico</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="dashborad_btn_1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/rooom.webp</normaloff>
+             <normalon>:/icon/icon/roomw.png</normalon>:/icon/icon/rooom.webp</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="orders_btn_1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/bookingg.png</normaloff>
+             <normalon>:/icon/icon/bookw.png</normalon>:/icon/icon/bookingg.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="products_btn_1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/projectt.png</normaloff>
+             <normalon>:/icon/icon/projectw.png</normalon>:/icon/icon/projectt.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="customers_btn_1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/group-32.ico</normaloff>
+             <normalon>:/icon/icon/group-48.ico</normalon>:/icon/icon/group-32.ico</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>375</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exit_btn_1">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icon/icon/close-window-64.ico</normaloff>:/icon/icon/close-window-64.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="full_menu_widget" native="true">
+      <layout class="QGridLayout" name="gridLayout_9">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="exit_btn_2">
+         <property name="text">
+          <string>Exit</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icon/icon/close-window-64.ico</normaloff>:/icon/icon/close-window-64.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:white;
+</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>110</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="home_btn_2">
+           <property name="text">
+            <string>Home</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/home-4-32.ico</normaloff>
+             <normalon>:/icon/icon/home-4-48.ico</normalon>:/icon/icon/home-4-32.ico</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>107</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Employee">
+           <property name="text">
+            <string>Employee</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/user-48.ico</normaloff>
+             <normalon>:/icon/icon/projectw.png</normalon>:/icon/icon/user-48.ico</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="dashborad_btn_2">
+           <property name="text">
+            <string>Rooms</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/rooom.webp</normaloff>
+             <normalon>:/icon/icon/roomw.png</normalon>:/icon/icon/rooom.webp</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="courses">
+           <property name="text">
+            <string>Courses</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/activity-feed-32.ico</normaloff>:/icon/icon/activity-feed-32.ico</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>107</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="orders_btn_2">
+           <property name="text">
+            <string>Reservations</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/bookingg.png</normaloff>
+             <normalon>:/icon/icon/bookw.png</normalon>:/icon/icon/bookingg.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>107</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="products_btn_2">
+           <property name="text">
+            <string>Projects</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/projectt.png</normaloff>
+             <normalon>:/icon/icon/projectw.png</normalon>:/icon/icon/projectt.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>107</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="customers_btn_2">
+           <property name="text">
+            <string>Members</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icon/icon/group-32.ico</normaloff>
+             <normalon>:/icon/icon/group-48.ico</normalon>:/icon/icon/group-32.ico</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>112</width>
+           <height>161</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <widget class="QWidget" name="LogoLab_2" native="true">
+         <property name="styleSheet">
+          <string notr="true">    background-color: #f9fafd;
+	color:#000;
+	font-weight:200;
+</string>
+         </property>
+         <layout class="QHBoxLayout" name="LogoLab">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="logo_label_2">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="resource.qrc">:/icon/icon/Logo.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="logo_label_3">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>25</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>FabuLab</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>change_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_only_widget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>50</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exit_btn_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>34</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>600</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashborad_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashborad_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>140</x>
+     <y>123</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>customers_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>customers_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>home_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>home_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>41</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>customers_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>customers_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>140</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>products_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>products_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>24</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>orders_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>orders_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>products_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>products_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>43</x>
+     <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>change_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>full_menu_widget</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>orders_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>orders_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>142</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashborad_btn_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashborad_btn_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>26</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>home_btn_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>home_btn_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>27</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exit_btn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>177</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>600</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
